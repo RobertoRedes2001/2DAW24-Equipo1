@@ -1,5 +1,5 @@
 # 2DAW24-Equipo1
-![Guilds of Kauria](https://raw.githubusercontent.com/RobertoRedes2001/2DAW24-Equipo1/documentacion/Logo.png?token=GHSAT0AAAAAACMTCS3PXJMV7ZK2MZAKSS3EZOJ7VIQ)
+![Guilds of Kauria](https://raw.githubusercontent.com/RobertoRedes2001/2DAW24-Equipo1/documentacion/Logo.png?token=GHSAT0AAAAAACMTCS3OMGLPYTSRHIMSD4Y6ZOKAJTQ)
 
 Proyecto colaborativo con la Empresa Nexus Sueca. La website de Guilds of Kauria alberga toda la informacion sobre el juego de cartas creado por Miguel Angel Boix. 
 
