@@ -54,4 +54,18 @@ footer {
     padding-top: 110px;
     margin-left: 10%;
     margin-right: 10%;
-}   
+}
+a{
+    color: #FFF;
+    text-decoration: none;
+}  
+
+a:visited{
+
+    color: #ccae8c;
+    
+} 
+a:hover{
+
+    color: #e3A25b;
+}
