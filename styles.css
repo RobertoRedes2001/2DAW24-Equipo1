@@ -1,0 +1,57 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styles */
+body {
+    background-color: #F9F9F9;
+}
+
+/* Navbar styles */
+.navbar {
+    background-color: #68838E;
+    color: #F9F9F9;
+}
+
+.navbar-nav .nav-link {
+    color: #f9f9f9 !important;
+    margin-left: 15px;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #e3A25b !important;
+}
+
+.navbar-nav {
+    font-size: 19px;
+    font-weight: 400;
+}
+
+footer {
+    color: #f9f9f9;
+    text-align: center;
+}
+
+.footer-container {
+    padding: 4rem 0 0;
+}
+
+.social-media-section {
+    margin-bottom: 4rem;
+}
+
+.btn-floating {
+    color: white;
+}
+
+.p-3 {
+    background-color: #0D111A;
+}
+
+.margin-info-proyectos {
+    padding-top: 110px;
+    margin-left: 10%;
+    margin-right: 10%;
+}   
