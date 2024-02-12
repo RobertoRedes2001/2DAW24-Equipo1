@@ -1,1 +1,2 @@
-https://www.dafont.com/es/belmonth.font
+Tipografia titulo: https://www.dafont.com/es/optimusprinceps.font
+Tipografia texto: https://www.1001fonts.com/aileron-font.html
