@@ -71,7 +71,7 @@ a:hover{
 }
 
 .jumbotron{
-    /* margin-top: 75px; */
+    margin-top: 75px;
     background-image: url('banner.png');
     background-repeat: no-repeat;
     background-position: center;
@@ -89,10 +89,14 @@ a:hover{
 
 .proyecto-row {
     padding-top: 20px;
+    padding-bottom: 20px;
     padding-left: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
-
+.carousel-item{
+    height: 275px;
+    padding-right: 20px;
+}
 .ver-mas-link {
     margin-top: 13%;
     margin-bottom: 3%;
