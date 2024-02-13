@@ -50,11 +50,7 @@ footer {
     background-color: #0D111A;
 }
 
-.margin-info-proyectos {
-    padding-top: 110px;
-    margin-left: 10%;
-    margin-right: 10%;
-}
+
 a{
     color: #FFF;
     text-decoration: none;
@@ -72,7 +68,7 @@ a:hover{
 
 .jumbotron{
     margin-top: 75px;
-    background-image: url('banner.png');
+    background-image: url('banner_bg.png');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -82,9 +78,14 @@ a:hover{
 
 .margin-info-proyectos {
     padding-top: 110px;
-    padding-top: 110px;
     margin-left: 20%;
     margin-right: 20%;
+}
+
+.aboutUs{
+    padding-top: 110px;
+    margin-left: 20%;
+    
 }
 
 .proyecto-row {
@@ -106,6 +107,7 @@ a:hover{
     text-align: right;
 
 }
+
 
 
 
