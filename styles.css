@@ -71,11 +71,13 @@ a:hover{
 }
 
 .jumbotron{
-    padding-top: 400px;
-    background-image: url('Logo.png');
+    /* margin-top: 75px; */
+    background-image: url('banner.png');
     background-repeat: no-repeat;
     background-position: center;
+    background-size: cover;
     height: 500px;
+    width: 100%;
 }
 
 .margin-info-proyectos {
