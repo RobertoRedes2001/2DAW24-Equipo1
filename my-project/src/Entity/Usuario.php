@@ -19,6 +19,10 @@ class Usuario
     #[ORM\Column(length: 255, nullable: true)]
     private ?string $password = null;
 
+    #[ORM\ManyToOne(inversedBy: 'usuarios')]
+    #[ORM\JoinColumn(name: "tienda", referencedColumnName: "tienda_cod")]
+    private ?Tienda $tienda = null;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -44,6 +48,18 @@ class Usuario
     public function setPassword(?string $password): static
     {
         $this->password = $password;
+
+        return $this;
+    }
+
+    public function getTienda(): ?Tienda
+    {
+        return $this->tienda;
+    }
+
+    public function setTienda(?Tienda $tienda): static
+    {
+        $this->tienda = $tienda;
 
         return $this;
     }

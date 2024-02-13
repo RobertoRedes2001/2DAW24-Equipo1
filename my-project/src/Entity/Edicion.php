@@ -3,6 +3,8 @@
 namespace App\Entity;
 
 use App\Repository\EdicionRepository;
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
 
@@ -22,6 +24,19 @@ class Edicion
 
     #[ORM\Column(nullable: true)]
     private ?int $cantidad = null;
+
+    #[ORM\ManyToOne(inversedBy: 'edicions')]
+    #[ORM\JoinColumn(name: "tienda", referencedColumnName: "tienda_cod")]
+    private ?Tienda $tienda = null;
+
+    #[ORM\ManyToMany(targetEntity: Carta::class, mappedBy: 'edicion')]
+    #[ORM\JoinColumn(name: "cartas", referencedColumnName: "edicion_cod")]
+    private Collection $cartas;
+
+    public function __construct()
+    {
+        $this->cartas = new ArrayCollection();
+    }
 
     public function getId(): ?int
     {
@@ -60,6 +75,45 @@ class Edicion
     public function setCantidad(?int $cantidad): static
     {
         $this->cantidad = $cantidad;
+
+        return $this;
+    }
+
+    public function getTienda(): ?Tienda
+    {
+        return $this->tienda;
+    }
+
+    public function setTienda(?Tienda $tienda): static
+    {
+        $this->tienda = $tienda;
+
+        return $this;
+    }
+
+    /**
+     * @return Collection<int, Carta>
+     */
+    public function getCartas(): Collection
+    {
+        return $this->cartas;
+    }
+
+    public function addCarta(Carta $carta): static
+    {
+        if (!$this->cartas->contains($carta)) {
+            $this->cartas->add($carta);
+            $carta->addEdicion($this);
+        }
+
+        return $this;
+    }
+
+    public function removeCarta(Carta $carta): static
+    {
+        if ($this->cartas->removeElement($carta)) {
+            $carta->removeEdicion($this);
+        }
 
         return $this;
     }

@@ -26,6 +26,10 @@ class Noticia
     #[ORM\Column(length: 255, nullable: true)]
     private ?string $foto = null;
 
+    #[ORM\ManyToOne(inversedBy: 'noticias')]
+    #[ORM\JoinColumn(name: "tienda", referencedColumnName: "tienda_cod")]
+    private ?Tienda $tienda = null;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -75,6 +79,18 @@ class Noticia
     public function setFoto(?string $foto): static
     {
         $this->foto = $foto;
+
+        return $this;
+    }
+
+    public function getTienda(): ?Tienda
+    {
+        return $this->tienda;
+    }
+
+    public function setTienda(?Tienda $tienda): static
+    {
+        $this->tienda = $tienda;
 
         return $this;
     }
