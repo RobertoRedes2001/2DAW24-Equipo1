@@ -50,23 +50,29 @@ footer {
     background-color: #0D111A;
 }
 
+.margin-info-proyectos {
+    padding-top: 110px;
+    margin-left: 10%;
+    margin-right: 10%;
+}
 
-a{
+a {
     color: #FFF;
     text-decoration: none;
-}  
+}
 
-a:visited{
+a:visited {
 
     color: #ccae8c;
-    
-} 
-a:hover{
+
+}
+
+a:hover {
 
     color: #e3A25b;
 }
 
-.jumbotron{
+.jumbotron {
     margin-top: 75px;
     background-image: url('banner_bg.png');
     background-repeat: no-repeat;
@@ -94,12 +100,14 @@ a:hover{
     padding-left: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
-.carousel-item{
+
+.carousel-item {
     min-height: auto;
     padding-right: 20px;
     max-height: 400px;
     max-width: 400px;
 }
+
 .ver-mas-link {
     margin-top: 13%;
     margin-bottom: 3%;
@@ -107,8 +115,20 @@ a:hover{
     text-align: right;
 
 }
+.form{
+    padding-top: 200px;
+    /* padding-left: 400px; */
+    padding-bottom: 200px;
+}
 
+.btn-enviar{
+    background-color: #635f5a;
+    color: #FFF;
+    border: black solid 2px
+}
 
-
-
-
+.btn-enviar:hover{
+    background-color: #ccae8c;
+    color: #FFF;
+    border: #635f5a solid 2px
+}
