@@ -60,12 +60,7 @@ footer {
     background-color: #0D111A;
 }
 
-.text-center {
-    color: #f9f9f9;
-    background-color: #68838E; /* Color de fondo del footer */
-    padding: 1rem; /* Añade un poco de espacio alrededor del contenido */
-    margin-top: auto; /* Esto empujará el footer hacia abajo */
-}
+
 
 a {
     color: #FFF;
