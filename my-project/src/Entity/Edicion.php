@@ -13,7 +13,7 @@ class Edicion
 {
     #[ORM\Id]
     #[ORM\GeneratedValue]
-    #[ORM\Column(name: "edicion_cod")]
+    #[ORM\Column(name: 'edicion_cod')]
     private ?int $id = null;
 
     #[ORM\Column(length: 255, nullable: true)]
@@ -29,9 +29,14 @@ class Edicion
     #[ORM\JoinColumn(name: "tienda", referencedColumnName: "tienda_cod")]
     private ?Tienda $tienda = null;
 
+    #[ORM\OneToMany(targetEntity: CartaEdicion::class, mappedBy: 'edicion_id')]
+    private Collection $cartaEdicions;
+
     public function __construct()
     {
         $this->cartas = new ArrayCollection();
+        $this->carta_cod = new ArrayCollection();
+        $this->cartaEdicions = new ArrayCollection();
     }
 
     public function getId(): ?int
@@ -87,4 +92,33 @@ class Edicion
         return $this;
     }
 
+    /**
+     * @return Collection<int, CartaEdicion>
+     */
+    public function getCartaEdicions(): Collection
+    {
+        return $this->cartaEdicions;
+    }
+
+    public function addCartaEdicion(CartaEdicion $cartaEdicion): static
+    {
+        if (!$this->cartaEdicions->contains($cartaEdicion)) {
+            $this->cartaEdicions->add($cartaEdicion);
+            $cartaEdicion->setEdicionId($this);
+        }
+
+        return $this;
+    }
+
+    public function removeCartaEdicion(CartaEdicion $cartaEdicion): static
+    {
+        if ($this->cartaEdicions->removeElement($cartaEdicion)) {
+            // set the owning side to null (unless already changed)
+            if ($cartaEdicion->getEdicionId() === $this) {
+                $cartaEdicion->setEdicionId(null);
+            }
+        }
+
+        return $this;
+    }
 }
