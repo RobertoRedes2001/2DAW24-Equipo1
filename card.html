@@ -16,11 +16,15 @@
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
+
     <!-- Font Awesome stylesheet -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
     <link rel="icon" href="../images/2.png" type="image/png">
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
 
     <title>Cartas</title>
 </head>
@@ -73,8 +77,8 @@
     <main>
         <div class="container form ">
             <form>
-                <div class="row" >
-                    <div class="offset-xl-3 col-xl-5 col-md-12">
+                <div class="row gy-3">
+                    <div class="offset-xl-3 col-xl-5 col-md-12 ">
                         <input type="name" class="form-control" id="inputName" aria-describedby="nombre"
                             placeholder="Nombre de la carta">
 
@@ -82,15 +86,32 @@
                     <div class="col-xl-4 col-md-12">
                         <button type="submit" class="btn btn-enviar ">Enviar</button>
                     </div>
-                    <div class="offset-xl-3 col-xl-4">
-                        <div class="answer">
-                            <select name="finish" id="finish">
-                                <option value="">Estado de la carta</option>
-                                <option value="banneada">Banneada</option>
-                                <option value="limitada">Limitada</option>
-                                <option value="libre">Libre</option>
-                            </select>
+                    <div class="offset-xl-5 col-xl-4">
+                        <p>
+                            <button class="btn btn-primary" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                                Button with data-bs-target
+                            </button>
+                            <button class="btn btn-primary" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                                Button with data-bs-target
+                            </button>
+                        </p>
+                        <div class="collapse" id="collapseExample" style="width: 500px; right: auto; left: 0;">
+                            <div class="card card-body">
+                                <div class="answer">
+                                    <select name="finish" id="finish">
+                                        <option value="">Estado de la carta</option>
+                                        <option value="banneada">Banneada</option>
+                                        <option value="limitada">Limitada</option>
+                                        <option value="libre">Libre</option>
+                                    </select>
+                                </div>
+                            </div>
                         </div>
+                    </div>
+                    <div class="offset-xl-3 col-xl-4">
+
                     </div>
                 </div>
 
