@@ -29,10 +29,6 @@ class Edicion
     #[ORM\JoinColumn(name: "tienda", referencedColumnName: "tienda_cod")]
     private ?Tienda $tienda = null;
 
-    #[ORM\ManyToMany(targetEntity: Carta::class, mappedBy: 'edicion')]
-    #[ORM\JoinColumn(name: "cartas", referencedColumnName: "edicion_cod")]
-    private Collection $cartas;
-
     public function __construct()
     {
         $this->cartas = new ArrayCollection();
@@ -91,30 +87,4 @@ class Edicion
         return $this;
     }
 
-    /**
-     * @return Collection<int, Carta>
-     */
-    public function getCartas(): Collection
-    {
-        return $this->cartas;
-    }
-
-    public function addCarta(Carta $carta): static
-    {
-        if (!$this->cartas->contains($carta)) {
-            $this->cartas->add($carta);
-            $carta->addEdicion($this);
-        }
-
-        return $this;
-    }
-
-    public function removeCarta(Carta $carta): static
-    {
-        if ($this->cartas->removeElement($carta)) {
-            $carta->removeEdicion($this);
-        }
-
-        return $this;
-    }
 }

@@ -57,10 +57,6 @@ class Carta
     #[ORM\Column(nullable: true)]
     private ?int $puntos_victoria = null;
 
-    #[ORM\ManyToMany(targetEntity: Edicion::class, inversedBy: 'cartas')]
-    #[ORM\JoinColumn(name: "edicion", referencedColumnName: "carta_cod")]
-    private Collection $edicion;
-
     public function __construct()
     {
         $this->edicion = new ArrayCollection();
@@ -239,27 +235,5 @@ class Carta
         return $this;
     }
 
-    /**
-     * @return Collection<int, Edicion>
-     */
-    public function getEdicion(): Collection
-    {
-        return $this->edicion;
-    }
-
-    public function addEdicion(Edicion $edicion): static
-    {
-        if (!$this->edicion->contains($edicion)) {
-            $this->edicion->add($edicion);
-        }
-
-        return $this;
-    }
-
-    public function removeEdicion(Edicion $edicion): static
-    {
-        $this->edicion->removeElement($edicion);
-
-        return $this;
-    }
+    
 }
