@@ -130,18 +130,3 @@ a:hover {
 .aboutUs{
     text-align: justify;
 }
-
-.jumbotron {
-    padding: 0 !important;
-    margin: 0 !important;
-    position: relative;
-    overflow: hidden;
-    width: 100vw;
-    height: 100vh;
-}
-
-.jumbotron img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
