@@ -14,7 +14,7 @@ body {
 }
 
 main {
-    padding: 50px;
+    padding-bottom: 50px;
 }
 
 /* Navbar styles */
@@ -97,7 +97,7 @@ a:hover {
 }
 
 .aboutUs {
-    padding-top: 110px;
+    padding-top: 60px;
     margin-left: 20%;
 
 }
