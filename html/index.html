@@ -16,24 +16,21 @@
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
-
     <!-- Font Awesome stylesheet -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
     <link rel="icon" href="../images/2.png" type="image/png">
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-        crossorigin="anonymous"></script>
 
-    <title>Cartas</title>
+    <title>Inicio</title>
 </head>
 
 <body>
-    <header>
-        <nav class="navbar navbar-expand-lg fixed-top navbar-light">
+    
+    <header class="sticky-sm-top sticky-md-top sticky-lg-top sticky-xl-top">
+        <nav class="navbar navbar-expand-lg  navbar-light">
             <a class="navbar-brand" href="#" style="padding-left: 20px;">
-                <img src="logo.png" width="130px" alt="Logo" style="margin-left: 20px;">
+                <img src="Images/logo.png" width="130px" alt="Logo" style="margin-left: 20px;">
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
                 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -74,100 +71,67 @@
 
     </header>
 
+        <img src="Images/banner.png" class="img-fluid" style="height: 500px;" > 
+
     <main>
-        <div class="container form ">
-            <form>
-                <div class="row">
-                    <div class="offset-xl-3 col-xl-5 col-md-12 ">
-                        <input type="name" class="form-control" id="inputName" aria-describedby="nombre"
-                            placeholder="Nombre de la carta">
-
-                    </div>
-
-                    <div class="col-xl-4 col-md-12">
-                        <button type="submit" class="btn btn-enviar ">Enviar</button>
-                    </div>
-                </div>
-            </form>
+        <section class="aboutUs">
+            <div class="col-sm-12 col-md-6 col-lg-10">
+                <h2>Bienvenidos a "Guilds of Kauria"</h2>
+                <hr class="my-4"/>
+                <p>
+                    En los misteriosos confines de Kauria, un reino inmerso en la fantasía medieval, se libra una batalla épica entre gremios rivales en busca de poder y supremacía. En este juego de estrategia y astucia, tu misión es forjar alianzas, desentrañar antiguos secretos y liderar a tu gremio hacia la gloria.
+                </p>
+                <p>
+                    <b>Forja tu Gremio:</b> Comienza tu viaje seleccionando sabiamente los miembros de tu gremio, cada uno con habilidades únicas y extraordinarias. Desde valientes guerreros hasta astutos mercaderes, la elección de tu equipo determinará la fuerza y la versatilidad de tu ejército.
+                </p>
+                <p>
+                    <b>Desata el Poder de las Cartas:</b> El destino de Kauria está en tus manos mientras barajas y juegas estratégicamente tus cartas. Convoca a tu ejército, lanza hechizos poderosos y aprovecha las tácticas específicas de tu gremio para superar a tus oponentes. ¿Serás el arquitecto de una victoria imparable?
+                </p>
+                <p>
+                    <b>Elige tu Camino hacia la Gloria:</b> ¿Te convertirás en un líder diplomático, forjando alianzas poderosas con otros gremios, o te sumirás en la guerra total en busca de la dominación absoluta? La elección es tuya mientras te sumerges en "Guilds of Kauria".
+                </p>
+                <p>
+                    ¡Prepárate para una experiencia única donde la estrategia, la astucia y la magia se entrelazan en un emocionante juego de mesa medieval! ¿Estás listo para liderar tu gremio hacia la victoria? ¡Que comience la batalla en "Guilds of Kauria"!
+                </p>
+                <hr class="my-4" />
+              </div>
+        </section>
+        
+        <section class="margin-info-proyectos">
+            <h2>Noticias populares</h2>
             <br>
-            <form>
-                <div class="row">
-                    <div class="offset-xl-5 col-xl-4 ">
-                        <button class="btn btn-enviar gy-3 " type="button" data-bs-toggle="offcanvas"
-                            data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
-                            Busqueda avanzada
-                        </button>
-
-                        <div class="offcanvas offcanvas-end" id="collapseExample"
-                            aria-labelledby="collapseExampleLabel">
-                            <div class="offcanvas-header">
-                                <h5 class="offcanvas-title" id="collapseExampleLabel">Búsqueda Avanzada</h5>
-                                <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
-                                    aria-label="Close"></button>
+            <div class="row proyecto-row">
+                <div class="col-xl-6 col-md-12 col-sm-12 gx-5">
+                    <br>
+                    <h3>Descubre novedades</h3>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sit iusto voluptatibus beatae in
+                        corrupti fugiat aperiam enim consequatur, ab magnam non unde nesciunt dolores vitae numquam
+                        explicabo vero autem. Natus.</p>
+                </div>
+                <div class="col-xl-6 col-md-12 col-sm-12">
+                    <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img class="d-block w-100"
+                                    src="https://t1.ea.ltmcdn.com/es/posts/7/5/2/la_personalidad_de_los_gatos_segun_su_color_21257_600.jpg"
+                                    alt="First slide">
                             </div>
-                            <div class="offcanvas-body">
-                                <div class="separacion">
-
-                                    <h6>Nombre de la carta</h6>
-                                    <input type="name" class="form-control" id="inputName" aria-describedby="nombre"
-                                        placeholder="Nombre de la carta">
-
-                                </div>
-                                
-                                <div class="separacion">
-                                    <h6>Nombre de la edición</h6>
-                                    <input type="name" class="form-control" id="inputName" aria-describedby="nombre"
-                                        placeholder="Nombre de la edición">
-                                </div>
-
-                                <div class="status-card">
-                                    <div class="w-50">
-                                        <h6>Estado de la carta</h6>
-                                    </div>
-                                    <div>
-                                        <select name="finish" id="finish">
-                                            <option value="">-- none --</option>
-                                            <option value="banneada">Vetada</option>
-                                            <option value="limitada">Limitada</option>
-                                            <option value="libre">Libre</option>
-                                        </select>
-                                    </div>
-                                </div>
-
+                            <div class="carousel-item">
+                                <img class="d-block w-100"
+                                    src="https://s1.eestatic.com/2023/03/10/curiosidades/mascotas/747436034_231551832_1706x1280.jpg"
+                                    alt="Second slide">
+                            </div>
+                            <div class="carousel-item">
+                                <img class="d-block w-100"
+                                    src="https://s1.eestatic.com/2023/03/10/curiosidades/mascotas/747436034_231551832_1706x1280.jpg"
+                                    alt="Third slide">
                             </div>
                         </div>
                     </div>
+
                 </div>
-            </form>
-        </div>
-
-        <!-- <section class="margin-info-proyectos">
-            <h2>Un gran poder conlleva una gran responsabilidad</h2>
-            <br>
-            <div class="question" id="question-1">
-                <form method="post">
-                    <div class="answer-bank">
-                        <div class="answer">
-                            <input type="text" name="name" id="name" value="nombre" placeholder="nombre" />
-                        </div>
-                        <div class="answer">
-                            <input type="submit" value="Enviar" class="primary" />
-                        </div>
-
-                        <div class="answer">
-                            <select name="finish" id="finish">
-                                <option value="">- Búsqueda por: -</option>
-                                <option value="capitulo">Capítulo</option>
-                                <option value="personaje">Personaje</option>
-                            </select>
-                        </div>
-
-                    </div>
-
-                </form>
-
             </div>
-        </section> -->
+        </section>
     </main>
     <footer class="bg-body-tertiary">
         <!-- Grid container -->

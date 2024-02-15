@@ -129,6 +129,10 @@ a:hover {
     /* padding-left: 400px; */
     padding-bottom: 200px;
 }
+.jumbPr{
+    background-color: #0D111A;
+    color: #FFF;
+}
 
 .btn-enviar {
     background-color: #635f5a;
@@ -169,4 +173,27 @@ a:hover {
 
 .aboutUs{
     text-align: justify;
+}
+
+.card-img-top {
+    margin-bottom: 15px;
+}
+
+.margin-info-news{
+    text-align: justify;
+    padding-top: 110px;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.link-news{
+    color: #0D111A;
+}
+
+.ver-mas-link {
+    margin-top: 33%;
+    margin-bottom: 3%;
+    padding-right: 5%;
+    text-align: right;
+
 }
