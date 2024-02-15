@@ -2,25 +2,28 @@
 <html lang="es">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
-    <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.cdnfonts.com/css/akzidenzgrotesk" rel="stylesheet">
+        integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous" />
+    <link rel="stylesheet" href="styles.css" />
+    <link href="https://fonts.cdnfonts.com/css/akzidenzgrotesk" rel="stylesheet" />
     <link
         href="https://db.onlinewebfonts.com/c/c9b633c5bd2f75144492451d119623ba?family=F12+Akzidenz+Grotesk%2A%2A+Light+02003"
-        rel="stylesheet">
+        rel="stylesheet" />
     <link
         href="https://db.onlinewebfonts.com/c/53c0b5ca4d4f261f0b4bacba005484ef?family=F12+Akzidenz+Grotesk%2A%2A+Roman+05003"
-        rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+        rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
 
     <!-- Font Awesome stylesheet -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
-    <link rel="icon" href="../images/2.png" type="image/png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
+    <link rel="icon" href="../images/2.png" type="image/png" />
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
 
     <title>Como jugar</title>
 </head>
@@ -28,15 +31,15 @@
 <body>
     <header class="sticky-sm-top sticky-md-top sticky-lg-top sticky-xl-top">
         <nav class="navbar navbar-expand-lg fixed-top navbar-light">
-            <a class="navbar-brand" href="#" style="padding-left: 20px;">
-                <img src="Images/logo.png" width="130px" alt="Logo" style="margin-left: 20px;">
+            <a class="navbar-brand" href="#" style="padding-left: 20px">
+                <img src="Images/logo.png" width="130px" alt="Logo" style="margin-left: 20px" />
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
                 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
 
-            <div class="collapse navbar-collapse" id="navbarSupportedContent" style="padding-left: 20px;">
+            <div class="collapse navbar-collapse" id="navbarSupportedContent" style="padding-left: 20px">
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item">
                         <a class="nav-link" href="index.html">Inicio</a>
@@ -61,93 +64,158 @@
                             <a class="dropdown-item" href="../src/en/index.html">English</a>
                         </div>
                     </li>
-
                 </ul>
             </div>
         </nav>
     </header>
-    
+
     <!-- <div class="jumbotron jumbotron-fluid"></div> -->
     <main>
-        <section style="margin-top: 50px;">
+        <section style="margin-top: 50px">
             <div class="container">
                 <h1>HOW TO PLAY</h1>
                 <div class="row">
                     <div class="col-lg-6 aa">
-                        <ul>
-                           <li class="nav-link"><a href=""></a>primero</li>
-                           <li class="nav-link"><a href=""></a>segundo</li>
-                           <li class="nav-link"><a href=""></a>tercero</li>
-                           <li class="nav-link"><a href=""></a>cuarto</li>
-                        </ul>
+                        <div class="accordion" id="accordionExample">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingOne">
+                                    <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                        Accordion Item #1
+                                    </button>
+                                </h2>
+                                <div id="collapseOne" class="accordion-collapse collapse show"
+                                    aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+                                        It is hidden by default, until the collapse plugin adds
+                                        the appropriate classes that we use to style each element.
+                                        These classes control the overall appearance, as though
+                                        the transition does limit overflow.
+                                    </div>
+                                    <br />
+                                    <button class="btn btn-enviar gy-3" type="button" data-bs-toggle="offcanvas"
+                                        data-bs-target="#collapseExample" aria-expanded="false"
+                                        aria-controls="collapseExample " style="">
+                                        Saber más
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingTwo">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                        Accordion Item #2
+                                    </button>
+                                </h2>
+                                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                                    data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+                                        It is hidden by default, until the collapse plugin adds
+                                        the appropriate classes that we use to style each element.
+                                        These classes control the overall appearance, as though
+                                        the transition does limit overflow.
+                                    </div>
+                                    <br />
+                                    <button class="btn btn-enviar gy-3" type="button" data-bs-toggle="offcanvas"
+                                        data-bs-target="#collapseExample" aria-expanded="false"
+                                        aria-controls="collapseExample" style="margin-left: 370px;">
+                                        Saber más
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingThree">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseThree" aria-expanded="false"
+                                        aria-controls="collapseThree">
+                                        Accordion Item #3
+                                    </button>
+                                </h2>
+                                <div id="collapseThree" class="accordion-collapse collapse"
+                                    aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+                                        It is hidden by default, until the collapse plugin adds
+                                        the appropriate classes that we use to style each element.
+                                        These classes control the overall appearance, as though
+                                        the transition does limit overflow.
+                                    </div>
+                                    <br />
+                                    <button class="btn btn-enviar gy-3" type="button" data-bs-toggle="offcanvas"
+                                        data-bs-target="#collapseExample" aria-expanded="false"
+                                        aria-controls="collapseExample" style="margin-left: 370px;">
+                                        Saber más
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                     <div class="col-lg-6 aa">
                         <figure class="figure">
-                            <img style="height: 200px; width: 200px;" src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi.pinimg.com%2Foriginals%2Fcb%2F06%2F1a%2Fcb061a25af6dfd935a913709e341a726.jpg&f=1&nofb=1&ipt=bd6ccccc8f0d965dc23c109ab1fe2666772179cbdb4449d8d0dabc47c0e111f0&ipo=images" class="figure-img img-fluid rounded" alt="...">
-                            <figcaption class="figure-caption text-end">María sueltame el brazo, no quiero tocar más margin </figcaption>
-                          </figure>
-                    </div>  
-                    
+                            <img style="height: 200px; width: 200px"
+                                src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi.pinimg.com%2Foriginals%2Fcb%2F06%2F1a%2Fcb061a25af6dfd935a913709e341a726.jpg&f=1&nofb=1&ipt=bd6ccccc8f0d965dc23c109ab1fe2666772179cbdb4449d8d0dabc47c0e111f0&ipo=images"
+                                class="figure-img img-fluid rounded" alt="..." />
+                            <figcaption class="figure-caption text-end">
+                                María sueltame el brazo, no quiero tocar más margin
+                            </figcaption>
+                        </figure>
+                    </div>
                 </div>
-
             </div>
-
-       
         </section>
         <section>
-                    <!-- Jumbotron -->
-        <div class="p-4 shadow-4 rounded-3 jumbPr mt-5 col-sm-12 col-md-12 col-lg-12 ">
-            <div class="row">
-          
-              <div class="col-sm-12 col-md-12 col-lg-12">
-                <h2 class="text-center">Ejemplo 1</h2>
-                <hr class="my-4" />
-                <p>
-                  Lorem ipsum, dolor sit amet consectetur adipisicing elit. A delectus itaque iusto aperiam laudantium in. Similique quibusdam incidunt praesentium cumque, ut libero facilis aliquid, eaque repellat quidem, explicabo reiciendis officia.
-                </p>
-              </div>
+            <!-- Jumbotron -->
+            <div class="p-4 shadow-4 rounded-3 jumbPr mt-5 col-sm-12 col-md-12 col-lg-12">
+                <div class="row">
+                    <div class="col-sm-12 col-md-12 col-lg-12">
+                        <h2 class="text-center">Ejemplo 1</h2>
+                        <hr class="my-4" />
+                        <p>
+                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. A
+                            delectus itaque iusto aperiam laudantium in. Similique quibusdam
+                            incidunt praesentium cumque, ut libero facilis aliquid, eaque
+                            repellat quidem, explicabo reiciendis officia.
+                        </p>
+                    </div>
+                </div>
             </div>
 
-          </div>
-          
-          <!-- Jumbotron -->
+            <!-- Jumbotron -->
         </section>
-        
     </main>
     <footer class="bg-body-tertiary">
         <!-- Grid container -->
         <div class="container p-4 pb-0 footer-container">
             <!-- Section: Social media -->
             <section class="mb-4 social-media-section">
-                <a data-mdb-ripple-init class="btn text-white btn-floating m-1" style="background-color: #0D111A;"
+                <a data-mdb-ripple-init class="btn text-white btn-floating m-1" style="background-color: #0d111a"
                     href="index.html" role="button"><i class="fab bi bi-house"></i></a>
 
-                <a data-mdb-ripple-init class="btn text-white btn-floating m-1" style="background-color: #e2263c;"
+                <a data-mdb-ripple-init class="btn text-white btn-floating m-1" style="background-color: #e2263c"
                     href="mailto:mariamonteagudo06@gmail.com" role="button"><i class="fab bi bi-envelope"></i></a>
 
-                <a data-mdb-ripple-init class="btn text-white btn-floating m-1" style="background-color: #ED7BAB;"
+                <a data-mdb-ripple-init class="btn text-white btn-floating m-1" style="background-color: #ed7bab"
                     href="../images/CV_María_Monteagudo.pdf" download="CV_María_Monteagudo" role="button"><i
                         class="bi bi-stickies"></i></a>
 
-                <a data-mdb-ripple-init class="btn text-white btn-floating m-1" style="background-color: #0082ca;"
+                <a data-mdb-ripple-init class="btn text-white btn-floating m-1" style="background-color: #0082ca"
                     href="https://www.linkedin.com/in/mar%C3%ADa-monteagudo-b0261a256/" role="button"><i
                         class="fab fa-linkedin-in"></i></a>
 
-                <a data-mdb-ripple-init class="btn text-white btn-floating m-1" style="background-color: #333333;"
+                <a data-mdb-ripple-init class="btn text-white btn-floating m-1" style="background-color: #333333"
                     href="https://github.com/mamoro02?tab=repositories" role="button"><i class="fab fa-github"></i></a>
 
-                <a data-mdb-ripple-init class="btn text-white btn-floating m-1" style="background-color: #25D366;"
+                <a data-mdb-ripple-init class="btn text-white btn-floating m-1" style="background-color: #25d366"
                     href="https://wa.me/123456789" role="button"><i class="bi bi-whatsapp"></i></a>
-
             </section>
         </div>
         <!-- Grid container -->
 
         <!-- Copyright -->
-        <div class="text-center p-3" style="background-color: #68838E;">
+        <div class="text-center p-3" style="background-color: #68838e">
             © Proyecto Integrado 2023-2024
         </div>
         <!-- Copyright -->
     </footer>
-
 </body>
+
+</html>
