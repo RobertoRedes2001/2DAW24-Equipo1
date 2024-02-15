@@ -134,3 +134,26 @@ a:hover {
 .aboutUs{
     text-align: justify;
 }
+
+.card-img-top {
+    margin-bottom: 15px;
+}
+
+.margin-info-news{
+    text-align: justify;
+    padding-top: 110px;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.link-news{
+    color: #0D111A;
+}
+
+.ver-mas-link {
+    margin-top: 33%;
+    margin-bottom: 3%;
+    padding-right: 5%;
+    text-align: right;
+
+}
