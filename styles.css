@@ -114,6 +114,10 @@ a:hover {
     /* padding-left: 400px; */
     padding-bottom: 200px;
 }
+.jumbPr{
+    background-color: #0D111A;
+    color: #FFF;
+}
 
 .btn-enviar{
     background-color: #635f5a;
