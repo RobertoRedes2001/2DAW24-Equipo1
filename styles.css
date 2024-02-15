@@ -115,8 +115,13 @@ a:hover {
     padding-bottom: 200px;
 }
 .jumbPr{
-    background-color: #0D111A;
-    color: #FFF;
+    box-shadow: 5px 5px 5px rgb(196, 173, 173);
+    width: 70%;
+    margin-left: 15%;
+
+}
+.aa{
+    border: 1px solid rgb(179, 166, 166);
 }
 
 .btn-enviar{
