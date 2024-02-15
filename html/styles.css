@@ -87,6 +87,7 @@ a:hover {
 .status-card {
     display: flex;
     padding-bottom: 30px;
+    justify-content: space-between;
 }
 
 
@@ -125,9 +126,9 @@ a:hover {
 }
 
 .form {
-    padding-top: 200px;
+    padding-top: 250px;
     /* padding-left: 400px; */
-    padding-bottom: 200px;
+    padding-bottom: 150px;
 }
 .jumbPr{
     box-shadow: 5px 5px 5px rgb(196, 173, 173);
@@ -202,5 +203,5 @@ a:hover {
     margin-bottom: 3%;
     padding-right: 5%;
     text-align: right;
-
 }
+
