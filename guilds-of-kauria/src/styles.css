@@ -2,6 +2,15 @@
     box-sizing: border-box;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Beaufort for LOL Bold",sans-serif;
+}
+
 /* Body styles */
 body {
     background-color: #F9F9F9;
@@ -10,7 +19,7 @@ body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    
+    font-family: "SpiegelSans Trial";
 }
 
 main {
@@ -87,6 +96,7 @@ a:hover {
 .status-card {
     display: flex;
     padding-bottom: 30px;
+    justify-content: space-between;
 }
 
 
@@ -125,17 +135,19 @@ a:hover {
 }
 
 .form {
-    padding-top: 200px;
+    padding-top: 250px;
     /* padding-left: 400px; */
-    padding-bottom: 200px;
+    padding-bottom: 150px;
 }
-.jumbPr{
+
+.jumbPr {
     box-shadow: 5px 5px 5px rgb(196, 173, 173);
     width: 70%;
     margin-left: 15%;
 
 }
-.aa{
+
+.aa {
     border: 1px solid rgb(179, 166, 166);
 }
 
@@ -150,12 +162,13 @@ a:hover {
     color: #FFF;
     border: #635f5a solid 2px
 }
+
 .btn-enviar:focus {
     background-color: #ccae8c;
     border-color: #635f5a;
-    color:white;
+    color: white;
     box-shadow: 2px 2px 2px 2px #635f5a;
-  } 
+}
 
 
 .offcanvas-header {
@@ -178,7 +191,7 @@ a:hover {
 
 }
 
-.aboutUs{
+.aboutUs {
     text-align: justify;
 }
 
@@ -186,14 +199,14 @@ a:hover {
     margin-bottom: 15px;
 }
 
-.margin-info-news{
+.margin-info-news {
     text-align: justify;
     padding-top: 110px;
     margin-left: 10%;
     margin-right: 10%;
 }
 
-.link-news{
+.link-news {
     color: #0D111A;
 }
 
@@ -202,5 +215,4 @@ a:hover {
     margin-bottom: 3%;
     padding-right: 5%;
     text-align: right;
-
 }
