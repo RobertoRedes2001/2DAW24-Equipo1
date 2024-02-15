@@ -11,7 +11,7 @@ use App\Entity\Carta;
 
 class CartaController extends AbstractController
 {
-    #[Route('/all', name: 'allCards', methods:['GET'])]
+    #[Route('/all', name: 'allCards', methods:['get'])]
     public function allCards(ManagerRegistry $doctrine): JsonResponse 
     {
         $cards = $doctrine
