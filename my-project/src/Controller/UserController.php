@@ -38,34 +38,22 @@ class UserController extends AbstractController
     #[Route('/login', name: 'loginUser', methods:['GET'])]
     public function login(ManagerRegistry $doctrine, Request $request): JsonResponse
     {
-        $users = $doctrine
-            ->getRepository(Usuario::class)
-            ->findAll();
+        $name = 'root';
+        $user = $doctrine->getRepository(Usuario::class)->findOneBy(['nombre' => $name]);
 
-        
-        echo $users->getPassword();
+        $hashedPassword = $user->getPassword();
 
-        $data = [];
+        $password = '';
 
-        foreach($users as $user) {
-            $data[] = [
-                'usuario_cod' => $user->getId(),
-                'nombre' => $card->getNombre(),
-                'habilidad_recurso' => $card->getHabilidadRecurso(),
-                'habilidad_batalla' => $card->getHabilidadBatalla(),
-                'coste' => $card->getCoste(),
-                'estado_carta' => $card->getEstadoCarta(),
-                'vida' => $card->getVida(),
-                'rareza' => $card->getRareza(),
-                'observaciones' => $card->getObservaciones(),
-                'foto' => $card->getFoto(),
-                'defensa' => $card->getDefensa(),
-                'ataque' => $card->getAtaque(),
-                'tipo_carta' => $card->getTipoCarta(),
-                'texto' => $card->getTexto(),
-                'puntos_victoria' => $card->getPuntosVictoria(),
-            ];
+        if (password_verify($password, $hashedPassword)) {
+            $validator = true;
+            return $this->json($validator);
+        } else {
+            $validator = false;
+            return $this->json($validator);
         }
+        
+
     }
 
 
