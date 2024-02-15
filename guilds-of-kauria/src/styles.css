@@ -1,3 +1,4 @@
+/* You can add global styles to this file, and also import other style files */
 * {
     box-sizing: border-box;
 }
@@ -12,9 +13,8 @@ body {
     flex-direction: column;
     
 }
-
-main {
-    padding-bottom: 50px;
+main{
+    padding: 50px;
 }
 
 /* Navbar styles */
@@ -40,14 +40,10 @@ main {
 footer {
     color: #f9f9f9;
     text-align: center;
-    margin-top: auto;
-    /* Esto empujará el footer hacia abajo */
-    background-color: #68838E;
-    /* Color de fondo del footer */
-    padding: 20px 0;
-    /* Añade un poco de espacio alrededor del contenido del footer */
-    width: 100%;
-    /* Ocupa todo el ancho disponible */
+    margin-top: auto; /* Esto empujará el footer hacia abajo */
+    background-color: #68838E; /* Color de fondo del footer */
+    padding: 20px 0; /* Añade un poco de espacio alrededor del contenido del footer */
+    width: 100%; /* Ocupa todo el ancho disponible */
 }
 
 .footer-container {
@@ -79,28 +75,18 @@ a:hover {
     color: #e3A25b;
 }
 
-.separacion {
-    padding-bottom: 30px;
-
-}
-
-.status-card {
-    display: flex;
-    padding-bottom: 30px;
-    justify-content: space-between;
-}
 
 
 .margin-info-proyectos {
-    padding-top: 50px;
+    padding-top: 110px;
     margin-left: 20%;
     margin-right: 20%;
 }
 
-.aboutUs {
-    padding-top: 60px;
+.aboutUs{
+    padding-top: 110px;
     margin-left: 20%;
-
+    
 }
 
 .proyecto-row {
@@ -124,59 +110,26 @@ a:hover {
     text-align: right;
 
 }
-
-.form {
-    padding-top: 250px;
+.form{
+    padding-top: 200px;
     /* padding-left: 400px; */
-    padding-bottom: 150px;
+    padding-bottom: 200px;
 }
 .jumbPr{
-    box-shadow: 5px 5px 5px rgb(196, 173, 173);
-    width: 70%;
-    margin-left: 15%;
-
-}
-.aa{
-    border: 1px solid rgb(179, 166, 166);
+    background-color: #0D111A;
+    color: #FFF;
 }
 
-.btn-enviar {
+.btn-enviar{
     background-color: #635f5a;
     color: #FFF;
     border: black solid 2px
 }
 
-.btn-enviar:hover {
+.btn-enviar:hover{
     background-color: #ccae8c;
     color: #FFF;
     border: #635f5a solid 2px
-}
-.btn-enviar:focus {
-    background-color: #ccae8c;
-    border-color: #635f5a;
-    color:white;
-    box-shadow: 2px 2px 2px 2px #635f5a;
-  } 
-
-
-.offcanvas-header {
-    padding: 1rem;
-    border-bottom: 1px solid #dee2e6;
-}
-
-
-.offcanvas-start {
-    max-width: 200px;
-}
-
-.offcanvas-body {
-    width: 400px;
-}
-
-.w-50 {
-    flex: 1;
-    margin-right: 10px;
-
 }
 
 .aboutUs{
@@ -203,5 +156,5 @@ a:hover {
     margin-bottom: 3%;
     padding-right: 5%;
     text-align: right;
-}
 
+}
