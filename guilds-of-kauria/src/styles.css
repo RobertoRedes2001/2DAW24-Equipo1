@@ -1,0 +1,160 @@
+/* You can add global styles to this file, and also import other style files */
+* {
+    box-sizing: border-box;
+}
+
+/* Body styles */
+body {
+    background-color: #F9F9F9;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    
+}
+main{
+    padding: 50px;
+}
+
+/* Navbar styles */
+.navbar {
+    background-color: #68838E;
+    color: #F9F9F9;
+}
+
+.navbar-nav .nav-link {
+    color: #f9f9f9 !important;
+    margin-left: 15px;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #e3A25b !important;
+}
+
+.navbar-nav {
+    font-size: 19px;
+    font-weight: 400;
+}
+
+footer {
+    color: #f9f9f9;
+    text-align: center;
+    margin-top: auto; /* Esto empujará el footer hacia abajo */
+    background-color: #68838E; /* Color de fondo del footer */
+    padding: 20px 0; /* Añade un poco de espacio alrededor del contenido del footer */
+    width: 100%; /* Ocupa todo el ancho disponible */
+}
+
+.footer-container {
+    padding: 4rem 0 0;
+}
+
+.social-media-section {
+    margin-bottom: 4rem;
+}
+
+.btn-floating {
+    color: white;
+}
+
+.p-3 {
+    background-color: #0D111A;
+}
+
+a {
+    color: #FFF;
+    text-decoration: none;
+}
+
+a:visited {
+    color: #ccae8c;
+}
+
+a:hover {
+    color: #e3A25b;
+}
+
+
+
+.margin-info-proyectos {
+    padding-top: 110px;
+    margin-left: 20%;
+    margin-right: 20%;
+}
+
+.aboutUs{
+    padding-top: 110px;
+    margin-left: 20%;
+    
+}
+
+.proyecto-row {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.carousel-item {
+    min-height: auto;
+    padding-right: 20px;
+    max-height: 400px;
+    max-width: 400px;
+}
+
+.ver-mas-link {
+    margin-top: 13%;
+    margin-bottom: 3%;
+    padding-right: 5%;
+    text-align: right;
+
+}
+.form{
+    padding-top: 200px;
+    /* padding-left: 400px; */
+    padding-bottom: 200px;
+}
+.jumbPr{
+    background-color: #0D111A;
+    color: #FFF;
+}
+
+.btn-enviar{
+    background-color: #635f5a;
+    color: #FFF;
+    border: black solid 2px
+}
+
+.btn-enviar:hover{
+    background-color: #ccae8c;
+    color: #FFF;
+    border: #635f5a solid 2px
+}
+
+.aboutUs{
+    text-align: justify;
+}
+
+.card-img-top {
+    margin-bottom: 15px;
+}
+
+.margin-info-news{
+    text-align: justify;
+    padding-top: 110px;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.link-news{
+    color: #0D111A;
+}
+
+.ver-mas-link {
+    margin-top: 33%;
+    margin-bottom: 3%;
+    padding-right: 5%;
+    text-align: right;
+
+}
