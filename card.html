@@ -77,41 +77,67 @@
     <main>
         <div class="container form ">
             <form>
-                <div class="row gy-3">
+                <div class="row">
                     <div class="offset-xl-3 col-xl-5 col-md-12 ">
                         <input type="name" class="form-control" id="inputName" aria-describedby="nombre"
                             placeholder="Nombre de la carta">
 
                     </div>
+
                     <div class="col-xl-4 col-md-12">
                         <button type="submit" class="btn btn-enviar ">Enviar</button>
                     </div>
-                    <div class="offset-xl-4 col-xl-4 text-center" > 
-                        <button class="btn btn-primary" type="button" data-bs-toggle="collapse"
-                                data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
-                                Button with data-bs-target
+                </div>
+            </form>
+            <br>
+            <form>
+                <div class="row">
+                    <div class="offset-xl-5 col-xl-4 ">
+                        <button class="btn btn-enviar gy-3 " type="button" data-bs-toggle="offcanvas"
+                            data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                            Busqueda avanzada
                         </button>
-                        <div class="collapse" id="collapseExample"> <!-- Eliminamos el estilo en línea para el ancho y la posición -->
-                            <div class="card card-body">
-                                <p style="color: #0D111A;">holaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
-                                <div class="answer">
-                                    <select name="finish" id="finish">
-                                        <option value="">Estado de la carta</option>
-                                        <option value="banneada">Banneada</option>
-                                        <option value="limitada">Limitada</option>
-                                        <option value="libre">Libre</option>
-                                    </select>
+
+                        <div class="offcanvas offcanvas-end" id="collapseExample"
+                            aria-labelledby="collapseExampleLabel">
+                            <div class="offcanvas-header">
+                                <h5 class="offcanvas-title" id="collapseExampleLabel">Búsqueda Avanzada</h5>
+                                <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="offcanvas-body">
+                                <div class="separacion">
+
+                                    <h6>Nombre de la carta</h6>
+                                    <input type="name" class="form-control" id="inputName" aria-describedby="nombre"
+                                        placeholder="Nombre de la carta">
+
                                 </div>
+                                
+                                <div class="separacion">
+                                    <h6>Nombre de la edición</h6>
+                                    <input type="name" class="form-control" id="inputName" aria-describedby="nombre"
+                                        placeholder="Nombre de la edición">
+                                </div>
+
+                                <div class="status-card">
+                                    <div class="w-50">
+                                        <h6>Estado de la carta</h6>
+                                    </div>
+                                    <div>
+                                        <select name="finish" id="finish">
+                                            <option value="">-- none --</option>
+                                            <option value="banneada">Vetada</option>
+                                            <option value="limitada">Limitada</option>
+                                            <option value="libre">Libre</option>
+                                        </select>
+                                    </div>
+                                </div>
+
                             </div>
                         </div>
                     </div>
-                    
-                    <div class="offset-xl-3 col-xl-4">
-
-                    </div>
                 </div>
-
-
             </form>
         </div>
 

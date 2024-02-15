@@ -12,7 +12,8 @@ body {
     flex-direction: column;
     margin-top: 30px;
 }
-main{
+
+main {
     padding: 50px;
 }
 
@@ -39,10 +40,14 @@ main{
 footer {
     color: #f9f9f9;
     text-align: center;
-    margin-top: auto; /* Esto empujará el footer hacia abajo */
-    background-color: #68838E; /* Color de fondo del footer */
-    padding: 20px 0; /* Añade un poco de espacio alrededor del contenido del footer */
-    width: 100%; /* Ocupa todo el ancho disponible */
+    margin-top: auto;
+    /* Esto empujará el footer hacia abajo */
+    background-color: #68838E;
+    /* Color de fondo del footer */
+    padding: 20px 0;
+    /* Añade un poco de espacio alrededor del contenido del footer */
+    width: 100%;
+    /* Ocupa todo el ancho disponible */
 }
 
 .footer-container {
@@ -76,6 +81,15 @@ a:hover {
     color: #e3A25b;
 }
 
+.separacion {
+    padding-bottom: 30px;
+
+}
+
+.status-card {
+    display: flex;
+    padding-bottom: 30px;
+}
 
 .jumbotron {
     margin-top: 75px;
@@ -93,10 +107,10 @@ a:hover {
     margin-right: 20%;
 }
 
-.aboutUs{
+.aboutUs {
     padding-top: 110px;
     margin-left: 20%;
-    
+
 }
 
 .proyecto-row {
@@ -120,20 +134,46 @@ a:hover {
     text-align: right;
 
 }
-.form{
+
+.form {
     padding-top: 200px;
     /* padding-left: 400px; */
     padding-bottom: 200px;
 }
 
-.btn-enviar{
+.btn-enviar {
     background-color: #635f5a;
     color: #FFF;
     border: black solid 2px
 }
 
-.btn-enviar:hover{
+.btn-enviar:hover {
     background-color: #ccae8c;
     color: #FFF;
     border: #635f5a solid 2px
+}
+
+
+/* Estilos para la barra de despliegue */
+.offcanvas-header {
+    padding: 1rem;
+    /* Ajusta el relleno de la barra de despliegue según sea necesario */
+    border-bottom: 1px solid #dee2e6;
+    /* Añade un borde inferior a la barra de despliegue */
+}
+
+/* Ajuste el ancho de la barra de despliegue */
+.offcanvas-start {
+    max-width: 200px;
+    /* Ajusta el ancho de la barra de despliegue según sea necesario */
+}
+
+.offcanvas-body {
+    width: 400px;
+}
+
+.w-50 {
+    flex: 1;
+    margin-right: 10px;
+
 }
