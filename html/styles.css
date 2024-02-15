@@ -145,20 +145,22 @@ a:hover {
     color: #FFF;
     border: #635f5a solid 2px
 }
+.btn-enviar:focus {
+    background-color: #ccae8c;
+    border-color: #635f5a;
+    color:white;
+    box-shadow: 2px 2px 2px 2px #635f5a;
+  } 
 
 
-/* Estilos para la barra de despliegue */
 .offcanvas-header {
     padding: 1rem;
-    /* Ajusta el relleno de la barra de despliegue según sea necesario */
     border-bottom: 1px solid #dee2e6;
-    /* Añade un borde inferior a la barra de despliegue */
 }
 
-/* Ajuste el ancho de la barra de despliegue */
+
 .offcanvas-start {
     max-width: 200px;
-    /* Ajusta el ancho de la barra de despliegue según sea necesario */
 }
 
 .offcanvas-body {
