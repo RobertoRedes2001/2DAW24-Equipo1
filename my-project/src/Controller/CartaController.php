@@ -8,6 +8,7 @@ use Symfony\Component\Routing\Annotation\Route;
 use Doctrine\Persistence\ManagerRegistry;
 use Symfony\Component\HttpFoundation\Request;
 use App\Entity\Carta;
+use App\Entity\CartaEdicion;
 
 class CartaController extends AbstractController
 {
@@ -71,5 +72,30 @@ class CartaController extends AbstractController
         ];
            
         return $this->json($data);
+    }
+
+    #[Route('/deleteCard/{id}', name: 'deleteCard', methods:['delete'] )]
+    public function delete(ManagerRegistry $doctrine, int $id): JsonResponse
+    {
+        $entityManager = $doctrine->getManager();
+        $secondEntityManager = $doctrine->getManager();
+        $card = $entityManager->getRepository(Carta::class)->find($id);
+        $cardEdition = $secondEntityManager->getRepository(CartaEdicion::class)->findOneBy(['carta_id' => $id]);
+   
+        if (!$card) {
+            return $this->json('No project found for id' . $id, 404);
+        }
+   
+        // Eliminar primero el registro de CartaEdicion
+        if ($cardEdition) {
+            $secondEntityManager->remove($cardEdition);
+            $secondEntityManager->flush();
+        }
+        
+        // Luego eliminar la carta
+        $entityManager->remove($card);
+        $entityManager->flush();
+   
+        return $this->json('Deleted a project successfully with id ' . $id);
     }
 }
