@@ -223,3 +223,9 @@ a:hover {
     padding-right: 5%;
     text-align: right;
 }
+
+.detail-card-padding{
+    margin-top: 150px ;
+    margin-left: 190px;
+    padding-right: 100px;
+}

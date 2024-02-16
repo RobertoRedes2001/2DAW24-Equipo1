@@ -11,7 +11,7 @@ export class NewsCardComponent {
   @Input() image : string = '';
   @Input() title : string = '';
   @Input() newsbody : string = '';
-  @Input() date : string = ''
+  @Input() date : string = '';
   public readed : boolean = false;
   public shortnews : string = '';
 
