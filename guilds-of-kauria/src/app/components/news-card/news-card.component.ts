@@ -8,12 +8,25 @@ import { Component, Input  } from '@angular/core';
   styleUrl: './news-card.component.css'
 })
 export class NewsCardComponent {
-  //@Input() image : string = '';
+  @Input() image : string = '';
   @Input() title : string = '';
   @Input() newsbody : string = '';
-  public shortnews : string = this.newsbody.substring(299)+"...";
+  @Input() date : string = ''
+  public readed : boolean = false;
+  public shortnews : string = '';
 
   public onReadMore(){
-    this.shortnews = this.newsbody;
+    if(this.readed){
+      this.shortnews = this.newsbody.substring(0, 300)+'[...]';
+      this.readed = false;
+    }else{
+      this.shortnews = this.newsbody;
+      this.readed = true;
+    }
+    
+  }
+
+  ngOnInit(){
+    this.shortnews = this.newsbody.substring(0, 300)+'[...]';
   }
 }
