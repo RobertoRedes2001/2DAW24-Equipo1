@@ -147,9 +147,7 @@ a:hover {
 
 }
 
-.aa {
-    border: 1px solid rgb(179, 166, 166);
-}
+
 
 .btn-enviar {
     background-color: #635f5a;
@@ -215,4 +213,10 @@ a:hover {
     margin-bottom: 3%;
     padding-right: 5%;
     text-align: right;
+}
+
+.detail-card-padding{
+    margin-top: 150px ;
+    margin-left: 190px;
+    padding-right: 100px;
 }
