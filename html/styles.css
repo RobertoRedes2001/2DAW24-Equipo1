@@ -147,6 +147,15 @@ a:hover {
 
 }
 
+.title {
+    background-image: url('./Images/banner_bg.png'); 
+    color: white; 
+    padding: 10px 20px; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5); 
+    border-radius: 10px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    margin-bottom: 50px;
+}
 
 
 .btn-enviar {
