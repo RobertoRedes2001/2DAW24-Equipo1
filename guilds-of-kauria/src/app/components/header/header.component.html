@@ -10,57 +10,30 @@
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent" style="padding-left: 20px;">
             <ul class="navbar-nav mr-auto">
-                @if (language==='es') {
-                    <li class="nav-item">
-                        <a class="nav-link" href="/es" routerLink="/es" RouterLinkActive="active">Inicio</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/es/cards" routerLink="/es/cards" RouterLinkActive="active">Cartas</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/es/game" routerLink="/es/game" RouterLinkActive="active">Jugabilidad</a>
-                    </li>
-                    
-                    <li class="nav-item">
-                        <a class="nav-link" href="/es/news" routerLink="/es/news" RouterLinkActive="active">Noticias</a>
-                    </li>
-    
-                    <li class="nav-item dropdown ml-auto">
-                        <a class="nav-link dropdown-toggle" id="navbarDropdown" 
-                        data-bs-toggle="dropdown" aria-expanded="false">
-                            Idioma
-                        </a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" routerLink="/es" RouterLinkActive="active" (click)="onLanChange('es')">Castellano</a>
-                            <a class="dropdown-item" routerLink="/en" RouterLinkActive="active" (click)="onLanChange('en')">Inglés</a>
-                        </div>
-                    </li>
-                }@else{
-                    <li class="nav-item">
-                        <a class="nav-link" href="/en" routerLink="/en" RouterLinkActive="active">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/en/cards" routerLink="/en/cards" RouterLinkActive="active">Cards</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/en/game" routerLink="/en/game" RouterLinkActive="active">Gameplay</a>
-                    </li>
-                    
-                    <li class="nav-item">
-                        <a class="nav-link" href="/en/news" routerLink="/en/news" RouterLinkActive="active">News</a>
-                    </li>
-    
-                    <li class="nav-item dropdown ml-auto">
-                        <a class="nav-link dropdown-toggle" id="navbarDropdown" 
-                        data-bs-toggle="dropdown" aria-expanded="false">
-                            Language
-                        </a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" routerLink="/es" RouterLinkActive="active" (click)="onLanChange('es')">Spanish</a>
-                            <a class="dropdown-item" routerLink="/en" RouterLinkActive="active" (click)="onLanChange('en')">English</a>
-                        </div>
-                    </li>
-                }
+                <li class="nav-item">
+                    <a class="nav-link" href="/" routerLink="/" RouterLinkActive="active">{{'home' | translate}}</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/cards" routerLink="/cards" RouterLinkActive="active">{{'cards' | translate}}</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/game" routerLink="/game" RouterLinkActive="active">{{'game' | translate}}</a>
+                </li>
+                
+                <li class="nav-item">
+                    <a class="nav-link" href="/news" routerLink="/news" RouterLinkActive="active">{{'news' | translate}}</a>
+                </li>
+
+                <li class="nav-item dropdown ml-auto">
+                    <a class="nav-link dropdown-toggle" id="navbarDropdown" 
+                    data-bs-toggle="dropdown" aria-expanded="false">
+                    {{'lang' | translate}}
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" (click)="switchLanguage('es')">Castellano</a>
+                        <a class="dropdown-item" (click)="switchLanguage('en')">Inglés</a>
+                    </div>
+                </li>
             </ul>
         </div>
     </nav>

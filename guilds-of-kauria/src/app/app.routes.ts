@@ -10,13 +10,13 @@ import { NewsEsComponent } from './views/news-es/news-es.component';
 
 
 export const routes: Routes = [
-    { path: 'es', component: MainEsComponent },
-    { path: '', pathMatch: 'full', redirectTo: 'es' },
+    { path: '', component: MainEsComponent },
+    { path: '', pathMatch: 'full', redirectTo: '' },
     { path: 'en', component: MainEnComponent },
-    { path: 'es/game', component: GameplayEsComponent },
+    { path: 'game', component: GameplayEsComponent },
     { path: 'en/game', component: GameplayEnComponent },
-    { path: 'es/cards', component: CardsEsComponent },
+    { path: 'cards', component: CardsEsComponent },
     { path: 'en/cards', component: CardsEnComponent },
-    { path: 'es/news', component: NewsEsComponent },
+    { path: 'news', component: NewsEsComponent },
     { path: 'en/news', component: NewsEnComponent },
 ];
