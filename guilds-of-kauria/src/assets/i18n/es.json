@@ -3,5 +3,16 @@
     "cards" : "Cartas",
     "game" : "Como jugar",
     "news" : "Noticias",
-    "lang" : "Idioma"
+    "lang" : "Idioma",
+    "main-title" : "Bienvenidos a 'Guilds of Kauria'",
+    "kauria1" : "En los misteriosos confines de Kauria, un reino inmerso en la fantasía medieval, se libra una batalla épica entre gremios rivales en busca de poder y supremacía. En este juego de estrategia y astucia, tu misión es forjar alianzas, desentrañar antiguos secretos y liderar a tu gremio hacia la gloria.",
+    "kauria2" : "Comienza tu viaje seleccionando sabiamente los miembros de tu gremio, cada uno con habilidades únicas y extraordinarias. Desde valientes guerreros hasta astutos mercaderes, la elección de tu equipo determinará la fuerza y la versatilidad de tu ejército.",
+    "kauria3" : "El destino de Kauria está en tus manos mientras barajas y juegas estratégicamente tus cartas. Convoca a tu ejército, lanza hechizos poderosos y aprovecha las tácticas específicas de tu gremio para superar a tus oponentes. ¿Serás el arquitecto de una victoria imparable?",
+    "kauria4" : "¿Te convertirás en un líder diplomático, forjando alianzas poderosas con otros gremios, o te sumirás en la guerra total en busca de la dominación absoluta? La elección es tuya mientras te sumerges en 'Guilds of Kauria'.",
+    "kauria5" : "¡Prepárate para una experiencia única donde la estrategia, la astucia y la magia se entrelazan en un emocionante juego de mesa medieval! ¿Estás listo para liderar tu gremio hacia la victoria? ¡Que comience la batalla en 'Guilds of Kauria'!",
+    "kauriaB1" : "Forja tu Gremio: ",
+    "kauriaB2" : "Desata el Poder de las Cartas: ",
+    "kauriaB3" : "Elige tu Camino hacia la Gloria: ",
+    "main-news-title1" : "Noticias populares",
+    "main-news-title2" : "Descubre novedades"
 }
