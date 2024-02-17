@@ -11,7 +11,6 @@ import { NewsEnComponent } from './views/news-en/news-en.component';
 
 export const routes: Routes = [
     { path: 'es', component: MainEsComponent },
-    { path: 'es', pathMatch: 'full', redirectTo: 'es' }, 
     { path: 'en', component: MainEnComponent },
     { path: 'es/game', component: GameplayEsComponent },
     { path: 'en/game', component: GameplayEnComponent },
