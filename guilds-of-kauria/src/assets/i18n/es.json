@@ -15,5 +15,13 @@
     "kauriaB3" : "Elige tu Camino hacia la Gloria: ",
     "main-news-title1" : "Noticias populares",
     "main-news-title2" : "Descubre novedades",
+    "game-title" : "COMO JUGAR",
+    "game-leanmore" : "Saber más",
+    "game-first-header" : "Acciones de Juego",
+    "game-second-header" : "Atacar y Bloquear",
+    "game-third-header" : "Partes del turno",
+    "game-first-body" : "En este emocionante juego de cartas, te embarcarás en duelos épicos contra otros poderosos magos, desatando hechizos, convocando criaturas y desafiando la voluntad de tus oponentes.",
+    "game-second-body" : "La manera más común de ganar el juego es atacar con tus criaturas. Si una criatura que está atacando a un oponente no es bloqueada, le hará a ese oponente una cantidad de daño igual a su fuerza.",
+    "game-third-body" : "Cada turno sigue la misma secuencia. Siempre que comiences un nuevo paso o fase, cualquier habilidad disparada que tenga lugar durante ese paso o fase se dispara y va a la pila.",
     "footer" : "Proyecto Integrado"
 }

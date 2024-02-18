@@ -1,1 +1,95 @@
-<p>game works!</p>
+<main>
+    <section class="margin-info-news">
+        <div class="container">
+            <h1 class="text-center px-3 py-3 title">{{'game-title'| translate}}</h1>
+            <div class="row">
+                <div class="col-lg-6 ">
+                    <div class="accordion" id="accordionExample">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingOne">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                    {{'game-first-header'| translate}}
+                                </button>
+                            </h2>
+                            <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    {{'game-first-body'| translate}}
+                                </div>
+                                <br />
+                                <div class="d-flex justify-content-end px-3 py-3">
+                                    <button class="btn btn-enviar gy-3 text-end " type="button" data-bs-toggle="offcanvas" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                                        {{'game-leanmore'| translate}}
+                                    </button>
+                                </div>
+                            </div>
+                            
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingTwo">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                    {{'game-second-header'| translate}}
+                                </button>
+                            </h2>
+                            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                                data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    {{'game-second-body'| translate}}
+                                </div>
+                                <br />
+                                <div class="d-flex justify-content-end px-3 py-3">
+                                    <button class="btn btn-enviar gy-3 text-end" type="button" data-bs-toggle="offcanvas" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                                        {{'game-leanmore'| translate}}
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingThree">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseThree" aria-expanded="false"
+                                    aria-controls="collapseThree">
+                                    {{'game-third-header'| translate}}
+                                </button>
+                            </h2>
+                            <div id="collapseThree" class="accordion-collapse collapse"
+                                aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    {{'game-third-body'| translate}}
+                                </div>
+                                <br />
+                                <div class="d-flex justify-content-end px-3 py-3">
+                                    <button class="btn btn-enviar gy-3 text-end" type="button" data-bs-toggle="offcanvas" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                                        {{'game-leanmore'| translate}}
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 ">
+                    <figure class="figure">
+                        <img style="height: 250px; width: 450px; margin-top: 55px;"
+                            src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi.pinimg.com%2Foriginals%2Fcb%2F06%2F1a%2Fcb061a25af6dfd935a913709e341a726.jpg&f=1&nofb=1&ipt=bd6ccccc8f0d965dc23c109ab1fe2666772179cbdb4449d8d0dabc47c0e111f0&ipo=images"
+                            class="figure-img img-fluid rounded" alt="image of game" />
+                    </figure>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section [ngClass]="{'d-block': learn, 'd-none': !learn}">
+        <!-- Jumbotron -->
+        <div class="p-4 shadow-4 rounded-3 jumbPr mt-5 col-sm-12 col-md-12 col-lg-12">
+            <div class="row">
+                <div class="col-sm-12 col-md-12 col-lg-12">
+                    <h2 class="text-center">{{changeTextTitle}}</h2>
+                    <hr class="my-4" />
+                    <p>{{changeTextBody}}</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Jumbotron -->
+    </section>
+</main>

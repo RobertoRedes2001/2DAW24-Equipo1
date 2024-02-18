@@ -15,5 +15,13 @@
     "kauriaB3": "Choose your Path to Glory: ",
     "main-news-title1": "Popular News",
     "main-news-title2": "Discover Updates",
+    "game-title": "HOW TO PLAY",
+    "game-leanmore": "Learn More",
+    "game-first-header": "Game Actions",
+    "game-second-header": "Attacking and Blocking",
+    "game-third-header": "Turn Parts",
+    "game-first-body": "In this thrilling card game, you will embark on epic duels against other powerful wizards, unleashing spells, summoning creatures, and challenging the will of your opponents.",
+    "game-second-body": "The most common way to win the game is by attacking with your creatures. If a creature attacking an opponent is not blocked, it deals that opponent an amount of damage equal to its power.",
+    "game-third-body": "Each turn follows the same sequence. Whenever you start a new step or phase, any triggered abilities that take place during that step or phase trigger and go on the stack.",
     "footer" : "Integrated Project"
 }
