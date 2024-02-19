@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listado carta</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        th,
+        td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        tr:hover {
+            background-color: #f5f5f5;
+        }
+
+        a {
+            text-decoration: none;
+            color: #3498db;
+        }
+    </style>
+</head>
+
+<body>
+    <h1> Listado cards</h1>
+    <table>
+        <tr>
+            <th>CARTA_COD</th>
+            <th>NOMBRE</th>
+            <th>COSTE</th>
+            <th>ESTADO_CARTA</th>
+            <th>VIDA</th>
+            <th>RAREZA</th>
+            <th>DELETE</th>
+            <th>UPDATE</th>
+        </tr>
+        {% for row in resultados %}
+        <tr>
+            <td>{{row.getClienteCod}}</td>
+            <td>{{row.getNombre}} </a></td>
+            <td>{{row.getCoste}}</td>
+            <td>{{row.getEstado_Carta}}</td>
+            <td>{{row.getVida}}</td>
+            <td>{{row.getRareza}}</td>
+
+            <td style='text-align: center;'><a href=""><img
+                        src="https://www.pngmart.com/files/3/Red-Cross-PNG-Photo.png" alt="Delete" width='20'></a></td>
+            <td style='text-align: center;'><a href=""><img
+                        src="https://cdn-icons-png.flaticon.com/512/1159/1159633.png" alt="Update" width='20'></a></td>
+        </tr>
+        {% endfor %}
+
+
+    </table>
+    <br>
+    <div style='text-align: center;'>
+        <a href='http://localhost/ud4/actividad2/templates/form.html'>
+            <img src="https://cdn.icon-icons.com/icons2/692/PNG/512/seo-social-web-network-internet_189_icon-icons.com_61521.png"
+                alt="Add" width='40'>
+        </a>
+    </div>
+</body>
+
+</html>
