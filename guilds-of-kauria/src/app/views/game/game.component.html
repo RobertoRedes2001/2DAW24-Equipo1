@@ -19,7 +19,7 @@
                                 <br />
                                 <div class="d-flex justify-content-end px-3 py-3">
                                     <button class="btn btn-enviar gy-3 text-end " type="button" data-bs-toggle="offcanvas" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample"
-                                    (click)="onChangeText(action_es)">
+                                    (click)="currentLan === 'es' ?  onChangeText(action_es) : onChangeText(action_en)">
                                         {{'game-leanmore'| translate}}
                                     </button>
                                 </div>
@@ -40,7 +40,8 @@
                                 </div>
                                 <br />
                                 <div class="d-flex justify-content-end px-3 py-3">
-                                    <button class="btn btn-enviar gy-3 text-end" type="button" data-bs-toggle="offcanvas" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                                    <button class="btn btn-enviar gy-3 text-end" type="button" data-bs-toggle="offcanvas" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample"
+                                    (click)="currentLan === 'es' ?  onChangeText(atk_es) : onChangeText(atk_en)">
                                         {{'game-leanmore'| translate}}
                                     </button>
                                 </div>
@@ -61,7 +62,8 @@
                                 </div>
                                 <br />
                                 <div class="d-flex justify-content-end px-3 py-3">
-                                    <button class="btn btn-enviar gy-3 text-end" type="button" data-bs-toggle="offcanvas" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                                    <button class="btn btn-enviar gy-3 text-end" type="button" data-bs-toggle="offcanvas" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample"
+                                    (click)="currentLan === 'es' ?  onChangeText(turn_es) : onChangeText(turn_en)">
                                         {{'game-leanmore'| translate}}
                                     </button>
                                 </div>
