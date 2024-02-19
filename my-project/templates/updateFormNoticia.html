@@ -33,7 +33,22 @@
 </head>
 
 <body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <a class="navbar-brand" href="#" style="margin-left: 21px;"><img src="img/logo.png" width="100px"> </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                    <a class="nav-item nav-link" href="listCard.html" style="font-size: 20px;">Listado de cartas</a>
+                    <a class="nav-item nav-link active" href="listNoticias.html" style="font-size: 20px;">Listado de noticias</a>
+                </div>
+            </div>
+    </header>
     <section class="container">
+        <br>
         <form method="post" action="">
             <h2>Actualizar noticia "{{resultado.getNombre}}"</h2>
             <div class="row">
