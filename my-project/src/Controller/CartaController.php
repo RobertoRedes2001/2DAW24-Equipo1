@@ -6,12 +6,22 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\Routing\Annotation\Route;
 use Doctrine\Persistence\ManagerRegistry;
+use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Component\HttpFoundation\Request;
 use App\Entity\Carta;
 use App\Entity\CartaEdicion;
 
 class CartaController extends AbstractController
 {
+
+    //Variable y constructor del EntityManagerInterface
+    private $em;
+
+    public function __construct(EntityManagerInterface $em)
+    {
+        $this->em = $em;
+    }
+
     #[Route('/all', name: 'allCards', methods:['get'])]
     public function allCards(ManagerRegistry $doctrine): JsonResponse 
     {
@@ -156,4 +166,18 @@ class CartaController extends AbstractController
            
         return $this->json($data);
     }
+
+    #[Route('/cards', name: 'listCards')]
+    public function listCards()
+    {
+        $cardsRepository = $this->em->getRepository(Carta::class);
+
+        // Obtenemos todas las tarjetas sin paginación
+        $resultados = $cardsRepository->findAll();
+
+        return $this->render("listCard.html", [
+            "resultados" => $resultados
+        ]);
+    }
+
 }
