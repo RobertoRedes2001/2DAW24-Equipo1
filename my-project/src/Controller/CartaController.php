@@ -85,17 +85,75 @@ class CartaController extends AbstractController
         if (!$card) {
             return $this->json('No project found for id' . $id, 404);
         }
-   
-        // Eliminar primero el registro de CartaEdicion
+
         if ($cardEdition) {
             $secondEntityManager->remove($cardEdition);
             $secondEntityManager->flush();
         }
-        
-        // Luego eliminar la carta
+
         $entityManager->remove($card);
         $entityManager->flush();
    
         return $this->json('Deleted a project successfully with id ' . $id);
+    }
+
+    #[Route('/addCard', name: 'addCard', methods:['get'] )]
+    public function add(ManagerRegistry $doctrine): JsonResponse
+    {
+        $entityManager = $doctrine->getManager();
+        $nombre = 'Carta Default';
+        $habilidad_recurso = 'Habilidad Recurso';
+        $habilidad_batalla = 'Habilidad Batalla';
+        $coste = 'Coste';
+        $estado_carta = 'Estado Carta';
+        $vida = 1;
+        $rareza = 'Rareza';
+        $observaciones = 'Observaciones';
+        $foto = 'Foto';
+        $defensa = 1;
+        $ataque = 1;
+        $tipo_carta = 'Tipo Carta';
+        $texto = 'Texto';
+        $puntos_victoria = 1;
+
+        $card = new Carta();
+
+        $card->setNombre($nombre);
+        $card->setHabilidadRecurso($habilidad_recurso);
+        $card->setHabilidadBatalla($habilidad_batalla);
+        $card->setCoste($coste);
+        $card->setEstadoCarta($estado_carta);
+        $card->setVida($vida);
+        $card->setRareza($rareza);
+        $card->setObservaciones($observaciones);
+        $card->setFoto($foto);
+        $card->setDefensa($defensa);
+        $card->setAtaque($ataque);
+        $card->setTipoCarta($tipo_carta);
+        $card->setTexto($texto);
+        $card->setPuntosVictoria($puntos_victoria);
+
+        $entityManager->persist($card);
+        $entityManager->flush();
+
+        $data =  [
+            'carta_cod' => $card->getId(),
+            'nombre' => $card->getNombre(),
+            'habilidad_recurso' => $card->getHabilidadRecurso(),
+            'habilidad_batalla' => $card->getHabilidadBatalla(),
+            'coste' => $card->getCoste(),
+            'estado_carta' => $card->getEstadoCarta(),
+            'vida' => $card->getVida(),
+            'rareza' => $card->getRareza(),
+            'observaciones' => $card->getObservaciones(),
+            'foto' => $card->getFoto(),
+            'defensa' => $card->getDefensa(),
+            'ataque' => $card->getAtaque(),
+            'tipo_carta' => $card->getTipoCarta(),
+            'texto' => $card->getTexto(),
+            'puntos_victoria' => $card->getPuntosVictoria(),
+        ];
+           
+        return $this->json($data);
     }
 }

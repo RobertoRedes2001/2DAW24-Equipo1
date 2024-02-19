@@ -52,9 +52,5 @@ class UserController extends AbstractController
             $validator = false;
             return $this->json($validator);
         }
-        
-
     }
-
-
 }
