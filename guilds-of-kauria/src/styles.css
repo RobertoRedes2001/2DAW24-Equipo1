@@ -18,6 +18,15 @@ body {
     flex-direction: column;
     font-family: "SpiegelSans Trial";
 }
+app-root {
+    background-color: #F9F9F9;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    font-family: "SpiegelSans Trial";
+}
 
 main {
     padding-bottom: 50px;
@@ -51,8 +60,6 @@ footer {
     background-color: #68838E;
     padding: 20px 0;
     width: 100%;
-    position: absolute;
-    bottom: 0;
 }
 
 .footer-container {
