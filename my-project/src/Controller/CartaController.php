@@ -4,6 +4,7 @@ namespace App\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\JsonResponse;
+use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use Doctrine\Persistence\ManagerRegistry;
 use Doctrine\ORM\EntityManagerInterface;
@@ -178,6 +179,12 @@ class CartaController extends AbstractController
         return $this->render("listCard.html", [
             "resultados" => $resultados
         ]);
+    }
+
+    #[Route('/renderInsertCard', name: 'renderInsert')]
+    public function renderInsert(): Response
+    {
+        return $this->render("formCard.html", []);
     }
 
 }
