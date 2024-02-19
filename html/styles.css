@@ -1,14 +1,11 @@
+/* Reset */
 * {
     box-sizing: border-box;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    font-family: "Beaufort for LOL Bold",sans-serif;
+/* Font */
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Beaufort for LOL Bold", sans-serif;
 }
 
 /* Body styles */
@@ -46,17 +43,14 @@ main {
     font-weight: 400;
 }
 
+/* Footer styles */
 footer {
     color: #f9f9f9;
     text-align: center;
     margin-top: auto;
-    /* Esto empujará el footer hacia abajo */
     background-color: #68838E;
-    /* Color de fondo del footer */
     padding: 20px 0;
-    /* Añade un poco de espacio alrededor del contenido del footer */
     width: 100%;
-    /* Ocupa todo el ancho disponible */
 }
 
 .footer-container {
@@ -71,10 +65,7 @@ footer {
     color: white;
 }
 
-.p-3 {
-    background-color: #0D111A;
-}
-
+/* Links */
 a {
     color: #FFF;
     text-decoration: none;
@@ -88,17 +79,17 @@ a:hover {
     color: #e3A25b;
 }
 
+/* General spacing */
 .separacion {
     padding-bottom: 30px;
-
 }
 
+/* Card styles */
 .status-card {
     display: flex;
     padding-bottom: 30px;
     justify-content: space-between;
 }
-
 
 .margin-info-proyectos {
     padding-top: 50px;
@@ -109,7 +100,6 @@ a:hover {
 .aboutUs {
     padding-top: 60px;
     margin-left: 20%;
-
 }
 
 .proyecto-row {
@@ -131,12 +121,11 @@ a:hover {
     margin-bottom: 3%;
     padding-right: 5%;
     text-align: right;
-
 }
 
+/* Form styles */
 .form {
     padding-top: 250px;
-    /* padding-left: 400px; */
     padding-bottom: 150px;
 }
 
@@ -144,9 +133,9 @@ a:hover {
     box-shadow: 5px 5px 5px rgb(196, 173, 173);
     width: 70%;
     margin-left: 15%;
-
 }
 
+/* Title styles */
 .title {
     background-image: url('./Images/banner_bg.png'); 
     color: white; 
@@ -157,7 +146,7 @@ a:hover {
     margin-bottom: 50px;
 }
 
-
+/* Button styles */
 .btn-enviar {
     background-color: #635f5a;
     color: #FFF;
@@ -177,12 +166,11 @@ a:hover {
     box-shadow: 2px 2px 2px 2px #635f5a;
 }
 
-
+/* Offcanvas styles */
 .offcanvas-header {
     padding: 1rem;
     border-bottom: 1px solid #dee2e6;
 }
-
 
 .offcanvas-start {
     max-width: 200px;
@@ -192,19 +180,12 @@ a:hover {
     width: 400px;
 }
 
-.w-50 {
-    flex: 1;
-    margin-right: 10px;
-}
-
-.aboutUs {
-    text-align: justify;
-}
-
+/* Image styles */
 .card-img-top {
     margin-bottom: 15px;
 }
 
+/* News styles */
 .margin-info-news {
     text-align: justify;
     padding-top: 110px;
@@ -223,8 +204,29 @@ a:hover {
     text-align: right;
 }
 
-.detail-card-padding{
+/* Detail card styles */
+.detail-card-padding {
     margin-top: 150px ;
-    margin-left: 190px;
-    padding-right: 100px;
+}
+
+/* Table styles */
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td, th {
+    border: none;
+    border-bottom: 1px solid #d7d7d7;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #68838e23;
+}
+
+/* Additional padding */
+.paddin-elements {
+    margin-top: 40px;
 }
