@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Actualizar carta</title>
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
@@ -34,39 +34,39 @@
 
 <body>
     <section class="container">
-        <form>
-            <h2>Insertar carta</h2>
+        <form method="post" action="">
+            <h2>Actualizar carta {{resultado.getNombre}}</h2>
             <div class="row">
                 <div class="col-md-12">
                     <label for="nameCard" class="form-label">Nombre carta</label>
-                    <input type="text" class="form-control" id="nameCard" aria-describedby="nameCard">
+                    <input type="text" class="form-control" id="nameCard" aria-describedby="nameCard" placeholder="{{resultados.getNombre}}">
                 </div>
 
 
                 <div class="col-xl-6 col-md-12">
                     <label for="habRecurso" class="form-label">Habilidad de recurso</label>
-                    <input type="text" class="form-control" id="habRecurso" aria-describedby="habRecurso">
+                    <input type="text" class="form-control" id="habRecurso" aria-describedby="habRecurso" placeholder="{{resultados.}}">
                 </div>
 
                 <div class="col-xl-6 col-md-12">
                     <label for="habBatalla" class="form-label">Habilidad de batalla</label>
-                    <input type="text" class="form-control" id="habBatalla" aria-describedby="habBatalla">
+                    <input type="text" class="form-control" id="habBatalla" aria-describedby="habBatalla" placeholder="{{resultados.}}">
                 </div>
 
                 <div class="col-xl-3 col-md-6">
                     <label for="coste" class="form-label">Coste</label>
-                    <input type="number" class="form-control" id="coste" aria-describedby="coste">
+                    <input type="number" class="form-control" id="coste" aria-describedby="coste" placeholder="{{resultados.}}">
 
                 </div>
 
                 <div class="col-xl-3 col-md-6">
                     <label for="estadoCarta" class="form-label">Estado de la carta</label>
-                    <input type="estadoCarta" class="form-control" id="estadoCarta" aria-describedby="estadoCarta">
+                    <input type="estadoCarta" class="form-control" id="estadoCarta" aria-describedby="estadoCarta" placeholder="{{resultados.}}">
                 </div>
 
                 <div class="col-xl-3 col-md-12">
                     <label for="vida" class="form-label">Vida</label>
-                    <input type="vida" class="form-control" id="vida" aria-describedby="vida">
+                    <input type="vida" class="form-control" id="vida" aria-describedby="vida" placeholder="{{resultados.}}">
                 </div>
 
                 <div class="col-xl-3 col-md-12">
@@ -77,34 +77,34 @@
                 <div class="col-xl-3 col-md-12">
                     <br>
                     <label for="fotoCard">Foto carta</label>
-                    <input type="file" class="form-control-file" id="fotoCard   ">
+                    <input type="file" class="form-control-file" id="fotoCard">
                 </div>
 
                 <div class="col-xl-3 col-md-12">
                     <label for="ataque" class="form-label">Ataque</label>
-                    <input type="ataque" class="form-control" id="ataque" aria-describedby="ataque">
+                    <input type="ataque" class="form-control" id="ataque" aria-describedby="ataque" placeholder="{{resultados.}}">
                 </div>
                 <div class="col-xl-3 col-md-12">
                     <label for="defensa" class="form-label">Defensa</label>
-                    <input type="defensa" class="form-control" id="defensa" aria-describedby="defensa">
+                    <input type="defensa" class="form-control" id="defensa" aria-describedby="defensa" placeholder="{{resultados.}}">
                 </div>
                 <div class="col-xl-3 col-md-12">
                     <label for="tipo_carta" class="form-label">Tipo de carta</label>
-                    <input type="tipo_carta" class="form-control" id="tipo_carta" aria-describedby="tipo_carta">
+                    <input type="tipo_carta" class="form-control" id="tipo_carta" aria-describedby="tipo_carta" placeholder="{{resultados.}}">
                 </div>
                 <div class="col-xl-6 col-md-12">
                     <label for="texto" class="form-label">Texto</label>
-                    <textarea class="form-control" id="texto" rows="4" aria-describedby="texto"></textarea>
+                    <textarea class="form-control" id="texto" rows="4" aria-describedby="texto">{{resultados.getNombre}}</textarea>
                 </div>
                 <div class="col-xl-6 col-md-12">
                     <label for="observaciones" class="form-label">Observaciones</label>
                     <textarea class="form-control" id="observaciones" rows="4"
-                        aria-describedby="observaciones"></textarea>
+                        aria-describedby="observaciones">{{resultados.getNombre}}</textarea>
                 </div>
             </div>
 
             <br>
-            <button type="submit" class="btn btn-enviar">Insertar</button>
+            <button type="submit" class="btn btn-enviar">Actualizar</button>
         </form>
 
     </section>

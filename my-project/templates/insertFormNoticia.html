@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Añadir noticia</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
+
+    <style>
+        .btn-enviar {
+            background-color: #635f5a;
+            color: #fff;
+            border: none;
+        
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn-enviar:hover {
+            background-color: #ccae8c;
+        }
+
+        .btn-enviar:focus {
+            background-color: #ccae8c;
+            color: #fff;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+        }
+    </style>
+</head>
+
+<body>
+    <section class="container">
+        <form method="post" action="">
+            <h2>Añadir carta</h2>
+            <div class="row">
+                <div class="col-md-12">
+                    <label for="nameCard" class="form-label">Titulo</label>
+                    <input type="text" class="form-control" id="nameCard" aria-describedby="nameCard">
+                </div>
+
+                <div class="col-xl-6 col-md-12">
+                    <label for="texto" class="form-label">Texto</label>
+                    <textarea class="form-control" id="texto" rows="4" aria-describedby="texto"></textarea>
+                </div>
+
+                <div class="col-xl-3 col-md-12">
+                    <br>
+                    <label for="fotoCard">Foto carta</label>
+                    <input type="file" class="form-control-file" id="fotoCard   ">
+                </div>
+
+                <div class="col-xl-3 col-md-12">
+                    <br>
+                    <label for="ataque" class="form-label">Fecha publicacion</label>
+                    <input type="date" class="form-control" id="ataque" aria-describedby="ataque">
+                </div>
+    
+            </div>
+
+            <br>
+            <button type="submit" class="btn btn-enviar">Añadir</button>
+        </form>
+
+    </section>
+
+</body>
+
+</html>

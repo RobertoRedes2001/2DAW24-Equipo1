@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Listado carta</title>
+    <title>Listado noticias</title>
     <style>
         table {
             border-collapse: collapse;
@@ -34,28 +34,27 @@
 </head>
 
 <body>
-    <h1> Listado cards</h1>
+    <h1> Listado noticias</h1>
     <table>
         <tr>
-            <th>CARTA_COD</th>
-            <th>NOMBRE</th>
-            <th>COSTE</th>
-            <th>ESTADO_CARTA</th>
-            <th>VIDA</th>
-            <th>RAREZA</th>
+            <th>FOTO CARD</th>
+            <th>ID</th>
+            <th>TITULO</th>
+            <th>TEXTO</th>
+            <th>FECHA PUBLIZACIÓN</th>
+            
             <th>DELETE</th>
             <th>UPDATE</th>
         </tr>
         {% for row in resultados %}
         <tr>
-            <td>{{row.getId}}</td>
-            <td>{{row.getNombre}} </a></td>
-            <td>{{row.getCoste}}</td>
-            <td>{{row.getEstadoCarta}}</td>
-            <td>{{row.getVida}}</td>
-            <td>{{row.getRareza}}</td>
+            <td><img src="{{row.getFotoCard}}" alt="{{row.getFotoCard}}"> </td>
+            <td>{{row.getId}} </a></td>
+            <td>{{row.getTitulo}}</td>
+            <td>{{row.getTexto}}</td>
+            <td>{{row.getFechaPublicacion}}</td>
 
-            <td style='text-align: center;'><a href="http://localhost:8000/deleteCard/{{row.getId}}"><img
+            <td style='text-align: center;'><a href="http://localhost:8000/renderInsertCard"><img
                         src="https://www.pngmart.com/files/3/Red-Cross-PNG-Photo.png" alt="Delete" width='20'></a></td>
             <td style='text-align: center;'><a href=""><img
                         src="https://cdn-icons-png.flaticon.com/512/1159/1159633.png" alt="Update" width='20'></a></td>
