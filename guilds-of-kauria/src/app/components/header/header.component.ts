@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { RouterLink, RouterLinkActive } from '@angular/router';
 import { TranslateService } from '@ngx-translate/core';
 import {TranslateModule} from '@ngx-translate/core';
+import { GlobalConstants } from '../../common/global-constants';
 
 
 @Component({
@@ -19,5 +20,7 @@ export class HeaderComponent {
 
   public switchLanguage(lan : string){
     this.translateService.use(lan);
+    GlobalConstants.currentLang=lan;
+    console.log(GlobalConstants.currentLang);
   }
 }

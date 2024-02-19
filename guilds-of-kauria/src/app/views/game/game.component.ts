@@ -1,6 +1,8 @@
 import { NgClass } from '@angular/common';
 import { Component } from '@angular/core';
 import { TranslateModule } from '@ngx-translate/core';
+import { GlobalConstants } from '../../common/global-constants';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-game',
@@ -9,16 +11,22 @@ import { TranslateModule } from '@ngx-translate/core';
   templateUrl: './game.component.html',
   styleUrl: './game.component.css'
 })
-export class GameComponent {
-
+export class GameComponent{
+  constructor(private translate: TranslateService) {}
   public changeTextTitle : string = "Ejemplo";
   public changeTextBody : string = "Lorem";
-  public learn : boolean = true;
+  public learn : boolean = false;
 
-  public onChangeText(title : string, body : string){
-    this.changeTextTitle = title;
-    this.changeTextBody = body;
-    this.learn = true;
+  public onChangeText(ampText:{t:string,b:string}){
+    this.changeTextTitle = ampText.t;
+    this.changeTextBody = ampText.b;
+    this.learn=true;
+    
+  }
+
+  public clickExample(){
+    console.log(GlobalConstants.currentLang);
+  
   }
 
 }
