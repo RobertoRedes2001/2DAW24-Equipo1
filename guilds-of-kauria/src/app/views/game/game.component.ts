@@ -16,6 +16,7 @@ export class GameComponent{
   public changeTextTitle : string = "Ejemplo";
   public changeTextBody : string = "Lorem";
   public learn : boolean = false;
+  public cl : string = GlobalConstants.currentLang;
 
   public onChangeText(ampText:{t:string,b:string}){
     this.changeTextTitle = ampText.t;
@@ -25,7 +26,7 @@ export class GameComponent{
   }
 
   public clickExample(){
-    console.log(GlobalConstants.currentLang);
+    console.log(this.cl);
   
   }
 
