@@ -21,6 +21,5 @@ export class HeaderComponent {
   public switchLanguage(lan : string){
     this.translateService.use(lan);
     GlobalConstants.currentLang=lan;
-    console.log(GlobalConstants.currentLang);
   }
 }
