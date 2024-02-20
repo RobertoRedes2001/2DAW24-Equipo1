@@ -9,13 +9,11 @@
                 <input type="name" class="form-control" id="inputName" aria-describedby="nombre"
                     placeholder="Introduce el nombre de la carta..." [formControl]="principalInputName" />
             </div>
-
             <div class="col-xl-4 col-md-12 col-md-6 col-sm-6">
                 <p type="submit" class="btn btn-enviar" (click)="firstButtonClicked()">Enviar</p>
             </div>
         </div>
     </form>
-    <br />
     <form>
         <div class="row">
             <div class="offset-xl-5 col-xl-4 col-md-6 col-sm-6">
@@ -59,7 +57,7 @@
                             </div>
                             <div>
                                 <select name="finish" id="finish" (change)="onChangeCardStatus($event)">
-                                    <option value="banneada" selected>Vetada</option>
+                                    <option value="banneada">Vetada</option>
                                     <option value="limitada">Limitada</option>
                                     <option value="libre">Libre</option>
                                 </select>
@@ -113,19 +111,15 @@
         </div>
     </form>
 </div>
-
-<section [ngStyle]="cardVisibility ? {'display': ''} : {'display': 'none'}">
-    <article class="container">
+<section>
+    <article class="container card-container">
         <div class="row">
             @for (item of items; track item; let i =$index) {
             <div class="col-sm-12 col-md-6 col-lg-4">
-                <div class="card" style="
-            width: 18rem;
-            min-height: 400px;
-            margin-left: 55px;
-            margin: 20px;
-          ">
-                    <app-card ></app-card>
+                <div class="card">
+                    <app-card [title]="title" [img]="img" [littleDescription]="littleDescription">
+                        
+                    </app-card>
                 </div>
             </div>
             }

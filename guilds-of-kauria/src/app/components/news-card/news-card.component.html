@@ -7,8 +7,6 @@
         <p>{{date}}</p>
         <h3>{{title}}</h3>
         <p style="text-align: justify;">{{shortnews}}</p>
-    </div>
-    <div class="col-xl-2 col-md-12 col-sm-12 ver-mas-link ">
-        <a class="link-news" (click)="onReadMore()">{{readed ? 'Ver menos...' : 'Ver más...'}}</a>
+        <p routerLink="/news/detail" RouterLinkActive="active" type="button" class="link-news btn">{{readed}}</p>
     </div>
 </div>

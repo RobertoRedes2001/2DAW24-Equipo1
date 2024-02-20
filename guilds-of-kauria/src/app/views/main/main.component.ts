@@ -1,11 +1,10 @@
 import { Component } from '@angular/core';
-import { RouterLink, RouterLinkActive } from '@angular/router';
 import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-main',
   standalone: true,
-  imports: [TranslateModule,RouterLink, RouterLinkActive],
+  imports: [TranslateModule],
   templateUrl: './main.component.html',
   styleUrl: './main.component.css'
 })
