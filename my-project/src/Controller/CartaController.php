@@ -98,7 +98,7 @@ class CartaController extends AbstractController
         ]);
     }
 
-    #[Route('/renderInsertCard', name: 'renderInsert')]
+    #[Route('/renderInsertCard', name: 'renderInsertCard')]
     public function renderInsert(): Response
     {
         return $this->render("insertFormCard.html", []);
@@ -153,5 +153,29 @@ class CartaController extends AbstractController
         $this->em->persist($card);
         $this->em->flush();
         return $this->redirectToRoute('listCards');
+    }
+
+    #[Route('/renderUpdateCard/{id}', name: 'renderUpdateCard')]
+    public function renderUpdate($id): Response
+    {
+        $cardRepository = $this->em->getRepository(Carta::class);
+        $card = $cardRepository->find($id);
+
+        return $this->render("updateFormCard.html", [
+            "resultados" => $card,
+        ]);
+    }
+
+    #[Route('/updateCard/{id}', name: 'updateClient', methods: ['POST'])]
+    public function updateProcess($id): Response
+    {
+        $nombre = $_POST['nombre'];
+        $ciudad = $_POST['ciudad'];
+        $client = $this->em->getRepository(Cliente::class)->find($id);
+        $client->setNombre($nombre);
+        $client->setCiudad($ciudad);
+        $this->em->persist($client);
+        $this->em->flush();
+        return $this->redirectToRoute('showClient');
     }
 }

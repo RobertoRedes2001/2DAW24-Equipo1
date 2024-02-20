@@ -52,7 +52,7 @@
     <section class="container">
         <br>
         <form method="post" action="">
-            <h2>Actualizar carta {{resultado.getNombre}}</h2>
+            <h2>Actualizar carta {{resultados.getNombre}}</h2>
             <div class="row">
                 <div class="col-md-12">
                     <label for="nameCard" class="form-label">Nombre carta</label>
@@ -64,37 +64,38 @@
                 <div class="col-xl-6 col-md-12">
                     <label for="habRecurso" class="form-label">Habilidad de recurso</label>
                     <input type="text" class="form-control" id="habRecurso" aria-describedby="habRecurso"
-                        placeholder="{{resultados.}}">
+                        placeholder="{{resultados.getHabilidadRecurso}}">
                 </div>
 
                 <div class="col-xl-6 col-md-12">
                     <label for="habBatalla" class="form-label">Habilidad de batalla</label>
                     <input type="text" class="form-control" id="habBatalla" aria-describedby="habBatalla"
-                        placeholder="{{resultados.}}">
+                        placeholder="{{resultados.getHabilidadBatalla}}">
                 </div>
 
                 <div class="col-xl-3 col-md-6">
                     <label for="coste" class="form-label">Coste</label>
                     <input type="number" class="form-control" id="coste" aria-describedby="coste"
-                        placeholder="{{resultados.}}">
+                        placeholder="{{resultados.getCoste}}">
 
                 </div>
 
                 <div class="col-xl-3 col-md-6">
                     <label for="estadoCarta" class="form-label">Estado de la carta</label>
                     <input type="text" class="form-control" id="estadoCarta" aria-describedby="estadoCarta"
-                        placeholder="{{resultados.}}">
+                        placeholder="{{resultados.getEstadoCarta}}">
                 </div>
 
                 <div class="col-xl-3 col-md-12">
                     <label for="vida" class="form-label">Vida</label>
                     <input type="text" class="form-control" id="vida" aria-describedby="vida"
-                        placeholder="{{resultados.}}">
+                        placeholder="{{resultados.getVida}}">
                 </div>
 
                 <div class="col-xl-3 col-md-12">
                     <label for="rareza" class="form-label">Rareza</label>
-                    <input type="text" class="form-control" id="rareza" aria-describedby="rareza">
+                    <input type="text" class="form-control" id="rareza" aria-describedby="rareza"
+                    placeholder="{{resultados.getRareza}}">
                 </div>
 
                 <div class="col-xl-3 col-md-12">
@@ -106,27 +107,27 @@
                 <div class="col-xl-3 col-md-12">
                     <label for="ataque" class="form-label">Ataque</label>
                     <input type="number" class="form-control" id="ataque" aria-describedby="ataque"
-                        placeholder="{{resultados.}}">
+                        placeholder="{{resultados.getAtaque}}">
                 </div>
                 <div class="col-xl-3 col-md-12">
                     <label for="defensa" class="form-label">Defensa</label>
                     <input type="number" class="form-control" id="defensa" aria-describedby="defensa"
-                        placeholder="{{resultados.}}">
+                        placeholder="{{resultados.getDefensa}}">
                 </div>
                 <div class="col-xl-3 col-md-12">
                     <label for="tipo_carta" class="form-label">Tipo de carta</label>
                     <input type="text" class="form-control" id="tipo_carta" aria-describedby="tipo_carta"
-                        placeholder="{{resultados.}}">
+                        placeholder="{{resultados.getTipoCarta}}">
                 </div>
                 <div class="col-xl-6 col-md-12">
                     <label for="texto" class="form-label">Texto</label>
                     <textarea class="form-control" id="texto" rows="4"
-                        aria-describedby="texto">{{resultados.getNombre}}</textarea>
+                        aria-describedby="texto">{{resultados.getTexto}}</textarea>
                 </div>
                 <div class="col-xl-6 col-md-12">
                     <label for="observaciones" class="form-label">Observaciones</label>
                     <textarea class="form-control" id="observaciones" rows="4"
-                        aria-describedby="observaciones">{{resultados.getNombre}}</textarea>
+                        aria-describedby="observaciones">{{resultados.getObservaciones}}</textarea>
                 </div>
             </div>
 
