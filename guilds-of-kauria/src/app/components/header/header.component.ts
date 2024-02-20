@@ -15,11 +15,12 @@ import { GlobalConstants } from '../../common/global-constants';
 export class HeaderComponent {
 
   constructor (private translateService : TranslateService){
-    this.translateService.setDefaultLang('es');
+    //this.translateService.setDefaultLang('es');
   }
 
   public switchLanguage(lan : string){
     this.translateService.use(lan);
     GlobalConstants.currentLang=lan;
+    localStorage.setItem('selectedLanguage', lan);
   }
 }
