@@ -1,4 +1,5 @@
-<section>
+
+<div class="container detail-card-padding text-justify">
     <h2>{{'news-title' | translate}}</h2>
     @for (item of ejemplos; track $index) {
         <app-news-card
@@ -7,4 +8,4 @@
         [newsbody]="item.b"
         [image]="item.i"></app-news-card>
     }
-</section>
+</div>

@@ -113,9 +113,8 @@ a:hover {
 }
 
 .proyecto-row {
-    padding-top: 20px;
-    padding-bottom: 20px;
-    padding-left: 20px;
+    padding: 20px;
+    margin: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
@@ -216,7 +215,7 @@ a:hover {
 
 /* Detail card styles */
 .detail-card-padding {
-    margin-top: 150px ;
+    margin-top: 50px ;
 }
 
 /* Table styles */
