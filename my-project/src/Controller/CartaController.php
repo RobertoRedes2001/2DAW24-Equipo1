@@ -169,13 +169,40 @@ class CartaController extends AbstractController
     #[Route('/updateCard/{id}', name: 'updateClient', methods: ['POST'])]
     public function updateProcess($id): Response
     {
-        $nombre = $_POST['nombre'];
-        $ciudad = $_POST['ciudad'];
-        $client = $this->em->getRepository(Cliente::class)->find($id);
-        $client->setNombre($nombre);
-        $client->setCiudad($ciudad);
-        $this->em->persist($client);
+        $nameCard = $_POST['nameCard'];
+        $firstHability = $_POST['habRecurso'];
+        $secondHability = $_POST['habBatalla'];
+        $cost = $_POST['coste'];
+        $cardStatus = $_POST['estadoCarta'];
+        $health = $_POST['vida'];
+        $rarity = $_POST['rareza'];
+        $foto = '';
+        $attack = $_POST['ataque'];
+        $defense = $_POST['defensa'];
+        $typeCard = $_POST['tipo_carta'];
+        $text = $_POST['texto'];
+        $observations = $_POST['observaciones'];
+        $victoryPoints = 0;
+
+        $card = $this->em->getRepository(Carta::class)->find($id);
+
+        $card->setNombre($nameCard);
+        $card->setHabilidadRecurso($firstHability);
+        $card->setHabilidadBatalla($secondHability);
+        $card->setCoste($cost);
+        $card->setEstadoCarta($cardStatus);
+        $card->setVida($health);
+        $card->setRareza($rarity);
+        $card->setObservaciones($observations);
+        $card->setFoto($foto);
+        $card->setDefensa($defense);
+        $card->setAtaque($attack);
+        $card->setTipoCarta($typeCard);
+        $card->setTexto($text);
+        $card->setPuntosVictoria($victoryPoints);
+
+        $this->em->persist($card);
         $this->em->flush();
-        return $this->redirectToRoute('showClient');
+        return $this->redirectToRoute('listCards');
     }
 }
