@@ -1,1 +1,10 @@
-<p>news works!</p>
+<section>
+    <h2>{{'news-title' | translate}}</h2>
+    @for (item of ejemplos; track $index) {
+        <app-news-card
+        [title]="item.t"
+        [date]="item.d"
+        [newsbody]="item.b"
+        [image]="item.i"></app-news-card>
+    }
+</section>
