@@ -53,60 +53,92 @@
         <br>
         <form method="post" action="http://localhost:8000/insertCard">
             <h2>Añadir carta</h2>
-            <div class="row">
+            <div class="row gy-3">
                 <div class="col-md-12">
                     <label for="nameCard" class="form-label">Nombre carta</label>
                     <input type="text" class="form-control" id="nameCard" name="nameCard" aria-describedby="nameCard">
                 </div>
-                
+
                 <div class="col-xl-6 col-md-12">
                     <label for="habRecurso" class="form-label">Habilidad de recurso</label>
-                    <input type="text" class="form-control" name="habRecurso" id="habRecurso" aria-describedby="habRecurso">
+                    <input type="text" class="form-control" name="habRecurso" id="habRecurso"
+                        aria-describedby="habRecurso">
                 </div>
-                
+
                 <div class="col-xl-6 col-md-12">
                     <label for="habBatalla" class="form-label">Habilidad de batalla</label>
-                    <input type="text" class="form-control" name="habBatalla" id="habBatalla" aria-describedby="habBatalla">
+                    <input type="text" class="form-control" name="habBatalla" id="habBatalla"
+                        aria-describedby="habBatalla">
                 </div>
-                
+
                 <div class="col-xl-3 col-md-6">
                     <label for="coste" class="form-label">Coste</label>
                     <input type="number" class="form-control" name="coste" id="coste" aria-describedby="coste">
                 </div>
-                
+
                 <div class="col-xl-3 col-md-6">
                     <label for="estadoCarta" class="form-label">Estado de la carta</label>
-                    <input type="text" class="form-control" name="estadoCarta" id="estadoCarta" aria-describedby="estadoCarta">
+                    <input type="text" class="form-control" name="estadoCarta" id="estadoCarta"
+                        aria-describedby="estadoCarta">
                 </div>
-                
+
                 <div class="col-xl-3 col-md-12">
                     <label for="vida" class="form-label">Vida</label>
                     <input type="number" class="form-control" name="vida" id="vida" aria-describedby="vida">
                 </div>
-                
+
                 <div class="col-xl-3 col-md-12">
                     <label for="rareza" class="form-label">Rareza</label>
                     <input type="text" class="form-control" name="rareza" id="rareza" aria-describedby="rareza">
                 </div>
-                
+
                 <div class="col-xl-3 col-md-12">
-                    <br>
+
                     <label for="fotoCard">Foto carta</label>
                     <input type="file" class="form-control-file" id="fotoCard">
                 </div>
-                
+
                 <div class="col-xl-3 col-md-12">
                     <label for="ataque" class="form-label">Ataque</label>
                     <input type="number" class="form-control" name="ataque" id="ataque" aria-describedby="ataque">
                 </div>
-                <div class="col-xl-3 col-md-12">
+                <div class="col-xl-6 col-md-12">
                     <label for="defensa" class="form-label">Defensa</label>
                     <input type="number" class="form-control" name="defensa" id="defensa" aria-describedby="defensa">
                 </div>
-                <div class="col-xl-3 col-md-12">
+                
+                <div class="offset-xl-2 col-xl-3 col-md-12">
+                    <br>
                     <label for="tipo_carta" class="form-label">Tipo de carta</label>
-                    <input type="tipo_carta" class="form-control" name="tipo_carta" id="tipo_carta" aria-describedby="tipo_carta">
+                    <select name="tipo_carta" id="tipo_carta">
+                        <option value="">-- none --</option>
+                        <option value="monstruo">Monstruo</option>
+                        <option value="hechizo">Hechizo</option>
+                        <option value="trampa">trampa</option>
+                    </select>
                 </div>
+
+                <div class="col-xl-3 col-md-12">
+                    <br>
+                    <label for="edicion" class="form-label">Edicion</label>
+                    <select name="edicion" id="edicion">
+                        <option value="">-- none --</option>
+                        <option value="primeraEdicicion">Primera edicion</option>
+                        
+                    </select>
+                </div>
+
+                <div class="col-xl-3 col-md-12">
+                    <br> 
+                    <label for="tipo_carta" class="form-label">Estado de la carta</label>
+                    <select name="tipo_carta" id="tipo_carta">
+                        <option value="">-- none --</option>
+                        <option value="banneada">Vetada</option>
+                        <option value="limitada">Limitada</option>
+                        <option value="libre">Libre</option>
+                    </select>
+                </div>
+
                 <div class="col-xl-6 col-md-12">
                     <label for="texto" class="form-label">Texto</label>
                     <textarea class="form-control" name="texto" id="texto" rows="4" aria-describedby="texto"></textarea>
@@ -116,7 +148,7 @@
                     <textarea class="form-control" name="observaciones" id="observaciones" rows="4"
                         aria-describedby="observaciones"></textarea>
                 </div>
-                
+
             </div>
 
             <br>
