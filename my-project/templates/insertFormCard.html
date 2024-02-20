@@ -51,73 +51,72 @@
     </header>
     <section class="container">
         <br>
-        <form method="post" action="">
+        <form method="post" action="http://localhost:8000/insertCard">
             <h2>Añadir carta</h2>
             <div class="row">
                 <div class="col-md-12">
                     <label for="nameCard" class="form-label">Nombre carta</label>
-                    <input type="text" class="form-control" id="nameCard" aria-describedby="nameCard">
+                    <input type="text" class="form-control" id="nameCard" name="nameCard" aria-describedby="nameCard">
                 </div>
-
-
+                
                 <div class="col-xl-6 col-md-12">
                     <label for="habRecurso" class="form-label">Habilidad de recurso</label>
-                    <input type="text" class="form-control" id="habRecurso" aria-describedby="habRecurso">
+                    <input type="text" class="form-control" name="habRecurso" id="habRecurso" aria-describedby="habRecurso">
                 </div>
-
+                
                 <div class="col-xl-6 col-md-12">
                     <label for="habBatalla" class="form-label">Habilidad de batalla</label>
-                    <input type="text" class="form-control" id="habBatalla" aria-describedby="habBatalla">
+                    <input type="text" class="form-control" name="habBatalla" id="habBatalla" aria-describedby="habBatalla">
                 </div>
-
+                
                 <div class="col-xl-3 col-md-6">
                     <label for="coste" class="form-label">Coste</label>
-                    <input type="number" class="form-control" id="coste" aria-describedby="coste">
-
+                    <input type="number" class="form-control" name="coste" id="coste" aria-describedby="coste">
                 </div>
-
+                
                 <div class="col-xl-3 col-md-6">
                     <label for="estadoCarta" class="form-label">Estado de la carta</label>
-                    <input type="text" class="form-control" id="estadoCarta" aria-describedby="estadoCarta">
+                    <input type="text" class="form-control" name="estadoCarta" id="estadoCarta" aria-describedby="estadoCarta">
                 </div>
-
+                
                 <div class="col-xl-3 col-md-12">
                     <label for="vida" class="form-label">Vida</label>
-                    <input type="number" class="form-control" id="vida" aria-describedby="vida">
+                    <input type="number" class="form-control" name="vida" id="vida" aria-describedby="vida">
                 </div>
-
+                
                 <div class="col-xl-3 col-md-12">
                     <label for="rareza" class="form-label">Rareza</label>
-                    <input type="text" class="form-control" id="rareza" aria-describedby="rareza">
+                    <input type="text" class="form-control" name="rareza" id="rareza" aria-describedby="rareza">
                 </div>
-
+                
                 <div class="col-xl-3 col-md-12">
                     <br>
                     <label for="fotoCard">Foto carta</label>
-                    <input type="file" class="form-control-file" id="fotoCard   ">
+                    <input type="file" class="form-control-file" id="fotoCard">
                 </div>
-
+                
                 <div class="col-xl-3 col-md-12">
                     <label for="ataque" class="form-label">Ataque</label>
-                    <input type="number" class="form-control" id="ataque" aria-describedby="ataque">
+                    <input type="number" class="form-control" name="ataque" id="ataque" aria-describedby="ataque">
                 </div>
                 <div class="col-xl-3 col-md-12">
                     <label for="defensa" class="form-label">Defensa</label>
-                    <input type="number" class="form-control" id="defensa" aria-describedby="defensa">
+                    <input type="number" class="form-control" name="defensa" id="defensa" aria-describedby="defensa">
                 </div>
                 <div class="col-xl-3 col-md-12">
                     <label for="tipo_carta" class="form-label">Tipo de carta</label>
-                    <input type="tipo_carta" class="form-control" id="tipo_carta" aria-describedby="tipo_carta">
+                    <input type="tipo_carta" class="form-control" name="tipo_carta" id="tipo_carta" aria-describedby="tipo_carta">
                 </div>
                 <div class="col-xl-6 col-md-12">
                     <label for="texto" class="form-label">Texto</label>
-                    <textarea class="form-control" id="texto" rows="4" aria-describedby="texto"></textarea>
+                    <textarea class="form-control" name="texto" id="texto" rows="4" aria-describedby="texto"></textarea>
                 </div>
                 <div class="col-xl-6 col-md-12">
                     <label for="observaciones" class="form-label">Observaciones</label>
-                    <textarea class="form-control" id="observaciones" rows="4"
+                    <textarea class="form-control" name="observaciones" id="observaciones" rows="4"
                         aria-describedby="observaciones"></textarea>
                 </div>
+                
             </div>
 
             <br>

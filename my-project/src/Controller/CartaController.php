@@ -91,7 +91,6 @@ class CartaController extends AbstractController
     {
         $cardsRepository = $this->em->getRepository(Carta::class);
 
-        // Obtenemos todas las tarjetas sin paginación
         $resultados = $cardsRepository->findAll();
 
         return $this->render("listCard.html", [
@@ -102,7 +101,7 @@ class CartaController extends AbstractController
     #[Route('/renderInsertCard', name: 'renderInsert')]
     public function renderInsert(): Response
     {
-        return $this->render("formCard.html", []);
+        return $this->render("insertFormCard.html", []);
     }
 
     #[Route('/deleteCard/{id}', name: 'delClient')]
@@ -111,6 +110,47 @@ class CartaController extends AbstractController
         $cardsRepository = $this->em->getRepository(Carta::class);
         $card = $cardsRepository->find($id);
         $this->em->remove($card);
+        $this->em->flush();
+        return $this->redirectToRoute('listCards');
+    }
+
+
+    #[Route('/insertCard', name: 'insertCard', methods: ['POST'])]
+    public function insert(): Response
+    {
+        $nameCard = $_POST['nameCard'];
+        $firstHability = $_POST['habRecurso'];
+        $secondHability = $_POST['habBatalla'];
+        $cost = $_POST['coste'];
+        $cardStatus = $_POST['estadoCarta'];
+        $health = $_POST['vida'];
+        $rarity = $_POST['rareza'];
+        $foto = '';
+        $attack = $_POST['ataque'];
+        $defense = $_POST['defensa'];
+        $typeCard = $_POST['tipo_carta'];
+        $text = $_POST['texto'];
+        $observations = $_POST['observaciones'];
+        $victoryPoints = 0;
+
+        $card = new Carta();
+
+        $card->setNombre($nameCard);
+        $card->setHabilidadRecurso($firstHability);
+        $card->setHabilidadBatalla($secondHability);
+        $card->setCoste($cost);
+        $card->setEstadoCarta($cardStatus);
+        $card->setVida($health);
+        $card->setRareza($rarity);
+        $card->setObservaciones($observations);
+        $card->setFoto($foto);
+        $card->setDefensa($defense);
+        $card->setAtaque($attack);
+        $card->setTipoCarta($typeCard);
+        $card->setTexto($text);
+        $card->setPuntosVictoria($victoryPoints);
+
+        $this->em->persist($card);
         $this->em->flush();
         return $this->redirectToRoute('listCards');
     }
