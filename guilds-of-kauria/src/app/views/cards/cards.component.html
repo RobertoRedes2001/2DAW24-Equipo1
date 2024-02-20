@@ -7,11 +7,11 @@
         <div class="row">
             <div class="offset-xl-3 col-xl-5 col-md-6 col-sm-6">
                 <input type="name" class="form-control" id="inputName" aria-describedby="nombre"
-                    placeholder="Introduce el nombre de la carta..." />
+                    placeholder="Introduce el nombre de la carta..." [formControl]="principalInputName" />
             </div>
 
             <div class="col-xl-4 col-md-12 col-md-6 col-sm-6">
-                <button type="submit" class="btn btn-enviar">Enviar</button>
+                <p type="submit" class="btn btn-enviar" (click)="firstButtonClicked()">Enviar</p>
             </div>
         </div>
     </form>
@@ -36,7 +36,7 @@
                         <div class="separacion">
                             <h6>Nombre de la carta</h6>
                             <input type="name" class="form-control" id="inputName" aria-describedby="nombre"
-                                placeholder="Introduce el nombre de la carta..." />
+                                placeholder="Introduce el nombre de la carta..." [formControl]="secondaryInputName"  />
                         </div>
 
                         <div class="status-card">
@@ -59,7 +59,7 @@
                             </div>
                             <div>
                                 <select name="finish" id="finish" (change)="onChangeCardStatus($event)">
-                                    <option value="banneada">Vetada</option>
+                                    <option value="banneada" selected>Vetada</option>
                                     <option value="limitada">Limitada</option>
                                     <option value="libre">Libre</option>
                                 </select>
@@ -95,17 +95,17 @@
                                 </div>
                                 <div class="input-wrapper">
                                     <input type="name" class="form-control" id="inputName" aria-describedby="nombre"
-                                        placeholder="Introduce tu estadisticas..." />
+                                        placeholder="Introduce tu estadisticas..." [formControl]="amountStats"/>
                                 </div>
                             </div>
                         </div>
                         <div class="separacion">
                             <h6>Coste:</h6>
                             <input type="name" class="form-control" id="inputName" aria-describedby="nombre"
-                                placeholder="Introduce el coste..." />
+                                placeholder="Introduce el coste..." [formControl]="amountMana"/>
                         </div>
                         <div class="col-xl-4 col-md-12">
-                            <p type="submit" class="btn btn-enviar" (click)="cardClicked()">Enviar</p>
+                            <p type="submit" class="btn btn-enviar" (click)="buttonFilterClicked()">Enviar</p>
                         </div>
                     </div>
                 </div>
