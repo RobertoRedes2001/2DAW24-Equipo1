@@ -1,41 +1,42 @@
-<div class="container form ">
-    <h2 class="text-center">Guilds of Kauria, juego inverso en fantasia mediaval</h2>
-    <br>
+<div class="container form">
+    <h2 class="text-center">
+        Guilds of Kauria, juego inverso en fantasia mediaval
+    </h2>
+    <br />
     <form>
         <div class="row">
             <div class="offset-xl-3 col-xl-5 col-md-6 col-sm-6">
                 <input type="name" class="form-control" id="inputName" aria-describedby="nombre"
-                    placeholder="Introduce el nombre de la carta...">
-
+                    placeholder="Introduce el nombre de la carta..." />
             </div>
 
             <div class="col-xl-4 col-md-12 col-md-6 col-sm-6">
-                <button type="submit" class="btn btn-enviar ">Enviar</button>
+                <button type="submit" class="btn btn-enviar">Enviar</button>
             </div>
         </div>
     </form>
-    <br>
+    <br />
     <form>
         <div class="row">
             <div class="offset-xl-5 col-xl-4 col-md-6 col-sm-6">
-                <button class="btn btn-enviar gy-3 " type="button" data-bs-toggle="offcanvas"
+                <button class="btn btn-enviar gy-3" type="button" data-bs-toggle="offcanvas"
                     data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
                     Busqueda avanzada
                 </button>
 
                 <div class="offcanvas offcanvas-end" id="collapseExample" aria-labelledby="collapseExampleLabel">
                     <div class="offcanvas-header">
-                        <h5 class="offcanvas-title" id="collapseExampleLabel">Búsqueda Avanzada</h5>
+                        <h5 class="offcanvas-title" id="collapseExampleLabel">
+                            Búsqueda Avanzada
+                        </h5>
                         <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
                             aria-label="Close"></button>
                     </div>
                     <div class="offcanvas-body">
                         <div class="separacion">
-
                             <h6>Nombre de la carta</h6>
                             <input type="name" class="form-control" id="inputName" aria-describedby="nombre"
-                                placeholder="Introduce el nombre de la carta...">
-
+                                placeholder="Introduce el nombre de la carta..." />
                         </div>
 
                         <div class="status-card">
@@ -51,7 +52,6 @@
                                 </select>
                             </div>
                         </div>
-
 
                         <div class="status-card">
                             <div class="w-50">
@@ -79,7 +79,6 @@
                                     <option value="trampa">Trampa</option>
                                 </select>
                             </div>
-
                         </div>
 
                         <div>
@@ -97,38 +96,40 @@
                                 </div>
                                 <div class="input-wrapper">
                                     <input type="name" class="form-control" id="inputName" aria-describedby="nombre"
-                                        placeholder="Introduce tu estadisticas...">
+                                        placeholder="Introduce tu estadisticas..." />
                                 </div>
                             </div>
                         </div>
                         <div class="separacion">
-
                             <h6>Coste:</h6>
                             <input type="name" class="form-control" id="inputName" aria-describedby="nombre"
-                                placeholder="Introduce el coste...">
-
+                                placeholder="Introduce el coste..." />
                         </div>
                         <div class="col-xl-4 col-md-12">
-                            <button type="submit" class="btn btn-enviar ">Enviar</button>
+                            <button type="submit" class="btn btn-enviar" (click)="cardClicked()">Enviar</button>
                         </div>
-
                     </div>
                 </div>
             </div>
         </div>
-
     </form>
 </div>
-<section>
+
+<section [ngStyle]="cardVisibility ? {'display': ''} : {'display': 'none'}">
     <article class="container">
-        <div class="row ">
+        <div class="row">
             @for (item of items; track item; let i =$index) {
-            <app-card></app-card>
+            <div class="col-sm-12 col-md-6 col-lg-4">
+                <div class="card" style="
+            width: 18rem;
+            min-height: 400px;
+            margin-left: 55px;
+            margin: 20px;
+          ">
+                    <app-card ></app-card>
+                </div>
+            </div>
             }
-
-
-
         </div>
-
     </article>
 </section>
