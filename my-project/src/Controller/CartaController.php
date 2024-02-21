@@ -10,6 +10,7 @@ use Doctrine\Persistence\ManagerRegistry;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Component\HttpFoundation\Request;
 use App\Entity\Carta;
+use App\Entity\Edicion;
 use App\Entity\CartaEdicion;
 
 class CartaController extends AbstractController
@@ -108,12 +109,24 @@ class CartaController extends AbstractController
     public function del(int $id): Response
     {
         $cardsRepository = $this->em->getRepository(Carta::class);
+        $cardEditionRepository = $this->em->getRepository(CartaEdicion::class);
+
         $card = $cardsRepository->find($id);
+
+        $cardEdition = $cardEditionRepository->findOneBy(['carta_id' => $id]);
+
+        if (!$card || !$cardEdition) {
+            throw $this->createNotFoundException('La carta o su edición no fueron encontradas');
+        }
+
+        $this->em->remove($cardEdition);
+
         $this->em->remove($card);
+
         $this->em->flush();
+
         return $this->redirectToRoute('listCards');
     }
-
 
     #[Route('/insertCard', name: 'insertCard', methods: ['POST'])]
     public function insert(): Response
@@ -122,7 +135,7 @@ class CartaController extends AbstractController
         $firstHability = $_POST['habRecurso'];
         $secondHability = $_POST['habBatalla'];
         $cost = $_POST['coste'];
-        $cardStatus = $_POST['estadoCarta'];
+        $cardStatus = $_POST['estado_carta'];
         $health = $_POST['vida'];
         $rarity = $_POST['rareza'];
         $foto = '';
@@ -131,6 +144,7 @@ class CartaController extends AbstractController
         $typeCard = $_POST['tipo_carta'];
         $text = $_POST['texto'];
         $observations = $_POST['observaciones'];
+        $edition = $_POST['edicion'];
         $victoryPoints = 0;
 
         $card = new Carta();
@@ -152,7 +166,19 @@ class CartaController extends AbstractController
 
         $this->em->persist($card);
         $this->em->flush();
+
+        $editionObject = $this->em->getRepository(Edicion::class)->find($edition);
+
+        $cardEdition = new CartaEdicion();
+        $cardEdition->setCartaId($card);
+        $cardEdition->setEdicionId($editionObject);
+
+        $this->em->persist($cardEdition);
+        $this->em->flush();
+
+
         return $this->redirectToRoute('listCards');
+
     }
 
     #[Route('/renderUpdateCard/{id}', name: 'renderUpdateCard')]
@@ -169,11 +195,12 @@ class CartaController extends AbstractController
     #[Route('/updateCard/{id}', name: 'updateClient', methods: ['POST'])]
     public function updateProcess($id): Response
     {
+        // Obtener los datos del formulario
         $nameCard = $_POST['nameCard'];
         $firstHability = $_POST['habRecurso'];
         $secondHability = $_POST['habBatalla'];
         $cost = $_POST['coste'];
-        $cardStatus = $_POST['estadoCarta'];
+        $cardStatus = $_POST['estado_carta'];
         $health = $_POST['vida'];
         $rarity = $_POST['rareza'];
         $foto = '';
@@ -182,10 +209,16 @@ class CartaController extends AbstractController
         $typeCard = $_POST['tipo_carta'];
         $text = $_POST['texto'];
         $observations = $_POST['observaciones'];
-        $victoryPoints = 0;
+        $editionId = $_POST['edicion']; // Obtener el ID de la edición
 
+        // Buscar la carta por su ID
         $card = $this->em->getRepository(Carta::class)->find($id);
 
+        if (!$card) {
+            throw $this->createNotFoundException('La carta no fue encontrada');
+        }
+
+        // Actualizar los campos de la carta
         $card->setNombre($nameCard);
         $card->setHabilidadRecurso($firstHability);
         $card->setHabilidadBatalla($secondHability);
@@ -199,10 +232,35 @@ class CartaController extends AbstractController
         $card->setAtaque($attack);
         $card->setTipoCarta($typeCard);
         $card->setTexto($text);
-        $card->setPuntosVictoria($victoryPoints);
+        $card->setPuntosVictoria(0);
 
+        // Persistir la carta
         $this->em->persist($card);
+
+        // Buscar o crear la CartaEdicion asociada
+        $cardEdition = $this->em->getRepository(CartaEdicion::class)->findOneBy(['carta_id' => $id]);
+        if (!$cardEdition) {
+            $cardEdition = new CartaEdicion();
+            $cardEdition->setCartaId($card);
+        }
+
+        // Obtener la entidad de Edicion por su ID
+        $edition = $this->em->getRepository(Edicion::class)->find($editionId);
+
+        if (!$edition) {
+            throw $this->createNotFoundException('La edición no fue encontrada');
+        }
+
+        // Asignar la edición a la CartaEdicion
+        $cardEdition->setEdicionId($edition);
+
+        // Persistir la CartaEdicion
+        $this->em->persist($cardEdition);
+
+        // Aplicar los cambios en la base de datos
         $this->em->flush();
+
+        // Redirigir a la página deseada
         return $this->redirectToRoute('listCards');
     }
 }
