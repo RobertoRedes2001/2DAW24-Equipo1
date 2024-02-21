@@ -91,13 +91,15 @@ a:hover {
 }
 
 .link-news{
-    color: black;
+    color: white !important;
     background-color: #e3A25b;
+    border: #0D111A solid 2px;
 }
 
 .link-news:hover{
-    color: #68838E;
-    background-color: #faa953;
+    color: white;
+    background-color: #ff9f39;
+    border: #0D111A solid 2px;
 }
 
 /* General spacing */
