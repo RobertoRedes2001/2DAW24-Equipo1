@@ -93,13 +93,13 @@ a:hover {
 .link-news{
     color: white !important;
     background-color: #e3A25b;
-    border: #0D111A solid 2px;
+    
 }
 
 .link-news:hover{
     color: white;
     background-color: #ff9f39;
-    border: #0D111A solid 2px;
+   
 }
 
 /* General spacing */
