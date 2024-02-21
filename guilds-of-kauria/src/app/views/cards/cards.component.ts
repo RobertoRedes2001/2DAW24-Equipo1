@@ -3,12 +3,13 @@ import { CardComponent } from '../../components/card/card.component';
 import { NgStyle } from '@angular/common';
 import { GlobalConstants } from '../../common/global-constants';
 import { ReactiveFormsModule, FormControl } from '@angular/forms';
+import { TranslateModule } from '@ngx-translate/core';
 
 
 @Component({
   selector: 'app-cards',
   standalone: true,
-  imports: [CardComponent, NgStyle, ReactiveFormsModule],
+  imports: [CardComponent, NgStyle, ReactiveFormsModule,TranslateModule],
   templateUrl: './cards.component.html',
   styleUrl: './cards.component.css',
 })

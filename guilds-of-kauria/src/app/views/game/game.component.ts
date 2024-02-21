@@ -2,7 +2,6 @@ import { NgClass } from '@angular/common';
 import { Component } from '@angular/core';
 import { TranslateModule } from '@ngx-translate/core';
 import { GlobalConstants } from '../../common/global-constants';
-import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-game',
