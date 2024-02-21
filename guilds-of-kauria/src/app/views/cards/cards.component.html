@@ -1,16 +1,16 @@
 <div class="container form">
     <h2 class="text-center">
-        Guilds of Kauria, juego inverso en fantasia mediaval
+        {{'cards-title'| translate}}
     </h2>
     <br />
     <form>
         <div class="row">
             <div class="offset-xl-3 col-xl-5 col-md-6 col-sm-6">
                 <input type="name" class="form-control" id="inputName" aria-describedby="nombre"
-                    placeholder="Introduce el nombre de la carta..." [formControl]="principalInputName" />
+                    placeholder="{{'cards-advance-ph1'| translate}}" [formControl]="principalInputName" />
             </div>
             <div class="col-xl-4 col-md-12 col-md-6 col-sm-6">
-                <p type="submit" class="btn btn-enviar" (click)="firstButtonClicked()">Enviar</p>
+                <p type="submit" class="btn btn-enviar" (click)="firstButtonClicked()">{{'cards-send-btn'| translate}}</p>
             </div>
         </div>
     </form>
@@ -19,91 +19,91 @@
             <div class="offset-xl-5 col-xl-4 col-md-6 col-sm-6">
                 <button class="btn btn-enviar gy-3" type="button" data-bs-toggle="offcanvas"
                     data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
-                    Busqueda avanzada
+                    {{'cards-advance-header'| translate}}
                 </button>
 
                 <div class="offcanvas offcanvas-end" id="collapseExample" aria-labelledby="collapseExampleLabel">
                     <div class="offcanvas-header">
                         <h5 class="offcanvas-title" id="collapseExampleLabel">
-                            Búsqueda Avanzada
+                            {{'cards-advance-header'| translate}}
                         </h5>
                         <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
                             aria-label="Close"></button>
                     </div>
                     <div class="offcanvas-body">
                         <div class="separacion">
-                            <h6>Nombre de la carta</h6>
+                            <h6>{{'cards-advance-name'| translate}}</h6>
                             <input type="name" class="form-control" id="inputName" aria-describedby="nombre"
-                                placeholder="Introduce el nombre de la carta..." [formControl]="secondaryInputName"  />
+                                placeholder="{{'cards-advance-ph1'| translate}}" [formControl]="secondaryInputName"  />
                         </div>
 
                         <div class="status-card">
                             <div class="w-50">
-                                <h6>Edición</h6>
+                                <h6>{{'cards-advance-edition'| translate}}</h6>
                             </div>
                             <div>
                                 <select name="finish" id="finish" (change)="onChangeCardEdition($event)">
                                     <option value="">-- none --</option>
-                                    <option value="primeraEdicicion">Primera edicion</option>
-                                    <option value="segundaEdicicion">Segunda edicion</option>
-                                    <option value="terceraEdicicion">Tercera edicion</option>
+                                    <option value="primeraEdicicion">{{'cards-advance-firsted'| translate}}</option>
+                                    <option value="segundaEdicicion">{{'cards-advance-seconded'| translate}}</option>
+                                    <option value="terceraEdicicion">{{'cards-advance-thirded'| translate}}</option>
                                 </select>
                             </div>
                         </div>
 
                         <div class="status-card">
                             <div class="w-50">
-                                <h6>Estado de la carta</h6>
+                                <h6>{{'cards-advance-status'| translate}}</h6>
                             </div>
                             <div>
                                 <select name="finish" id="finish" (change)="onChangeCardStatus($event)">
-                                    <option value="banneada">Vetada</option>
-                                    <option value="limitada">Limitada</option>
-                                    <option value="libre">Libre</option>
+                                    <option value="banneada">{{'cards-advance-firstst'| translate}}</option>
+                                    <option value="limitada">{{'cards-advance-secondst'| translate}}</option>
+                                    <option value="libre">{{'cards-advance-thirdst'| translate}}</option>
                                 </select>
                             </div>
                         </div>
 
                         <div class="status-card">
                             <div class="w-50">
-                                <h6>Tipo de carta</h6>
+                                <h6>{{'cards-advance-type'| translate}}</h6>
                             </div>
                             <div>
                                 <select name="finish" id="finish" (change)="onChangeCardType($event)" >
                                     <option value="">-- none --</option>
-                                    <option value="monstruo">Monstruo</option>
-                                    <option value="hechizo">Hechizo</option>
-                                    <option value="trampa">Trampa</option>
+                                    <option value="monstruo">{{'cards-advance-firsttp'| translate}}</option>
+                                    <option value="hechizo">{{'cards-advance-secondtp'| translate}}</option>
+                                    <option value="trampa">{{'cards-advance-thirdtp'| translate}}</option>
                                 </select>
                             </div>
                         </div>
 
                         <div>
                             <div>
-                                <h6>Estadisticas</h6>
+                                <h6>{{'cards-advance-stat'| translate}}</h6>
                             </div>
                             <div class="status-card">
                                 <div class="select-wrapper">
                                     <select name="finish" id="finish" (change)="onChangeCardStats($event)">
                                         <option value="">-- none --</option>
-                                        <option value="ataque">Ataque</option>
-                                        <option value="defensa">Defensa</option>
-                                        <option value="velocidad">Velocidad</option>
+                                        <option value="ataque">{{'cards-advance-atk'| translate}}</option>
+                                        <option value="defensa">{{'cards-advance-def'| translate}}</option>
+                                        <option value="velocidad">{{'cards-advance-spd'| translate}}</option>
                                     </select>
                                 </div>
                                 <div class="input-wrapper">
                                     <input type="name" class="form-control" id="inputName" aria-describedby="nombre"
-                                        placeholder="Introduce tu estadisticas..." [formControl]="amountStats"/>
+                                        placeholder="{{'cards-advance-ph2'| translate}}" [formControl]="amountStats"/>
                                 </div>
                             </div>
                         </div>
                         <div class="separacion">
-                            <h6>Coste:</h6>
+                            <h6>{{'cards-advance-cost'| translate}}</h6>
                             <input type="name" class="form-control" id="inputName" aria-describedby="nombre"
-                                placeholder="Introduce el coste..." [formControl]="amountMana"/>
+                                placeholder="{{'cards-advance-ph3'| translate}}" [formControl]="amountMana"/>
                         </div>
                         <div class="col-xl-4 col-md-12">
-                            <p type="submit" class="btn btn-enviar" (click)="buttonFilterClicked()">Enviar</p>
+                            <p type="submit" class="btn btn-enviar" (click)="buttonFilterClicked()">{{'cards-send-btn'| translate}}</p>
                         </div>
                     </div>
                 </div>
