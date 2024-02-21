@@ -13,6 +13,25 @@
             height: 1px;
             background: #eee;
         }
+
+        .btn-enviar {
+            background-color: #635f5a;
+            color: #FFF;
+            border: black solid 2px
+        }
+
+        .btn-enviar:hover {
+            background-color: #ccae8c;
+            color: #FFF;
+            border: #635f5a solid 2px
+        }
+
+        .btn-enviar:focus {
+            background-color: #ccae8c;
+            border-color: #635f5a;
+            color: white;
+            box-shadow: 2px 2px 2px 2px #635f5a;
+        }
     </style>
 </head>
 
@@ -30,21 +49,17 @@
                         <!-- Email input -->
                         <div class="form-outline mb-4">
                             <input type="email" id="form1Example13" class="form-control form-control-lg" />
-                            <label class="form-label" for="form1Example13">Email address</label>
+                            <label class="form-label" for="form1Example13">Email address / Correo electronico</label>
                         </div>
 
                         <!-- Password input -->
                         <div class="form-outline mb-4">
                             <input type="password" id="form1Example23" class="form-control form-control-lg" />
-                            <label class="form-label" for="form1Example23">Password</label>
+                            <label class="form-label" for="form1Example23">Password / Contraseña</label>
                         </div>
 
-
-
                         <!-- Submit button -->
-                        <button type="submit" class="btn  btn-lg btn-block">Sign in</button>
-
-
+                        <button type="submit" class="btn btn-enviar btn-lg btn-block">Sign in</button>
 
                     </form>
                 </div>
