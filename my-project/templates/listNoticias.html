@@ -56,22 +56,20 @@
             <h1> Listado noticias</h1>
             <table>
                 <tr>
-                    <th>FOTO CARD</th>
                     <th>ID</th>
                     <th>TITULO</th>
                     <th>TEXTO</th>
-                    <th>FECHA PUBLIZACIÓN</th>
+                    <th>FECHA PUBLICACIÓN</th>
 
                     <th>DELETE</th>
                     <th>UPDATE</th>
                 </tr>
                 {% for row in resultados %}
                 <tr>
-                    <td><img src="{{row.getFotoCard}}" alt="{{row.getFotoCard}}"> </td>
                     <td>{{row.getId}} </a></td>
                     <td>{{row.getTitulo}}</td>
                     <td>{{row.getTexto}}</td>
-                    <td>{{row.getFechaPublicacion}}</td>
+                    <td>{{ row.getFechaPublicacion|date('Y-m-d') }}</td>
 
                     <td style='text-align: center;'><a href="http://localhost:8000/renderInsertCard"><img
                                 src="https://www.pngmart.com/files/3/Red-Cross-PNG-Photo.png" alt="Delete"
