@@ -90,16 +90,6 @@ a:hover {
     color: #e3A25b;
 }
 
-.link-news{
-    color: black;
-    background-color: #e3A25b;
-}
-
-.link-news:hover{
-    color: #68838E;
-    background-color: #faa953;
-}
-
 /* General spacing */
 .separacion {
     padding-bottom: 30px;
