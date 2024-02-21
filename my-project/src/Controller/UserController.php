@@ -4,6 +4,8 @@ namespace App\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\JsonResponse;
+use Symfony\Component\HttpFoundation\RedirectResponse;
+use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use Doctrine\Persistence\ManagerRegistry;
 use Symfony\Component\HttpFoundation\Request;
@@ -35,22 +37,34 @@ class UserController extends AbstractController
         return $this->json($data);
     }
 
-    #[Route('/login', name: 'loginUser', methods:['GET'])]
-    public function login(ManagerRegistry $doctrine, Request $request): JsonResponse
+    #[Route('/login', name: 'loginUser', methods: ['POST'])]
+    public function login(ManagerRegistry $doctrine, Request $request): RedirectResponse
     {
-        $name = 'root';
-        $user = $doctrine->getRepository(Usuario::class)->findOneBy(['nombre' => $name]);
+        // Obtener los datos del formulario
+        $username = $request->request->get('username');
+        $password = $request->request->get('password');
 
-        $hashedPassword = $user->getPassword();
+        // Buscar al usuario por su nombre de usuario
+        $user = $doctrine->getRepository(Usuario::class)->findOneBy(['nombre' => $username]);
 
-        $password = '';
-
-        if (password_verify($password, $hashedPassword)) {
-            $validator = true;
-            return $this->json($validator);
-        } else {
-            $validator = false;
-            return $this->json($validator);
+        if (!$user) {
+            // Si el usuario no existe, redirigir al formulario de inicio de sesión
+            return $this->redirectToRoute('renderLogin');
         }
+
+        // Verificar la contraseña
+        if (password_verify($password, $user->getPassword())) {
+            // Si la contraseña es válida, redirigir a otra página
+            return $this->redirectToRoute('listCards');
+        } else {
+            // Si la contraseña no es válida, redirigir al formulario de inicio de sesión
+            return $this->redirectToRoute('renderLogin');
+        }
+    }
+
+    #[Route('/', name: 'renderLogin')]
+    public function renderLogin(): Response
+    {
+        return $this->render("login.html", []);
     }
 }

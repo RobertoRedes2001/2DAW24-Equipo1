@@ -45,18 +45,19 @@
                 </div>
                 <div class="col-md-7 col-lg-5 col-xl-5 offset-xl-1">
                     <h2>Inicio sesión</h2>
-                    <form>
+                    <form method="post" action="http://localhost:8000/login">
                         <!-- Email input -->
                         <div class="form-outline mb-4">
-                            <input type="email" id="form1Example13" class="form-control form-control-lg" />
-                            <label class="form-label" for="form1Example13">Nombre de usuario</label>
+                            <label for="username" class="form-label">Username</label>
+                            <input type="text" class="form-control" name="username" id="username" aria-describedby="username">
                         </div>
-
+                        
                         <!-- Password input -->
                         <div class="form-outline mb-4">
-                            <input type="password" id="form1Example23" class="form-control form-control-lg" />
+                            <input type="password" id="form1Example23" name="password" class="form-control form-control-lg" />
                             <label class="form-label" for="form1Example23">Contraseña</label>
                         </div>
+                        
 
                         <!-- Submit button -->
                         <button type="submit" class="btn btn-enviar btn-lg btn-block">Sign in</button>
