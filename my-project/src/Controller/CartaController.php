@@ -86,6 +86,48 @@ class CartaController extends AbstractController
         return $this->json($data);
     }
 
+    #[Route('/cardName/{name}', name: 'nameCard', methods: ['get'])]
+    public function showName(ManagerRegistry $doctrine, string $name): JsonResponse
+    {
+        $repository = $doctrine->getRepository(Carta::class);
+
+        // Utilizamos la función LIKE para buscar nombres que contengan el valor proporcionado
+        $query = $repository->createQueryBuilder('c')
+            ->where('c.nombre LIKE :name')
+            ->setParameter('name', '%' . $name . '%')
+            ->getQuery();
+
+        $cards = $query->getResult();
+
+        if (empty($cards)) {
+            return $this->json('No project found for name ' . $name, 404);
+        }
+
+        $responseData = [];
+        foreach ($cards as $card) {
+            $data = [
+                'carta_cod' => $card->getId(),
+                'nombre' => $card->getNombre(),
+                'habilidad_recurso' => $card->getHabilidadRecurso(),
+                'habilidad_batalla' => $card->getHabilidadBatalla(),
+                'coste' => $card->getCoste(),
+                'estado_carta' => $card->getEstadoCarta(),
+                'vida' => $card->getVida(),
+                'rareza' => $card->getRareza(),
+                'observaciones' => $card->getObservaciones(),
+                'foto' => $card->getFoto(),
+                'defensa' => $card->getDefensa(),
+                'ataque' => $card->getAtaque(),
+                'tipo_carta' => $card->getTipoCarta(),
+                'texto' => $card->getTexto(),
+                'puntos_victoria' => $card->getPuntosVictoria(),
+            ];
+            $responseData[] = $data;
+        }
+
+        return $this->json($responseData);
+    }
+
 
     #[Route('/cards', name: 'listCards')]
     public function listCards()
