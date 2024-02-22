@@ -73,10 +73,10 @@
                     <td>{{row.getTexto}}</td>
                     <td>{{ row.getFechaPublicacion|date('Y-m-d') }}</td>
 
-                    <td style='text-align: center;'><a href="http://localhost:8000/renderInsertCard"><img
+                    <td style='text-align: center;'><a href="http://localhost:8000/deleteNoticia/{{row.getId}}"><img
                                 src="https://www.pngmart.com/files/3/Red-Cross-PNG-Photo.png" alt="Delete"
                                 width='20'></a></td>
-                    <td style='text-align: center;'><a href=""><img
+                    <td style='text-align: center;'><a href="http://localhost:8000/renderUpdateNoticia/{{row.getId}}"><img
                                 src="https://cdn-icons-png.flaticon.com/512/1159/1159633.png" alt="Update"
                                 width='20'></a></td>
                 </tr>

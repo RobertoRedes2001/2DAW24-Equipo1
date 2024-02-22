@@ -55,30 +55,27 @@
     </header>
     <section class="container">
         <br>
-        <form method="post" action="">
-            <h2>Actualizar noticia "{{resultado.getNombre}}"</h2>
+        <form method="post" action="http://localhost:8000/updateNoticia/{{resultados.getId}}">
+            <h2>Actualizar noticia "{{resultados.getTitulo}}"</h2>
             <div class="row">
                 <div class="col-md-12">
-                    <label for="nameCard" class="form-label">Nombre de la noticia</label>
-                    <input type="text" class="form-control" id="nameCard" aria-describedby="nameCard"
-                        value="{{resultados.getNombre}}">
+                    <label for="titulo" class="form-label">Titulo</label>
+                    <input type="text" class="form-control" id="titulo" name="titulo" aria-describedby="titulo" value="{{resultados.getTitulo}}">
                 </div>
 
                 <div class="col-xl-3 col-md-12">
                     <br>
-                    <label for="fotoCard">Foto carta</label>
-                    <input type="text" class="form-control-file" id="fotoCard">
+                    <label for="foto">Foto</label>
+                    <input type="text" class="form-control-file" id="foto" name="foto">
                 </div>
 
                 <div class="col-xl-6 col-md-12">
                     <label for="texto" class="form-label">Texto</label>
-                    <textarea class="form-control" id="texto" rows="4"
-                        aria-describedby="texto">{{resultados.getNombre}}</textarea>
+                    <textarea class="form-control" id="texto" name="texto" rows="4" aria-describedby="texto">{{resultados.getTexto}}</textarea>
                 </div>
                 <div class="col-xl-6 col-md-12">
-                    <label for="ataque" class="form-label">Fecha publicacion</label>
-                    <input type="date" class="form-control" id="ataque" aria-describedby="ataque"
-                        value="{{resultados.getFecha}}">
+                    <label for="fecha" class="form-label">Fecha publicacion</label>
+                    <input type="date" class="form-control" id="fecha" name="fecha" aria-describedby="fecha" value="{{resultados.getFechaPublicacion|date('Y-m-d')}}">
                 </div>
             </div>
 
