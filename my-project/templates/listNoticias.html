@@ -45,9 +45,9 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav">
-                    <a class="nav-item nav-link" href="listCard.html" style="font-size: 20px;">Listado de cartas</a>
-                    <a class="nav-item nav-link active" href="listNoticias.html" style="font-size: 20px;">Listado de noticias</a>
-                    <a class="nav-item nav-link " href="listEdiciones.html" style="font-size: 20px;">Listado de
+                    <a class="nav-item nav-link" href="http://localhost:8000/cards" style="font-size: 20px;">Listado de cartas</a>
+                    <a class="nav-item nav-link active" href="http://localhost:8000/noticias" style="font-size: 20px;">Listado de noticias</a>
+                    <a class="nav-item nav-link " href="http://localhost:8000/ediciones" style="font-size: 20px;">Listado de
                         ediciones</a>
                 </div>
             </div>
@@ -73,10 +73,10 @@
                     <td>{{row.getTexto}}</td>
                     <td>{{ row.getFechaPublicacion|date('Y-m-d') }}</td>
 
-                    <td style='text-align: center;'><a href="http://localhost:8000/deleteNoticia/{{row.getId}}"><img
+                    <td style='text-align: center;'><a href="http://localhost:8000/renderInsertCard"><img
                                 src="https://www.pngmart.com/files/3/Red-Cross-PNG-Photo.png" alt="Delete"
                                 width='20'></a></td>
-                    <td style='text-align: center;'><a href="http://localhost:8000/renderUpdateNoticia/{{row.getId}}"><img
+                    <td style='text-align: center;'><a href=""><img
                                 src="https://cdn-icons-png.flaticon.com/512/1159/1159633.png" alt="Update"
                                 width='20'></a></td>
                 </tr>
@@ -86,7 +86,7 @@
             </table>
             <br>
             <div style='text-align: center;'>
-                <a href='http://localhost:8000/addNoticia'>
+                <a href='http://localhost:8000/renderInsertCard'>
                     <img src="https://cdn.icon-icons.com/icons2/692/PNG/512/seo-social-web-network-internet_189_icon-icons.com_61521.png"
                         alt="Add" width='40'>
                 </a>
