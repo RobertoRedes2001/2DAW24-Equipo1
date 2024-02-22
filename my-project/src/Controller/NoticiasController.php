@@ -10,6 +10,7 @@ use Doctrine\Persistence\ManagerRegistry;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Component\HttpFoundation\Request;
 use App\Entity\Noticia;
+use App\Entity\Tienda;
 
 class NoticiasController extends AbstractController
 {
@@ -76,6 +77,91 @@ class NoticiasController extends AbstractController
             "resultados" => $resultados
         ]);
     }
+
+    #[Route('/addNoticia', name: 'addNoticia')]
+    public function renderInsert()
+    {
+        return $this->render("insertFormNoticia.html", []);
+    }
+
+    #[Route('/insertNoticia', name: 'insertNoticia', methods: ['POST'])]
+    public function insert(): Response
+    {
+        $titulo = $_POST['titulo'];
+        $texto = $_POST['texto'];
+        $fotoNoticia = '';
+        $fecha = new \DateTime($_POST['fecha']);
+
+        $noticia = new Noticia();
+
+        $noticia->setFechaPublicacion($fecha);
+        $noticia->setTitulo($titulo);
+        $noticia->setTexto($texto);
+        $noticia->setFoto($fotoNoticia);
+
+        $tiendaObject = $this->em->getRepository(Tienda::class)->find(1);
+
+        $noticia->setTienda($tiendaObject);
+
+        $this->em->persist($noticia);
+        $this->em->flush();
+
+        return $this->redirectToRoute('listNoticias');
+    }
+
+    #[Route('/deleteNoticia/{id}', name: 'delNoticia')]
+    public function del(int $id): Response
+    {
+        $noticiaRepository = $this->em->getRepository(Noticia::class);
+
+        $noticia = $noticiaRepository->find($id);
+
+        $this->em->remove($noticia);
+
+        $this->em->flush();
+
+        return $this->redirectToRoute('listNoticias');
+    }
+
+    #[Route('/renderUpdateNoticia/{id}', name: 'renderUpdateNoticia')]
+    public function renderUpdate($id): Response
+    {
+        $noticiaRepository = $this->em->getRepository(Noticia::class);
+        $noticia = $noticiaRepository->find($id);
+
+        return $this->render("updateFormNoticia.html", [
+            "resultados" => $noticia,
+        ]);
+    }
+
+    #[Route('/updateNoticia/{id}', name: 'updateNoticia')]
+    public function update($id): Response
+    {
+        $titulo = $_POST['titulo'];
+        $texto = $_POST['texto'];
+        $fotoNoticia = '';
+        $fecha = new \DateTime($_POST['fecha']);
+
+        $noticia = $this->em->getRepository(Noticia::class)->find($id);
+
+        $noticia->setFechaPublicacion($fecha);
+        $noticia->setTitulo($titulo);
+        $noticia->setTexto($texto);
+        $noticia->setFoto($fotoNoticia);
+
+        $tiendaObject = $this->em->getRepository(Tienda::class)->find(1);
+
+        $noticia->setTienda($tiendaObject);
+
+        $this->em->persist($noticia);
+        $this->em->flush();
+
+        return $this->redirectToRoute('listNoticias');
+
+    }
+
+
+
 
 
 
