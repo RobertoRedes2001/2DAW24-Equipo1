@@ -14,7 +14,7 @@
             background-color: #635f5a;
             color: #fff;
             border: none;
-        
+
             font-size: 16px;
             cursor: pointer;
             transition: background-color 0.3s ease;
@@ -43,7 +43,10 @@
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav">
                     <a class="nav-item nav-link" href="listCard.html" style="font-size: 20px;">Listado de cartas</a>
-                    <a class="nav-item nav-link active" href="listNoticias.html" style="font-size: 20px;">Listado de noticias</a>
+                    <a class="nav-item nav-link active" href="listNoticias.html" style="font-size: 20px;">Listado de
+                        noticias</a>
+                    <a class="nav-item nav-link " href="listEdiciones.html" style="font-size: 20px;">Listado de
+                        ediciones</a>
                 </div>
             </div>
     </header>
@@ -54,7 +57,8 @@
             <div class="row">
                 <div class="col-md-12">
                     <label for="nameCard" class="form-label">Nombre de la noticia</label>
-                    <input type="text" class="form-control" id="nameCard" aria-describedby="nameCard" value="{{resultados.getNombre}}">
+                    <input type="text" class="form-control" id="nameCard" aria-describedby="nameCard"
+                        value="{{resultados.getNombre}}">
                 </div>
 
                 <div class="col-xl-3 col-md-12">
@@ -65,11 +69,13 @@
 
                 <div class="col-xl-6 col-md-12">
                     <label for="texto" class="form-label">Texto</label>
-                    <textarea class="form-control" id="texto" rows="4" aria-describedby="texto">{{resultados.getNombre}}</textarea>
+                    <textarea class="form-control" id="texto" rows="4"
+                        aria-describedby="texto">{{resultados.getNombre}}</textarea>
                 </div>
                 <div class="col-xl-6 col-md-12">
                     <label for="ataque" class="form-label">Fecha publicacion</label>
-                    <input type="date" class="form-control" id="ataque" aria-describedby="ataque" value="{{resultados.getFecha}}">
+                    <input type="date" class="form-control" id="ataque" aria-describedby="ataque"
+                        value="{{resultados.getFecha}}">
                 </div>
             </div>
 

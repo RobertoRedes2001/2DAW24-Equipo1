@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Añadir noticia</title>
+    <title>Añadir edición</title>
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
@@ -43,9 +43,9 @@
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav">
                     <a class="nav-item nav-link" href="listCard.html" style="font-size: 20px;">Listado de cartas</a>
-                    <a class="nav-item nav-link active" href="listNoticias.html" style="font-size: 20px;">Listado de
+                    <a class="nav-item nav-link " href="listNoticias.html" style="font-size: 20px;">Listado de
                         noticias</a>
-                    <a class="nav-item nav-link " href="listEdiciones.html" style="font-size: 20px;">Listado de
+                    <a class="nav-item nav-link active" href="listEdiciones.html" style="font-size: 20px;">Listado de
                         ediciones</a>
                 </div>
             </div>
@@ -53,34 +53,35 @@
     <section class="container">
         <br>
         <form method="post" action="">
-            <h2>Añadir carta</h2>
+            <h2>Añadir edición</h2>
             <div class="row">
-                <div class="col-md-12">
-                    <label for="nameCard" class="form-label">Titulo</label>
-                    <input type="text" class="form-control" id="nameCard" aria-describedby="nameCard">
+                <div class="col-xl-6 col-md-12">
+                    <label for="nameEdition" class="form-label">Nombre de la edición</label>
+                    <input type="text" class="form-control" id="nameEdition" aria-describedby="nameEdition" value="{{resultado.getNombreEdición}}">
                 </div>
 
                 <div class="col-xl-6 col-md-12">
-                    <label for="texto" class="form-label">Texto</label>
-                    <textarea class="form-control" id="texto" rows="4" aria-describedby="texto"></textarea>
+                    <label for="fecha_salida" class="form-label">Fecha salida</label>
+                    <input type="date" class="form-control" id="fecha_salida" aria-describedby="fecha_salida" value="{{resultado.getFechaSalida}}">
                 </div>
 
-                <div class="col-xl-3 col-md-12">
+
+                <div class="col-xl-6 col-md-12">
                     <br>
-                    <label for="fotoCard">Foto carta</label>
-                    <input type="file" class="form-control-file" id="fotoCard   ">
+                    <label for="cantidad" class="form-label">Cantidad</label>
+                    <input type="number" class="form-control" id="cantidad" aria-describedby="cantidad" value="{{resultado.getCantidad}}">
                 </div>
 
-                <div class="col-xl-3 col-md-12">
+                <div class="col-xl-6 col-md-12">
                     <br>
-                    <label for="ataque" class="form-label">Fecha publicacion</label>
-                    <input type="date" class="form-control" id="ataque" aria-describedby="ataque">
+                    <label for="tienda" class="form-label">Tienda</label>
+                    <input type="number" class="form-control" id="tienda" aria-describedby="tienda" value="{{resultado.getTienda}}">
                 </div>
 
             </div>
 
             <br>
-            <button type="submit" class="btn btn-enviar">Añadir</button>
+            <button type="submit" class="btn btn-enviar">Actualizar</button>
         </form>
 
     </section>

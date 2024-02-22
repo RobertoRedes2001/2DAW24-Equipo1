@@ -45,8 +45,12 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav">
-                    <a class="nav-item nav-link active" href="listCard.html" style="font-size: 20px;">Listado de cartas</a>
-                    <a class="nav-item nav-link " href="http://localhost:8000/noticias" style="font-size: 20px;">Listado de noticias</a>
+                    <a class="nav-item nav-link active" href="listCard.html" style="font-size: 20px;">Listado de
+                        cartas</a>
+                    <a class="nav-item nav-link " href="http://localhost:8000/noticias" style="font-size: 20px;">Listado
+                        de noticias</a>
+                    <a class="nav-item nav-link " href="listEdiciones.html" style="font-size: 20px;">Listado de
+                        ediciones</a>
                 </div>
             </div>
     </header>
@@ -73,17 +77,19 @@
                     <td>{{row.getEstadoCarta}}</td>
                     <td>{{row.getVida}}</td>
                     <td>{{row.getRareza}}</td>
-    
+
                     <td style='text-align: center;'><a href="http://localhost:8000/deleteCard/{{row.getId}}"><img
-                                src="https://www.pngmart.com/files/3/Red-Cross-PNG-Photo.png" alt="Delete" width='20'></a>
+                                src="https://www.pngmart.com/files/3/Red-Cross-PNG-Photo.png" alt="Delete"
+                                width='20'></a>
                     </td>
                     <td style='text-align: center;'><a href="http://localhost:8000/renderUpdateCard/{{row.getId}}"><img
-                                src="https://cdn-icons-png.flaticon.com/512/1159/1159633.png" alt="Update" width='20'></a>
+                                src="https://cdn-icons-png.flaticon.com/512/1159/1159633.png" alt="Update"
+                                width='20'></a>
                     </td>
                 </tr>
                 {% endfor %}
-    
-    
+
+
             </table>
             <br>
             <div style='text-align: center;'>
@@ -93,7 +99,7 @@
                 </a>
             </div>
         </article>
-       
+
     </main>
 </body>
 

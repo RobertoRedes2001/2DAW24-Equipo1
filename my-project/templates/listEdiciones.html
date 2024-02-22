@@ -46,8 +46,8 @@
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav">
                     <a class="nav-item nav-link" href="listCard.html" style="font-size: 20px;">Listado de cartas</a>
-                    <a class="nav-item nav-link active" href="listNoticias.html" style="font-size: 20px;">Listado de noticias</a>
-                    <a class="nav-item nav-link " href="listEdiciones.html" style="font-size: 20px;">Listado de
+                    <a class="nav-item nav-link" href="listNoticias.html" style="font-size: 20px;">Listado de noticias</a>
+                    <a class="nav-item nav-link active" href="listEdiciones.html" style="font-size: 20px;">Listado de
                         ediciones</a>
                 </div>
             </div>
@@ -59,9 +59,10 @@
             <table>
                 <tr>
                     <th>ID</th>
-                    <th>TITULO</th>
-                    <th>TEXTO</th>
-                    <th>FECHA PUBLICACIÓN</th>
+                    <th>NOMBRE DE LA EDICIÓN</th>
+                    <th>FECHA SALIDA</th>
+                    <th>CANTIDAD</th>
+                    <th>TIENDA</th>
 
                     <th>DELETE</th>
                     <th>UPDATE</th>
@@ -69,9 +70,10 @@
                 {% for row in resultados %}
                 <tr>
                     <td>{{row.getId}} </a></td>
-                    <td>{{row.getTitulo}}</td>
-                    <td>{{row.getTexto}}</td>
-                    <td>{{ row.getFechaPublicacion|date('Y-m-d') }}</td>
+                    <td>{{row.getNombreEdición}}</td>
+                    <td>{{row.getFechaSalida|date('Y-m-d')}}</td>
+                    <td>{{ row.getCantidad }}</td>
+                    <td>{{ row.getTienda }}</td>
 
                     <td style='text-align: center;'><a href="http://localhost:8000/renderInsertCard"><img
                                 src="https://www.pngmart.com/files/3/Red-Cross-PNG-Photo.png" alt="Delete"
