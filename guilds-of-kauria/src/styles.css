@@ -4,7 +4,12 @@
 }
 
 /* Font */
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     font-family: "Beaufort for LOL Bold", sans-serif;
 }
 
@@ -90,16 +95,21 @@ a:hover {
     color: #e3A25b;
 }
 
-.link-news{
+.link-news {
     color: white !important;
     background-color: #e3A25b;
-    
-}
 
-.link-news:hover{
+}
+.link-news:focus {
+    background-color: #ccae8c;
+    border-color: #635f5a;
+    color: black;
+    box-shadow: 2px 2px 2px 2px #635f5a;
+}
+.link-news:hover {
     color: white;
     background-color: #ff9f39;
-   
+
 }
 
 /* General spacing */
@@ -161,34 +171,19 @@ a:hover {
 
 /* Title styles */
 .title {
-    background-image: url('assets/images/banner_bg.png'); 
-    color: white; 
-    padding: 10px 20px; 
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5); 
+    background-image: url('assets/images/banner_bg.png');
+    color: white;
+    padding: 10px 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
     border-radius: 10px;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
     margin-bottom: 50px;
 }
 
 /* Button styles */
-.btn-enviar {
-    background-color: #635f5a;
-    color: #FFF;
-    border: black solid 2px
-}
 
-.btn-enviar:hover {
-    background-color: #ccae8c;
-    color: #FFF;
-    border: #635f5a solid 2px
-}
 
-.btn-enviar:focus {
-    background-color: #ccae8c;
-    border-color: #635f5a;
-    color: white;
-    box-shadow: 2px 2px 2px 2px #635f5a;
-}
+
 
 /* Offcanvas styles */
 .offcanvas-header {
@@ -209,14 +204,14 @@ a:hover {
     margin-bottom: 15px;
 }
 
-.card{
+.card {
     width: 18rem;
     min-height: 400px;
     margin-left: 55px;
     margin: 20px;
 }
 
-.card-container{
+.card-container {
     margin-top: -100px;
     margin-bottom: 50px;
 }
@@ -242,7 +237,7 @@ a:hover {
 
 /* Detail card styles */
 .detail-card-padding {
-    margin-top: 50px ;
+    margin-top: 50px;
 }
 
 /* Table styles */
@@ -251,7 +246,8 @@ table {
     width: 100%;
 }
 
-td, th {
+td,
+th {
     border: none;
     border-bottom: 1px solid #d7d7d7;
     text-align: left;
@@ -268,23 +264,23 @@ tr:nth-child(even) {
 }
 
 .notice-container {
-    
+
     width: 75%;
     height: 100%;
     margin: 0 auto;
     display: flex;
 }
 
-.content{
+.content {
     margin: 20px;
-    max-width: 100%; 
-    padding: 20px; 
-    box-sizing: border-box; 
-    text-align: justify; 
+    max-width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    text-align: justify;
 }
 
 .content img {
-    max-width: 100%; 
+    max-width: 100%;
     height: auto;
     margin-bottom: 10px;
 
