@@ -10,7 +10,7 @@
                     placeholder="{{'cards-advance-ph1'| translate}}" [formControl]="principalInputName" />
             </div>
             <div class="col-xl-4 col-md-12 col-md-6 col-sm-6">
-                <p type="submit" class="btn link-news" (click)="firstButtonClicked()">{{'cards-send-btn'| translate}}</p>
+                <p type="submit" (click)="onSearchByName()" class="btn link-news">{{'cards-send-btn'| translate}}</p>
             </div>
         </div>
     </form>
@@ -103,7 +103,7 @@
                                 placeholder="{{'cards-advance-ph3'| translate}}" [formControl]="amountMana"/>
                         </div>
                         <div class="col-xl-4 col-md-12">
-                            <p type="submit" class="btn link-news" (click)="buttonFilterClicked()">{{'cards-send-btn'| translate}}</p>
+                            <p type="submit" class="btn link-news">{{'cards-send-btn'| translate}}</p>
                         </div>
                     </div>
                 </div>
@@ -114,11 +114,10 @@
 <section>
     <article class="container card-container">
         <div class="row">
-            @for (item of items; track item; let i =$index) {
+            @for (item of cardsOfDDBB; track item; let i =$index) {
             <div class="col-sm-12 col-md-6 col-lg-4">
                 <div class="card">
-                    <app-card [title]="title" [img]="img" [littleDescription]="littleDescription">
-                        
+                    <app-card [index]="i" [title]="item.nombre" [img]="img" [littleDescription]="item.observaciones">  
                     </app-card>
                 </div>
             </div>

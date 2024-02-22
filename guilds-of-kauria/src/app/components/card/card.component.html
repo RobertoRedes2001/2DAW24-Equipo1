@@ -1,6 +1,6 @@
 
     <a routerLink="/cards/detail" RouterLinkActive="active">
-    <img src={{img}} class="card-img-top" alt="Image about me" /></a>
+    <img (click)="onClickCard(index)" src={{img}} class="card-img-top" alt="Image about me" /></a>
         <div class="card-body">
             <h5 class="card-title">{{title}}</h5>
             <p class="card-text">
