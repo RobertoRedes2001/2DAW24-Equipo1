@@ -3,11 +3,26 @@
 
 Proyecto colaborativo con la Empresa Nexus Sueca. La website de Guilds of Kauria alberga toda la informacion sobre el juego de cartas creado por Miguel Angel Boix. 
 
-Cuando entras estaras en index donde hay texto descriptivo sobre el juego y tendremos varias secciones importantes como:
-1. **Noticias** donde tendremos un grupo de noticias con el titulo, imagen, fecha y texto relacionada a esta cuando pulses sobre una de ellas se expandira y mostrara mas texto en 
-2. Jugabilidad
-3. Cartas
+### Navegacion del sitio web
 
+1. **Noticias:** En noticias estan diferentes noticias que involucran con el juego
+2. **Jugabilidad:** En jugabilidad aprendes como jugar al juego por secciones
+3. **Cartas** Descubres todas las cartas que contiene el juego habilidades/ataques, recursos y objetivos.
+4. **Idioma** Cambia el  idioma de la pagina a español o inglés para una mejor experiencia.
+
+### Funcionalidad de la pagina
+
+-**Busqueda de cartas:** En base a un buscador en el centro de la pantalla y filtros  laterales podras encontrar cualquier carta que desees ver.
+-**Captar jugadores**: La página tiene el proposito de aumentar la base de jugadores en base a los conocimientos dados
+
+
+### Tecnologias
+
+- Symfony
+- Angular
+- MariaDB
+
+### Integrantes
 
 | FOTO | NOMBRE | ROL |
 |------|--------|-----|
