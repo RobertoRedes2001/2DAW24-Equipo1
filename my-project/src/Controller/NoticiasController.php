@@ -12,6 +12,10 @@ use Symfony\Component\HttpFoundation\Request;
 use App\Entity\Noticia;
 use App\Entity\Tienda;
 
+// Habilitar CORS
+header("Access-Control-Allow-Origin: http://localhost:4200"); // Reemplaza esto con la URL de tu aplicación Angular
+header("Access-Control-Allow-Methods: GET, POST, OPTIONS");
+header("Access-Control-Allow-Headers: Content-Type");
 class NoticiasController extends AbstractController
 {
     //Variable y constructor del EntityManagerInterface
