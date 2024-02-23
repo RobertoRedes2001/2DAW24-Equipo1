@@ -15,7 +15,8 @@ export class GameComponent{
   public changeTextTitle : string = "Ejemplo";
   public changeTextBody : string = "Lorem";
   public learn : boolean = false;
-  public currentLan : string = GlobalConstants.currentLang;
+  public currentLan : string | null = localStorage.getItem('selectedLanguage');
+  
 
   public action_es : {t:string,b:string} = 
   {t:"ACCIONES DE JUEGO", b:"<ul><li><b>GIRAR Y ENDEREZAR:</b> Girar una carta es ponerla de lado; esto significa que se usó durante el turno. Haces esto cuando usas una tierra para producir maná, cuando atacas con una criatura o cuando activas una habilidad que tiene el símbolo como parte del coste ( significa “gira este permanente”).  Cuando se gira un permanente, no puedes girarlo de nuevo hasta que se endereza (se pone derecho de nuevo).  En cuanto empieza tu turno, endereza tus cartas giradas para que puedas usarlas de nuevo.</li><li><b>LANZAR HECHIZOS:</b> Para lanzar un hechizo, debes pagar su coste de maná (ubicado en la esquina superior derecha de la carta) girando tierras (u otros permanentes) para generar la cantidad y tipo de maná que requiere el hechizo. Por ejemplo, si fueras a lanzar el Ángel de Serra, que cuesta , podrías girar tres tierras básicas de cualquier tipo para pagar más dos Llanuras para pagar Una vez que hayas lanzado el hechizo, puede ocurrir una de estas dos cosas. Si el hechizo es un instantáneo o un conjuro, sigues las instrucciones en la carta y luego pones la carta en tu cementerio. Si el hechizo es una criatura, artefacto, encantamiento, pones la carta en la mesa frente a ti. La carta está ahora en el campo de batalla.</li></ul>"};
