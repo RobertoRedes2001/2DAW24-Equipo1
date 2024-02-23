@@ -2,6 +2,8 @@ import { Component } from '@angular/core';
 import { RouterLink, RouterLinkActive } from '@angular/router';
 import { TranslateService } from '@ngx-translate/core';
 import {TranslateModule} from '@ngx-translate/core';
+import { GlobalConstants } from '../../common/global-constants';
+
 
 @Component({
   selector: 'app-header',
@@ -16,6 +18,7 @@ export class HeaderComponent {
 
   public switchLanguage(lan : string){
     this.translateService.use(lan);
+    GlobalConstants.currentLang=lan;
     localStorage.setItem('selectedLanguage', lan);
     window.location.reload();
   }
