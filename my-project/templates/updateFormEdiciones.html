@@ -55,30 +55,29 @@
     </header>
     <section class="container">
         <br>
-        <form method="post" action="">
-            <h2>Añadir edición</h2>
+        <form method="post" action="http://localhost:8000/updateEdicion/{{resultados.getId}}">
+            <h2>Update edición</h2>
             <div class="row">
                 <div class="col-xl-6 col-md-12">
                     <label for="nameEdition" class="form-label">Nombre de la edición</label>
-                    <input type="text" class="form-control" id="nameEdition" aria-describedby="nameEdition" value="{{resultado.getNombreEdición}}">
+                    <input type="text" class="form-control" id="nameEdition" name="nameEdition" aria-describedby="nameEdition" value="{{resultados.getNombre}}">
                 </div>
-
+                
                 <div class="col-xl-6 col-md-12">
                     <label for="fecha_salida" class="form-label">Fecha salida</label>
-                    <input type="date" class="form-control" id="fecha_salida" aria-describedby="fecha_salida" value="{{resultado.getFechaSalida}}">
+                    <input type="date" class="form-control" id="fecha_salida" name="fecha_salida" aria-describedby="fecha_salida" value="{{ resultados.getFechaSalida|date('Y-m-d') }}">
                 </div>
-
-
+                
                 <div class="col-xl-6 col-md-12">
                     <br>
                     <label for="cantidad" class="form-label">Cantidad</label>
-                    <input type="number" class="form-control" id="cantidad" aria-describedby="cantidad" value="{{resultado.getCantidad}}">
+                    <input type="number" class="form-control" id="cantidad" name="cantidad" aria-describedby="cantidad" value="{{resultados.getCantidad}}">
                 </div>
 
                 <div class="col-xl-6 col-md-12">
                     <br>
                     <label for="tienda" class="form-label">Tienda</label>
-                    <input type="number" class="form-control" id="tienda" aria-describedby="tienda" value="{{resultado.getTienda}}">
+                    <input type="number" class="form-control" id="tienda" aria-describedby="tienda" disabled>
                 </div>
 
             </div>

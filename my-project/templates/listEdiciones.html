@@ -55,14 +55,13 @@
     <main>
         <br>
         <article class="container">
-            <h1> Listado noticias</h1>
+            <h1> Listado ediciones</h1>
             <table>
                 <tr>
                     <th>ID</th>
                     <th>NOMBRE DE LA EDICIÓN</th>
                     <th>FECHA SALIDA</th>
                     <th>CANTIDAD</th>
-                    <th>TIENDA</th>
 
                     <th>DELETE</th>
                     <th>UPDATE</th>
@@ -70,15 +69,14 @@
                 {% for row in resultados %}
                 <tr>
                     <td>{{row.getId}} </a></td>
-                    <td>{{row.getNombreEdición}}</td>
+                    <td>{{row.getNombre}}</td>
                     <td>{{row.getFechaSalida|date('Y-m-d')}}</td>
-                    <td>{{ row.getCantidad }}</td>
-                    <td>{{ row.getTienda }}</td>
+                    <td>{{row.getCantidad}}</td>
 
-                    <td style='text-align: center;'><a href="http://localhost:8000/renderInsertCard"><img
+                    <td style='text-align: center;'><a href="http://localhost:8000/deleteEdicion/{{row.getId}}"><img
                                 src="https://www.pngmart.com/files/3/Red-Cross-PNG-Photo.png" alt="Delete"
                                 width='20'></a></td>
-                    <td style='text-align: center;'><a href=""><img
+                    <td style='text-align: center;'><a href="http://localhost:8000/renderUpdateEdicion/{{row.getId}}"><img
                                 src="https://cdn-icons-png.flaticon.com/512/1159/1159633.png" alt="Update"
                                 width='20'></a></td>
                 </tr>
@@ -88,7 +86,7 @@
             </table>
             <br>
             <div style='text-align: center;'>
-                <a href='http://localhost:8000/renderInsertCard'>
+                <a href='http://localhost:8000/renderInsertEdicion'>
                     <img src="https://cdn.icon-icons.com/icons2/692/PNG/512/seo-social-web-network-internet_189_icon-icons.com_61521.png"
                         alt="Add" width='40'>
                 </a>

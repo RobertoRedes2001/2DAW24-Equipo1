@@ -158,12 +158,5 @@ class NoticiasController extends AbstractController
 
         return $this->redirectToRoute('listNoticias');
 
-    }
-
-
-
-
-
-
-    
+    } 
 }

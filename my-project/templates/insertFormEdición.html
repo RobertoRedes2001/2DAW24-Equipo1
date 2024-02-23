@@ -55,30 +55,29 @@
     </header>
     <section class="container">
         <br>
-        <form method="post" action="">
+        <form method="post" action="http://localhost:8000/insertEdicion">
             <h2>Añadir edición</h2>
             <div class="row">
                 <div class="col-xl-6 col-md-12">
                     <label for="nameEdition" class="form-label">Nombre de la edición</label>
-                    <input type="text" class="form-control" id="nameEdition" aria-describedby="nameEdition">
+                    <input type="text" class="form-control" id="nameEdition" name="nameEdition" aria-describedby="nameEdition">
                 </div>
-
+                
                 <div class="col-xl-6 col-md-12">
                     <label for="fecha_salida" class="form-label">Fecha salida</label>
-                    <input type="date" class="form-control" id="fecha_salida" aria-describedby="fecha_salida">
+                    <input type="date" class="form-control" id="fecha_salida" name="fecha_salida" aria-describedby="fecha_salida">
                 </div>
-
-
+                
                 <div class="col-xl-6 col-md-12">
                     <br>
                     <label for="cantidad" class="form-label">Cantidad</label>
-                    <input type="number" class="form-control" id="cantidad" aria-describedby="cantidad">
+                    <input type="number" class="form-control" id="cantidad" name="cantidad" aria-describedby="cantidad">
                 </div>
 
                 <div class="col-xl-6 col-md-12">
                     <br>
                     <label for="tienda" class="form-label">Tienda</label>
-                    <input type="number" class="form-control" id="tienda" aria-describedby="tienda">
+                    <input type="number" class="form-control" id="tienda" aria-describedby="tienda" disabled>
                 </div>
 
             </div>
