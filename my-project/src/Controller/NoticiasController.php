@@ -89,7 +89,7 @@ class NoticiasController extends AbstractController
     {
         $titulo = $_POST['titulo'];
         $texto = $_POST['texto'];
-        $fotoNoticia = '';
+        $file = $_FILES["fotoNoticia"];
         $fecha = new \DateTime($_POST['fecha']);
 
         $noticia = new Noticia();
@@ -97,11 +97,36 @@ class NoticiasController extends AbstractController
         $noticia->setFechaPublicacion($fecha);
         $noticia->setTitulo($titulo);
         $noticia->setTexto($texto);
-        $noticia->setFoto($fotoNoticia);
 
         $tiendaObject = $this->em->getRepository(Tienda::class)->find(1);
 
         $noticia->setTienda($tiendaObject);
+
+        if ($file["error"] === UPLOAD_ERR_OK) {
+            $filename = basename($file["name"]);
+            $tempFilePath = $file["tmp_name"];
+
+            echo $tempFilePath . "<br>"; // Comprobación de la ruta del archivo temporal
+
+            $uploadDir = "./img/";
+            $destination = $uploadDir . $filename;
+
+            echo $destination . "<br>"; // Comprobación de la ruta de destino del archivo
+
+            // Moviendo el archivo desde la ubicación temporal a la carpeta de destino
+            if (rename($tempFilePath, $destination)) {
+                $rutaArchivo = $destination;
+                $noticia->setFoto(realpath($rutaArchivo));
+                echo "El archivo se ha movido correctamente."; // Mensaje de éxito
+            } else {
+                echo "Error al mover el archivo."; // Mensaje de error al mover el archivo
+            }
+        } else {
+            echo "Error en la subida del archivo."; // Mensaje de error en la subida del archivo
+        }
+
+
+
 
         $this->em->persist($noticia);
         $this->em->flush();
