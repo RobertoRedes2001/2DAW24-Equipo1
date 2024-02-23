@@ -1,4 +1,6 @@
--- Inserción de cartas
+INSERT INTO Tienda (tienda_cod,'nombre') VALUES (1,'Nexus');
+
+INSERT INTO Edicion (edicion_cod,nombre,fecha_salida,cantidad) VALUES (1,'Cat-uria',null,20);
 INSERT INTO Carta (carta_cod, nombre, habilidad_recurso, habilidad_batalla, coste, estado_carta, vida, rareza, observaciones, foto, ataque, defensa, tipo_carta, texto, puntos_victoria) VALUES
 (1, 'Sofi, la dama oscura', 'Hasta 2 criaturas del gremio "Caedes" obtienen sigilo', 'Sigilo', 'EEE', 'Liberada', 5, NULL, NULL, 'assets/images/Sofi.jpeg', 3, 3, 'Leyenda', '¿Esa sensación en que alguien te sigue? Es ella', 3),
 (2, 'Ladronzuelo', NULL, 'Sigilo, (No puede ser seleccionada ni bloqueada hasta después de atacar por primera vez.', 'E', 'Liberada', 2, NULL, NULL, 'assets/images/Ladronzuelo.jpeg', 1, 1, 'Criatura', '¿Me podría dar una moneda (mientras le robo) amable señor?', 1),
@@ -21,13 +23,10 @@ INSERT INTO Carta (carta_cod, nombre, habilidad_recurso, habilidad_batalla, cost
 (19, 'Secuestrador', NULL, 'Secuestra 1 criatura del oponente', '2E', 'Liberada', 4, NULL, NULL, 'assets/images/Secuestrador.jpeg', 2, 2, 'Criatura', NULL, 2),
 (20, 'Ocultar', NULL, 'Mano: Hasta 1 criatura que controles obtiene Sigilo. Roba 1 carta', '1E', 'Liberada', 2, NULL, NULL, 'assets/images/Ocultar.jpeg', NULL, NULL, 'Magia', NULL, 2);
 
--- Inserción en CartaEdicion
 INSERT INTO CartaEdicion (edicion_id, carta_id) VALUES
 (1, 1), (1, 2), (1, 3), (1, 4), (1, 5), (1, 6), (1, 7), (1, 8), (1, 9), (1, 10),
 (1, 11), (1, 12), (1, 13), (1, 14), (1, 15), (1, 16), (1, 17), (1, 18), (1, 19), (1, 20);
 
+INSERT INTO Noticia (noticia_cod,titulo,texto,foto) VALUES (1,'Ha llegado Guilds of Kauria','cnanscjkasjkcasjkfjasjkfnaksnfnaskfnkasnfnasfn',null);
 
-INSERT INTO Edicion (edicion_cod,nombre,fecha_salida,cantidad,tienda_cod) VALUES (1,'Cat-uria',null,20,1)
-INSERT INTO Noticia (noticia_cod,titulo,texto,foto,tienda_cod) VALUES (1,'Ha llegado Guilds of Kauria','cnanscjkasjkcasjkfjasjkfnaksnfnaskfnkasnfnasfn',null,1)
-INSERT INTO Tienda (tienda_cod,'nombre') VALUES (1,'Nexus')
-INSERT INTO Usuario (usuario_cod,nombre,password,tienda_cod) VALUES (1,'admin','1234',1)
+INSERT INTO Usuario (usuario_cod,nombre,password) VALUES (1,'admin','1234');
