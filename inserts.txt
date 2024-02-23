@@ -1,48 +1,31 @@
-INSERT INTO Carta (carta_cod,nombre,habilidad_recurso,habilidad_batalla,coste,estado_carta,vida,rareza,observaciones,foto,ataque,defensa,tipo_carta,texto,puntos_victoria) 
-VALUES
-(1,'Sofi, la dama oscura','Hasta 2 criaturas del gremio "Caedes" obtienen sigilo','Sigilo','EEE','Liberada',5,null,null,'assets/images/Sofi.jpeg,3,3,'Leyenda','¿Esa sensación en que alguien te sigue? Es ella',3),
-(2,'Ladronzuelo',null,'Sigilo, (No puede ser seleccionada ni bloqueada hasta despues de atacar por primera vez.','E','Liberada',2,null,null,assets/images/Ladronzuelo.jpeg,1,1,'Criatura','¿Me podría dar una moneda ( mientras le robo ) amable señor',1),
-(3,'Carterista',null,'Sigilo, (No puede ser seleccionada ni bloqueada hasta despues de atacar por primera vez.','EE','Liberada',2,null,null,assets/images/Carterista.jpeg,2,1,'Criatura',null,1),
-(4,'Asesino','Añade 1 "Arma" del mazo o cementerio a tu mano','Sigilo','1EE','Liberada',4,null,null,assets/images/Asesino.jpeg,3,1,'Criatura',null,2),
-(5,'Preparar Arsenal','Añade 1 "Arma" del mazo a tu mano','Añade 1 "Arma" del mazo a la mano. Las armas del proximo turno cuestan 1E menos','1EE','Liberada',3,null,null,assets/images/Preparar_Arsenal.jpeg,null,null,'Magia',null,3),
-(6,'Arma: Cuchillo', 'Envenenar 1', 'Hace 1 Daño a cualquier objetivo','1E','Liberada',1,null,null,assets/images/Arma_Cuchillo.jpeg,null,null,'Magia',null,1),
-(7,'Arma: Daga','Envenenar 1','Hace 2 Daño a cualquier objetivo','2E','Liberada',2,null,null,assets/images/Arma_Daga.jpeg,null,null,'Magia',null,1 ),
-(8,'Arma: aguja','Envenar 2','Hace 2 Daño a cualquier objetivo','1EE','Liberada',1,null,null,assets/images/Arma_Aguja.jpeg,null,null,'Magia',null,2),
-(9,'Envenenar','Añade 1 "Arma" del mazo o cementerio a tu mano','Envenenar 3','1E',2,null,null,assets/images/Envenenar.jpeg,null,null,'Magia','Nunca un frasco tan pequeño podria ser tan peligroso',2),
-(10,'Pvnk the Ripper','Sacrifica otro recurso al entrar. Añade 1 "Arma" del mazo a la mano. Añade EE','Descarta 1 "Arma" de la mano y destruye 1 criatura del oponente','2EE','Baneada',4,null,null,assets/images/Pvnk.jpeg,3,3,'Leyenda','No tenga miedo, todo es por el futuro de la medicina',3),
-(11,'Embaucadora','Cada jugador roba 1 carta','Secuestra 1 criatura del oponente con Ataque igual o menor a la "Embaucadora")','2E',3,null,null,assets/images/Embaucadora.jpeg,2,1,'Criatura','Vamos a un sitio que te encantara,estoy segura que nos lo pasaremos genial juntos',2),
-(12,'Espia','Cada jugador descarta 1 carta si tienes 3 o mas cartas en la mano.','Sigilo','1EE','Liberada',4,null,null,assets/images/Espia.jpeg,2,2,'Criatura',null,2),
-(13,'Mercado Negro','Cuando 1 criatura del gremio "Caedes" haga daño a 1 criatura, haces 1 daño a 1 recurso',
- 'Continuo: Cuando descartes 1 "arma" de la mano, añade un contador de veneno sobre el "Mercado negro". Tus "Armas" Envenenan +1 por cada contador en esta carta.','EE','Liberada',1,null,null,assets/images/Mercado_Negro.jpeg,0,1,'Criatura',3),
- (14,'Encargo: Asesinato','Descarta 1 "Arma" de la mano','Mira la mano del oponente. Puedes descarta 1 carta de su mano o destruir 1 carta en su campo. Gana sus puntos de victoria','2EE','Liberada',3,null,null,assets/images/Encargo_Asesinato.jpeg,null,null,'Magia',null,3),
- (15,'Asesina','Envenenar 1','Sigilo: Selecciona 1 criatura del oponente. Mientras "Asesina" este en Sigilo la criatura selecciona no puede atacar','1EE','Liberada',5,null,null,assets/images/Asesina.jpeg,2,1,'Criatura',null,2),
- (16,'Encargo: Rescate','Secuestra hasta los puntos de victoria x2','Ganas los puntos de victoria secuestrados en "Rescate".','3E','Liberada',5,null,null,assets/images/Encargo_Rescate.jpeg,null,null,'Magia','Ni que fueramos Delatrua para ganar siempre',2),
- (17,'Mercader','Añade 1 "Arma" del cementerio a tu mano','Añade 1 "Mercado negro" del mazo a la mano','1E','Liberada',3,null,null,assets/images/Mercader.jpeg,1,1,'Criatura',null,1),
- (18,'Maton',null,'Descarta 1 "Arma" para poder atacar. Hace 1 Daño hasta 1 criatura','3E','Liberada',5,null,null,assets/images/Maton.jpeg,5,3,'Criatura',null,2),
- (19,'Secuestrador',null,'Secuestra 1 criatura del oponente','2E','Liberada',4,null,null,assets/images/Secuestrador.jpeg,2,2,'Criatura',null,2),
- (20,'Ocultar',null,'Mano: Hasta 1 criatura que controles obtiene Sigilo. Roba 1 carta','1E','Liberada',2,null,null,assets/images/Ocultar.jpeg,null,null,'Magia',null,2) 
+-- Inserción de cartas
+INSERT INTO Carta (carta_cod, nombre, habilidad_recurso, habilidad_batalla, coste, estado_carta, vida, rareza, observaciones, foto, ataque, defensa, tipo_carta, texto, puntos_victoria) VALUES
+(1, 'Sofi, la dama oscura', 'Hasta 2 criaturas del gremio "Caedes" obtienen sigilo', 'Sigilo', 'EEE', 'Liberada', 5, NULL, NULL, 'assets/images/Sofi.jpeg', 3, 3, 'Leyenda', '¿Esa sensación en que alguien te sigue? Es ella', 3),
+(2, 'Ladronzuelo', NULL, 'Sigilo, (No puede ser seleccionada ni bloqueada hasta después de atacar por primera vez.', 'E', 'Liberada', 2, NULL, NULL, 'assets/images/Ladronzuelo.jpeg', 1, 1, 'Criatura', '¿Me podría dar una moneda (mientras le robo) amable señor?', 1),
+(3, 'Carterista', NULL, 'Sigilo, (No puede ser seleccionada ni bloqueada hasta después de atacar por primera vez.', 'EE', 'Liberada', 2, NULL, NULL, 'assets/images/Carterista.jpeg', 2, 1, 'Criatura', NULL, 1),
+(4, 'Asesino', 'Añade 1 "Arma" del mazo o cementerio a tu mano', 'Sigilo', '1EE', 'Liberada', 4, NULL, NULL, 'assets/images/Asesino.jpeg', 3, 1, 'Criatura', NULL, 2),
+(5, 'Preparar Arsenal', 'Añade 1 "Arma" del mazo a tu mano', 'Añade 1 "Arma" del mazo a la mano. Las armas del próximo turno cuestan 1E menos', '1EE', 'Liberada', 3, NULL, NULL, 'assets/images/Preparar_Arsenal.jpeg', NULL, NULL, 'Magia', NULL, 3),
+(6, 'Arma: Cuchillo', 'Envenenar 1', 'Hace 1 Daño a cualquier objetivo', '1E', 'Liberada', 1, NULL, NULL, 'assets/images/Arma_Cuchillo.jpeg', NULL, NULL, 'Magia', NULL, 1),
+(7, 'Arma: Daga', 'Envenenar 1', 'Hace 2 Daño a cualquier objetivo', '2E', 'Liberada', 2, NULL, NULL, 'assets/images/Arma_Daga.jpeg', NULL, NULL, 'Magia', NULL, 1),
+(8, 'Arma: aguja', 'Envenar 2', 'Hace 2 Daño a cualquier objetivo', '1EE', 'Liberada', 1, NULL, NULL, 'assets/images/Arma_Aguja.jpeg', NULL, NULL, 'Magia', NULL, 2),
+(9, 'Envenenar', 'Añade 1 "Arma" del mazo o cementerio a tu mano', 'Envenenar 3', '1E', 'Liberada', 2, NULL, NULL, 'assets/images/Envenenar.jpeg', NULL, NULL, 'Magia', 'Nunca un frasco tan pequeño podría ser tan peligroso', 2),
+(10, 'Pvnk the Ripper', 'Sacrifica otro recurso al entrar. Añade 1 "Arma" del mazo a la mano. Añade EE', 'Descarta 1 "Arma" de la mano y destruye 1 criatura del oponente', '2EE', 'Baneada', 4, NULL, NULL, 'assets/images/Pvnk.jpeg', 3, 3, 'Leyenda', 'No tenga miedo, todo es por el futuro de la medicina', 3),
+(11, 'Embaucadora', 'Cada jugador roba 1 carta', 'Secuestra 1 criatura del oponente con Ataque igual o menor a la "Embaucadora"', '2E', 'Liberada', 3, NULL, NULL, 'assets/images/Embaucadora.jpeg', 2, 1, 'Criatura', 'Vamos a un sitio que te encantará, estoy segura que nos lo pasaremos genial juntos', 2),
+(12, 'Espia', 'Cada jugador descarta 1 carta si tienes 3 o más cartas en la mano.', 'Sigilo', '1EE', 'Liberada', 4, NULL, NULL, 'assets/images/Espia.jpeg', 2, 2, 'Criatura', NULL, 2),
+(13, 'Mercado Negro', 'Cuando 1 criatura del gremio "Caedes" haga daño a 1 criatura, haces 1 daño a 1 recurso', 'Continuo: Cuando descartes 1 "arma" de la mano, añade un contador de veneno sobre el "Mercado negro". Tus "Armas" Envenenan +1 por cada contador en esta carta.', 'EE', 'Liberada', 1, NULL, NULL, 'assets/images/Mercado_Negro.jpeg', 0, 1, 'Criatura', 3),
+(14, 'Encargo: Asesinato', 'Descarta 1 "Arma" de la mano', 'Mira la mano del oponente. Puedes descartar 1 carta de su mano o destruir 1 carta en su campo. Gana sus puntos de victoria', '2EE', 'Liberada', 3, NULL, NULL, 'assets/images/Encargo_Asesinato.jpeg', NULL, NULL, 'Magia', NULL, 3),
+(15, 'Asesina', 'Envenenar 1', 'Sigilo: Selecciona 1 criatura del oponente. Mientras "Asesina" esté en Sigilo la criatura seleccionada no puede atacar', '1EE', 'Liberada', 5, NULL, NULL, 'assets/images/Asesina.jpeg', 2, 1, 'Criatura', NULL, 2),
+(16, 'Encargo: Rescate', 'Secuestra hasta los puntos de victoria x2', 'Ganas los puntos de victoria secuestrados en "Rescate".', '3E', 'Liberada', 5, NULL, NULL, 'assets/images/Encargo_Rescate.jpeg', NULL, NULL, 'Magia', 'Ni que fuéramos Delatrua para ganar siempre', 2),
+(17, 'Mercader', 'Añade 1 "Arma" del cementerio a tu mano', 'Añade 1 "Mercado negro" del mazo a la mano', '1E', 'Liberada', 3, NULL, NULL, 'assets/images/Mercader.jpeg', 1, 1, 'Criatura', NULL, 1),
+(18, 'Maton', NULL, 'Descarta 1 "Arma" para poder atacar. Hace 1 Daño hasta 1 criatura', '3E', 'Liberada', 5, NULL, NULL, 'assets/images/Maton.jpeg', 5, 3, 'Criatura', NULL, 2),
+(19, 'Secuestrador', NULL, 'Secuestra 1 criatura del oponente', '2E', 'Liberada', 4, NULL, NULL, 'assets/images/Secuestrador.jpeg', 2, 2, 'Criatura', NULL, 2),
+(20, 'Ocultar', NULL, 'Mano: Hasta 1 criatura que controles obtiene Sigilo. Roba 1 carta', '1E', 'Liberada', 2, NULL, NULL, 'assets/images/Ocultar.jpeg', NULL, NULL, 'Magia', NULL, 2);
 
-INSERT INTO CartaEdicion (edicion_id,carta_id) VALUES 
-(1,1),
-(1,2),
-(1,3),
-(1,4),
-(1,5),
-(1,6),
-(1,7),
-(1,8),
-(1,9),
-(1,10),
-(1,11),
-(1,12),
-(1,13),
-(1,14),
-(1,15),
-(1,16),
-(1,17),
-(1,18),
-(1,19),
-(1,20)
+-- Inserción en CartaEdicion
+INSERT INTO CartaEdicion (edicion_id, carta_id) VALUES
+(1, 1), (1, 2), (1, 3), (1, 4), (1, 5), (1, 6), (1, 7), (1, 8), (1, 9), (1, 10),
+(1, 11), (1, 12), (1, 13), (1, 14), (1, 15), (1, 16), (1, 17), (1, 18), (1, 19), (1, 20);
+
 
 INSERT INTO Edicion (edicion_cod,nombre,fecha_salida,cantidad,tienda_cod) VALUES (1,'Cat-uria',null,20,1)
 INSERT INTO Noticia (noticia_cod,titulo,texto,foto,tienda_cod) VALUES (1,'Ha llegado Guilds of Kauria','cnanscjkasjkcasjkfjasjkfnaksnfnaskfnkasnfnasfn',null,1)
