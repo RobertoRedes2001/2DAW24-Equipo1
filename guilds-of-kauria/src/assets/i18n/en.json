@@ -58,5 +58,6 @@
     "game-second-body": "The most common way to win the game is by attacking with your creatures. If a creature attacking an opponent is not blocked, it deals that opponent an amount of damage equal to its power.",
     "game-third-body": "Each turn follows the same sequence. Whenever you start a new step or phase, any triggered abilities that take place during that step or phase trigger and go on the stack.",
     "news-title" : "News",
+    "news-detail-return" : "Return",
     "footer" : "Integrated Project"
 }

@@ -7,6 +7,6 @@
         <p>{{date}}</p>
         <h3>{{title}}</h3>
         <p style="text-align: justify;">{{shortnews}}</p>
-        <p routerLink="/news/detail" RouterLinkActive="active" type="button" class="link-news btn">{{readed}}</p>
+        <p (click)="onClickNews(index)" routerLink="/news/detail" RouterLinkActive="active" type="button" class="link-news btn">{{readed}}</p>
     </div>
 </div>

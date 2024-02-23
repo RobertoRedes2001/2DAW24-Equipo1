@@ -15,3 +15,21 @@ export interface KauriaCard {
     texto:             string;
     puntos_victoria:   number;
 }
+
+export interface KauriaNews {
+    noticia_cod:       number;
+    fecha_publicacion: FechaPublicacion;
+    titulo:            string;
+    texto:             string;
+    foto:              string;
+    tienda:            Tienda;
+}
+
+export interface FechaPublicacion {
+    date:          string;
+    timezone_type: number;
+    timezone:      string;
+}
+
+export interface Tienda {
+}

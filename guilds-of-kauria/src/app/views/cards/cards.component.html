@@ -103,7 +103,7 @@
                                 placeholder="{{'cards-advance-ph3'| translate}}" [formControl]="amountMana"/>
                         </div>
                         <div class="col-xl-4 col-md-12">
-                            <p type="submit" class="btn link-news">{{'cards-send-btn'| translate}}</p>
+                            <p type="submit" (click)="onSearchByName()" class="btn link-news">{{'cards-send-btn'| translate}}</p>
                         </div>
                     </div>
                 </div>
@@ -114,7 +114,7 @@
 <section>
     <article class="container card-container">
         <div class="row">
-            @for (item of cardsOfDDBB; track item; let i =$index) {
+            @for (item of cardsOfDDBB; track item; let i = $index) {
             <div class="col-sm-12 col-md-6 col-lg-4">
                 <div class="card">
                     <app-card [index]="i" [title]="item.nombre" [img]="img" [littleDescription]="item.observaciones">  

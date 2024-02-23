@@ -1,11 +1,11 @@
 
 <div class="container detail-card-padding text-justify">
     <h2>{{'news-title' | translate}}</h2>
-    @for (item of ejemplos; track $index) {
+    @for (item of newsOfDDBB; track $index) {
         <app-news-card
-        [title]="item.t"
-        [date]="item.d"
-        [newsbody]="item.b"
-        [image]="item.i"></app-news-card>
+        [title]="item.titulo"
+        [date]="item.fecha_publicacion.date.split(' ')[0]"
+        [newsbody]="item.texto"
+        [image]="image"></app-news-card>
     }
 </div>

@@ -1,18 +1,18 @@
 <main class="notice-container">
-    <div class="content text-center">
+    <div class="content">
         
-        <img src="../../../assets/images/pato.jpg" width="700px">
+        <img style="align-self: center; display: flex; justify-content: center;" src="../../../assets/images/pato.jpg" width="700px">
         <br>
-        <h1>Un pato</h1>
+        <h1 style="text-align: center;">{{news[index].titulo}}</h1>
 
         <br>
         
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec pretium vitae mauris vel tincidunt. Nulla auctor dui eu ultrices gravida. Mauris ut facilisis justo. Morbi et odio mauris. Donec id dui quis orci euismod aliquet sed ut leo. Pellentesque congue convallis diam. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. In blandit ante non imperdiet auctor. Proin maximus diam eu mi lacinia fermentum. In non quam in mi aliquet vestibulum. Aliquam erat volutpat. Aliquam non ex tempus, interdum sem ut, lacinia augue. Donec porta est nisl, ut condimentum purus hendrerit non. Pellentesque interdum dignissim odio sed suscipit. Nulla eu vehicula enim. Morbi egestas risus in sodales efficitur. Etiam egestas, nibh quis faucibus sagittis, magna velit auctor lectus, vitae eleifend neque mauris ut magna. Donec id neque tellus. Aenean volutpat purus gravida est interdum, vel finibus risus auctor. Fusce dapibus, sem a aliquam posuere, eros enim tempus odio, non ullamcorper dui massa laoreet nunc. Nunc facilisis ex tempus urna ultricies, a venenatis lacus accumsan. Nulla ut risus odio. Suspendisse sit amet lorem semper, dignissim nisl at, rutrum ante. Suspendisse dignissim sagittis sem. Sed imperdiet eu dui id lacinia. Pellentesque rutrum maximus neque, non pretium est tincidunt eget. Nam diam massa, convallis nec bibendum luctus, varius at quam. Maecenas non iaculis sapien. Morbi bibendum lacus mauris. Nullam at egestas quam. Sed varius tortor non hendrerit convallis. Pellentesque odio metus, sodales ut arcu porta, maximus pharetra lorem. Maecenas luctus, turpis id convallis ornare, dui diam lobortis eros, ac lobortis tortor est in justo. Duis ut posuere magna. Fusce tincidunt turpis enim, quis scelerisque nibh dignissim ac. Praesent iaculis fringilla mi, non viverra eros semper quis. Suspendisse consectetur tempus diam, id mattis ligula mattis nec. </p>
+        <p style="text-align: justify;">{{news[index].texto}} </p>
 
-        <p style="text-align: right;">01-01-2024</p>
+        <p style="text-align: right;">{{news[index].fecha_publicacion.date.split(' ')[0]}}</p>
 
-        <button style="display: block; text-align: left;" type="button" class="btn link-news">Volver</button>
-
+        <p type="submit" class="btn link-news" routerLink="/news" RouterLinkActive="active">{{'news-detail-return' | translate}}</p>
+    
 
     </div>
 </main>

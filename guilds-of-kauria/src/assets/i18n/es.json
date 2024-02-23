@@ -58,5 +58,6 @@
     "game-second-body" : "La manera más común de ganar el juego es atacar con tus criaturas. Si una criatura que está atacando a un oponente no es bloqueada, le hará a ese oponente una cantidad de daño igual a su fuerza.",
     "game-third-body" : "Cada turno sigue la misma secuencia. Siempre que comiences un nuevo paso o fase, cualquier habilidad disparada que tenga lugar durante ese paso o fase se dispara y va a la pila.",
     "news-title" : "Noticias",
+    "news-detail-return" : "Volver",
     "footer" : "Proyecto Integrado"
 }
