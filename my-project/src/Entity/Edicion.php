@@ -26,7 +26,7 @@ class Edicion
     private ?int $cantidad = null;
 
     #[ORM\ManyToOne(inversedBy: 'edicions')]
-    #[ORM\JoinColumn(name: "tienda", referencedColumnName: "tienda_cod")]
+    #[ORM\JoinColumn(name: "tienda_cod", referencedColumnName: "tienda_cod")]
     private ?Tienda $tienda = null;
 
     #[ORM\OneToMany(targetEntity: CartaEdicion::class, mappedBy: 'edicion_id')]
