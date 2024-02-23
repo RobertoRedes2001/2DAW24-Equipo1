@@ -13,6 +13,10 @@ use App\Entity\Carta;
 use App\Entity\Edicion;
 use App\Entity\CartaEdicion;
 
+// Habilitar CORS
+header("Access-Control-Allow-Origin: http://localhost:4200"); // Reemplaza esto con la URL de tu aplicación Angular
+header("Access-Control-Allow-Methods: GET, POST, OPTIONS");
+header("Access-Control-Allow-Headers: Content-Type");
 class CartaController extends AbstractController
 {
 
