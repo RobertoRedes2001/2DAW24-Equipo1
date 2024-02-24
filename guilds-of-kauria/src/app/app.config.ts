@@ -24,6 +24,7 @@ export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http);
 }
 
+//Funcion para recuperar el lenguaje almacenado en local
 function getSelectedLanguage(): string {
   const selectedLanguage = localStorage.getItem('selectedLanguage');
   return selectedLanguage || 'es'; 

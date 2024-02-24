@@ -11,7 +11,7 @@ import { KauriaCard } from '../../interfaces/kauria.interfaces';
   styleUrl: './detail.component.css'
 })
 export class DetailComponent {
-  
+  //recibir de parametros globales la informacion de la pagina de cards
   public card : KauriaCard[] = GlobalConstants.selectedCard;
   public index : number = GlobalConstants.indexCard;
   

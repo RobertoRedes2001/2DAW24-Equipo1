@@ -16,6 +16,7 @@ export class HeaderComponent {
 
   constructor (private translateService : TranslateService){}
 
+  //Cambia el lenguaje de la pagina entre español o ingles
   public switchLanguage(lan : string){
     this.translateService.use(lan);
     GlobalConstants.currentLang=lan;

@@ -12,6 +12,7 @@ import { TranslateModule } from '@ngx-translate/core';
   styleUrl: './notice.component.css'
 })
 export class NoticeComponent {
+  //recibir de parametros globales la informacion de la pagina de news
   public news : KauriaNews[] = GlobalConstants.selectedNews;
   public index : number = GlobalConstants.indexNews;
 }

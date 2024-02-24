@@ -19,10 +19,12 @@ export class NewsCardComponent {
 
   @Input() index : number = 0;
 
+  //Asigna el id de la noticia a la variable global para localizarla
   public onClickNews(index:number) {
     GlobalConstants.indexNews = index;
   }
 
+  //Acorta el texto de la noticia
   ngOnInit(){
     this.shortnews = this.newsbody.substring(0, 300)+'...';
   }

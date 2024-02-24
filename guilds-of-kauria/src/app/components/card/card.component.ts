@@ -15,6 +15,7 @@ export class CardComponent {
   @Input() littleDescription: string = '';
   @Input() index : number = 0;
 
+  //Asigna el id de la carta a la variable global para localizarla
   public onClickCard(index:number) {
     GlobalConstants.indexCard = index;
   }

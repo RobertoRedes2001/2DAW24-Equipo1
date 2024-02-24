@@ -14,9 +14,11 @@ import { GlobalConstants } from '../../common/global-constants';
 })
 export class NewsComponent {
 
+  /*inicializamos el constructor para hacer una llamada a la API que devuelva
+  *todas las noticias que haya en la BBDD*/
   public constructor(public service : KauriaService ){}
   newsOfDDBB : KauriaNews[] = [];
-  image : string = 'https://i.ytimg.com/vi/M1WBcQrlUeQ/maxresdefault.jpg';
+  image : string = '../../../assets/images/banner.png';
   
   ngOnInit(){
     this.service.getAllNews().subscribe((response) => {

@@ -18,8 +18,8 @@ import { KauriaCard } from '../../interfaces/kauria.interfaces';
 export class CardsComponent {
   public constructor(public service : KauriaService ){}
   cardVisibility: boolean = false;
-  items: number[] = [1, 2, 3, 4, 5, 6];
-  cardType: string = ''; // Variable para almacenar el valor seleccionado del select
+
+  cardType: string = ''; 
   cardEdition: string = '';
   cardStatus: string = GlobalConstants.currentLang === 'es' ? 'Vetada' : 'Banned';
   cardTypeStats: string = '';
@@ -29,7 +29,7 @@ export class CardsComponent {
   amountMana = new FormControl('');
   cardsOfDDBB : KauriaCard[] = [];
 
-  public img : string = 'https://pm1.aminoapps.com/6364/ad0ba8b1acfd4f3925c98a5fc7c340834f07bf9f_00.jpg';
+  public img : string = '../../../assets/images/Embaucadora.jpeg';
 
   onChangeCardEdition(event: any) {
     this.cardEdition = event.target.value;
@@ -47,6 +47,7 @@ export class CardsComponent {
     this.cardType = event.target.value;
   }
 
+  //Realiza una busqueda por nombre de carta en la API
   public onSearchByName() {
     this.service.getCardByName(this.principalInputName.value).subscribe((response) => {
       this.cardsOfDDBB = response;
@@ -54,6 +55,7 @@ export class CardsComponent {
     })
   }
 
+  //Hace una llamada de todas las cartas en la BBDD via API
   ngOnInit(){
     this.service.getAllCards().subscribe((response) => {
       this.cardsOfDDBB = response;
