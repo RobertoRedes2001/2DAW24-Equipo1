@@ -22,6 +22,7 @@ class EdicionController extends AbstractController
         $this->em = $em;
     }
 
+    //Renderizador para listar ediciones a traves del backoffice
     #[Route('/ediciones', name: 'listEdiciones')]
     public function listEdiciones()
     {
@@ -34,12 +35,14 @@ class EdicionController extends AbstractController
         ]);
     }
 
+    //Renderizador para insertar ediciones a traves del backoffice
     #[Route('/renderInsertEdicion', name: 'renderInsertEdicion')]
     public function renderInsertEdicion()
     {
         return $this->render("insertFormEdición.html", []); 
     }
 
+    //Funcion para añadir una edicion a traves del backoffice
     #[Route('/insertEdicion', name: 'insertEdicion', methods: ['POST'])]
     public function insert(): Response
     {
@@ -63,6 +66,7 @@ class EdicionController extends AbstractController
         return $this->redirectToRoute('listEdiciones');
     }
 
+    //Funcion para eliminar una edicion a traves del backoffice
     #[Route('/deleteEdicion/{id}', name: 'delEdicion')]
     public function del(int $id): Response
     {
@@ -77,6 +81,7 @@ class EdicionController extends AbstractController
         return $this->redirectToRoute('listEdiciones');
     }
 
+    //Renderizador para actualizar una edicion
     #[Route('/renderUpdateEdicion/{id}', name: 'renderUpdateEdicion')]
     public function renderUpdate($id): Response
     {
@@ -88,6 +93,7 @@ class EdicionController extends AbstractController
         ]);
     }
 
+    //Funcion para actualizar una edicion
     #[Route('/updateEdicion/{id}', name: 'updateEdicion')]
     public function update($id): Response
     {

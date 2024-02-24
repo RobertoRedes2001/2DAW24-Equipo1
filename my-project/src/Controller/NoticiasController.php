@@ -13,9 +13,10 @@ use App\Entity\Noticia;
 use App\Entity\Tienda;
 
 // Habilitar CORS
-header("Access-Control-Allow-Origin: http://localhost:4200"); // Reemplaza esto con la URL de tu aplicación Angular
+header("Access-Control-Allow-Origin: http://localhost:4200");
 header("Access-Control-Allow-Methods: GET, POST, OPTIONS");
 header("Access-Control-Allow-Headers: Content-Type");
+
 class NoticiasController extends AbstractController
 {
     //Variable y constructor del EntityManagerInterface
@@ -26,6 +27,7 @@ class NoticiasController extends AbstractController
         $this->em = $em;
     }
 
+    //Funcion de la api para sacar todas las noticias
     #[Route('/allNews', name: 'allNews', methods: ['get'])]
     public function allCards(ManagerRegistry $doctrine): JsonResponse
     {
@@ -48,6 +50,7 @@ class NoticiasController extends AbstractController
         return $this->json($data);
     }
 
+    //Funcion de la api para sacar noticia por id
     #[Route('/news/{id}', name: 'singleNew', methods: ['get'])]
     public function show(ManagerRegistry $doctrine, int $id): JsonResponse
     {
@@ -70,6 +73,7 @@ class NoticiasController extends AbstractController
         return $this->json($data);
     }
 
+    //Renderizador que lista todas las noticias en el backoffice
     #[Route('/noticias', name: 'listNoticias')]
     public function listNoticias()
     {
@@ -82,12 +86,15 @@ class NoticiasController extends AbstractController
         ]);
     }
 
+    //Renderizador para añadir noticia en el backoffice
     #[Route('/addNoticia', name: 'addNoticia')]
     public function renderInsert()
     {
         return $this->render("insertFormNoticia.html", []);
     }
 
+
+    //Funcion que inserta una noticia en la cual hemos implementado lo de las fotos funciona pero tenemos que adaptarlo para el proximo sprint(Una vez finalizado este sera añadido a cartas tambien)
     #[Route('/insertNoticia', name: 'insertNoticia', methods: ['POST'])]
     public function insert(): Response
     {
@@ -138,6 +145,7 @@ class NoticiasController extends AbstractController
         return $this->redirectToRoute('listNoticias');
     }
 
+    //Funcion que borra una noticia a traves del backoffice
     #[Route('/deleteNoticia/{id}', name: 'delNoticia')]
     public function del(int $id): Response
     {
@@ -152,6 +160,8 @@ class NoticiasController extends AbstractController
         return $this->redirectToRoute('listNoticias');
     }
 
+
+    //Renderizador de actualizar una noticia a traves del backoffice
     #[Route('/renderUpdateNoticia/{id}', name: 'renderUpdateNoticia')]
     public function renderUpdate($id): Response
     {
@@ -163,6 +173,7 @@ class NoticiasController extends AbstractController
         ]);
     }
 
+    //Funcion de actualizar una noticia
     #[Route('/updateNoticia/{id}', name: 'updateNoticia')]
     public function update($id): Response
     {

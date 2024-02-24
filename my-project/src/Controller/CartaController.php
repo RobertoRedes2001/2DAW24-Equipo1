@@ -14,9 +14,10 @@ use App\Entity\Edicion;
 use App\Entity\CartaEdicion;
 
 // Habilitar CORS
-header("Access-Control-Allow-Origin: http://localhost:4200"); // Reemplaza esto con la URL de tu aplicación Angular
+header("Access-Control-Allow-Origin: http://localhost:4200");
 header("Access-Control-Allow-Methods: GET, POST, OPTIONS");
 header("Access-Control-Allow-Headers: Content-Type");
+
 class CartaController extends AbstractController
 {
 
@@ -28,6 +29,8 @@ class CartaController extends AbstractController
         $this->em = $em;
     }
 
+
+    //Funcion de la api para llamar a todas las cartas
     #[Route('/allCards', name: 'allCards', methods:['get'])]
     public function allCards(ManagerRegistry $doctrine): JsonResponse 
     {
@@ -59,6 +62,7 @@ class CartaController extends AbstractController
         return $this->json($data);
     } 
     
+    //Funcion de la api para llamar a una carta por id
     #[Route('/card/{id}', name: 'singleCard', methods:['get'] )]
     public function show(ManagerRegistry $doctrine, int $id): JsonResponse
     {
@@ -90,6 +94,7 @@ class CartaController extends AbstractController
         return $this->json($data);
     }
 
+    //Funcion de la api para llamar a todas las cartas por un nombre
     #[Route('/cardName/{name}', name: 'nameCard', methods: ['get'])]
     public function showName(ManagerRegistry $doctrine, string $name): JsonResponse
     {
@@ -133,6 +138,7 @@ class CartaController extends AbstractController
     }
 
 
+    //Renderizador de todas las cartas en el backoffice
     #[Route('/cards', name: 'listCards')]
     public function listCards()
     {
@@ -145,12 +151,14 @@ class CartaController extends AbstractController
         ]);
     }
 
+    //Renderizador del insert de cartas en el backoffice
     #[Route('/renderInsertCard', name: 'renderInsertCard')]
     public function renderInsert(): Response
     {
         return $this->render("insertFormCard.html", []);
     }
 
+    //Funcion para borrar carta a traves del backoffice
     #[Route('/deleteCard/{id}', name: 'delClient')]
     public function del(int $id): Response
     {
@@ -174,6 +182,7 @@ class CartaController extends AbstractController
         return $this->redirectToRoute('listCards');
     }
 
+    //Funcion para insertar carta a traves del backoffice
     #[Route('/insertCard', name: 'insertCard', methods: ['POST'])]
     public function insert(): Response
     {
@@ -227,6 +236,7 @@ class CartaController extends AbstractController
 
     }
 
+    //Renderizador para updatear carta a traves del backoffice
     #[Route('/renderUpdateCard/{id}', name: 'renderUpdateCard')]
     public function renderUpdate($id): Response
     {
@@ -238,6 +248,8 @@ class CartaController extends AbstractController
         ]);
     }
 
+
+    //Funcion para updatear carta a traves del backoffice
     #[Route('/updateCard/{id}', name: 'updateClient', methods: ['POST'])]
     public function updateProcess($id): Response
     {

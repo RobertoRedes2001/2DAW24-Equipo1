@@ -13,6 +13,7 @@ use App\Entity\Usuario;
 
 class UserController extends AbstractController
 {
+    //Funcion de insercion de usuario(solo utilizado en el back ya que solo tenemos un usuario admin, el resto no tiene user)
     #[Route('/insertUser', name: 'insertUser', methods:['GET'])]
     public function createUser(ManagerRegistry $doctrine, Request $request): JsonResponse
     {
@@ -37,6 +38,7 @@ class UserController extends AbstractController
         return $this->json($data);
     }
 
+    //Funcion de login para acceder al backoffice
     #[Route('/login', name: 'loginUser', methods: ['POST'])]
     public function login(ManagerRegistry $doctrine, Request $request): RedirectResponse
     {
@@ -62,6 +64,7 @@ class UserController extends AbstractController
         }
     }
 
+    //Funcion que te renderiza el login nada mas iniciar el programa
     #[Route('/', name: 'renderLogin')]
     public function renderLogin(): Response
     {
