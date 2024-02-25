@@ -1,0 +1,31 @@
+name: CI/CD
+
+on: [push]
+
+jobs:
+  ci:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - run: echo "El repositorio ${{ github.repository }} ha sido clonado con éxito."
+      - uses: php-actions/composer@v6
+      - run: echo "Instaladas las dependencias de Composer"
+      - run: vendor/bin/phpunit test/
+
+  cd:
+    needs: ci
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Docker Login
+        run: |
+          docker login -u ${{ secrets.DOCKER_USER }} -p ${{ secrets.DOCKER_PASSWORD }}
+          echo "Login exitoso"
+      - name: Build and Push
+        run: |
+          docker build -t ${{ secrets.DOCKER_USER }}/prueba:${{ github.sha }} .
+          docker push ${{ secrets.DOCKER_USER }}/prueba:${{ github.sha }}
+          echo "Histórico guardado"
+          docker build -t ${{ secrets.DOCKER_USER }}/prueba:latest .
+          docker push ${{ secrets.DOCKER_USER }}/prueba:latest
+          echo "Última versión subida"
